@@ -31,6 +31,7 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
 .nav-right{display:flex;align-items:center;gap:24px;}
 .nav-link{font-size:13px;color:var(--muted);cursor:pointer;background:none;border:none;padding:0;font-family:'Inter',sans-serif;}
 .nav-link:hover{color:var(--ink);}
+.nav-link.active{color:var(--ink);font-weight:500;}
 .nav-btn{font-size:12px;font-weight:500;font-family:'Inter',sans-serif;background:var(--accent);color:#fff;border:none;border-radius:4px;padding:6px 14px;cursor:pointer;letter-spacing:.01em;}
 .nav-btn:hover{background:#2e4a8a;}
 .nav-btn:active{transform:scale(.98);}
@@ -101,6 +102,24 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
 
 /* LOADING / EMPTY */
 .loading{padding:48px 24px;color:var(--muted);font-size:13px;font-family:'JetBrains Mono',monospace;}
+.error-state{padding:48px 24px;}
+.error-title{font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:var(--ink);margin-bottom:8px;}
+.error-msg{font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* ── ARCHIVE PAGE ── */
+.archive-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:40px 32px 32px;}
+.archive-hero h2{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:32px;line-height:1.2;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em;}
+.archive-hero p{font-size:14px;color:var(--muted);line-height:1.75;max-width:520px;}
+.archive-meta{display:flex;align-items:center;gap:14px;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);}
+.archive-meta .dot{width:6px;height:6px;border-radius:50%;background:#52A07A;}
+.archive-meta .dot.cache{background:var(--accent);}
+.archive-meta .dot.err{background:#C04848;}
+
+.archive-day{border-bottom:1px solid var(--border);}
+.archive-day-header{display:flex;align-items:baseline;gap:14px;padding:24px 32px 12px;background:var(--paper);}
+.archive-day-date{font-family:'Newsreader',serif;font-style:italic;font-size:22px;color:var(--ink);}
+.archive-day-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;}
+.archive-day-cards{display:flex;flex-direction:column;}
 
 /* ── SUBSCRIBE PAGE ── */
 .sub-page{max-width:520px;margin:0 auto;padding:48px 24px 72px;}
@@ -147,6 +166,8 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
   .filter-bar{padding:10px 20px;}
   .card{padding:16px 20px;}
   .nav{padding:0 20px;}
+  .archive-hero{padding:32px 20px 24px;}
+  .archive-day-header{padding:20px 20px 10px;}
 }
 @media (max-width:480px){
   .hero h1{font-size:26px;}
@@ -161,7 +182,8 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
 <nav class="nav">
   <span class="nav-logo" onclick="showPage('home')">follow builders</span>
   <div class="nav-right">
-    <button class="nav-link" onclick="showPage('home')">日报</button>
+    <button class="nav-link" id="nav-home" onclick="showPage('home')">日报</button>
+    <button class="nav-link" id="nav-archive" onclick="showPage('archive')">往期</button>
     <button class="nav-btn" onclick="showPage('sub')">订阅日报 →</button>
   </div>
 </nav>
@@ -173,7 +195,7 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
     <p>追踪 26 位真正在构建 AI 产品的人——研究员、创始人、工程师——看他们在想什么、做什么。</p>
     <div class="hero-actions">
       <button class="hero-btn" onclick="showPage('sub')">订阅日报</button>
-      <button class="hero-link">查看往期 →</button>
+      <button class="hero-link" onclick="showPage('archive')">查看往期 →</button>
     </div>
   </div>
 
@@ -198,6 +220,20 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
     <div class="cards" id="cards-container">
       <div class="loading">正在加载今日内容…</div>
     </div>
+  </div>
+</div>
+
+<!-- ARCHIVE PAGE -->
+<div id="page-archive" class="page">
+  <div class="archive-hero">
+    <h2>往期日报</h2>
+    <p>从 GitHub commit 历史里取回 builders 过去 7 天的发声。数据来自 follow-builders 仓库的 <code style="font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--paper);padding:1px 5px;border-radius:3px;">feed-x.json</code> 每日快照。</p>
+    <div class="archive-meta" id="archive-meta">
+      <span class="dot"></span><span id="archive-status">初始化…</span>
+    </div>
+  </div>
+  <div id="archive-content">
+    <div class="loading">正在从 GitHub 拉取历史快照…<br>首次加载需要 5-10 秒。</div>
   </div>
 </div>
 
@@ -262,11 +298,22 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
 
 <script>
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const REPO = 'zarazhangrui/follow-builders';
+const FEED_PATH = 'feed-x.json';
+const POD_PATH = 'feed-podcasts.json';
+const ARCHIVE_CACHE_KEY = 'fb-archive-v1';
+const ARCHIVE_CACHE_TTL_HOURS = 6;
+const ARCHIVE_DAYS = 7;
 
+/* ============ NAVIGATION ============ */
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const navLink = document.getElementById('nav-' + id);
+  if (navLink) navLink.classList.add('active');
   window.scrollTo(0, 0);
+  if (id === 'archive') loadArchive();
 }
 
 function setFilter(el, type) {
@@ -297,6 +344,7 @@ function handleSubmit() {
   document.getElementById('email-input').value = '';
 }
 
+/* ============ UTILITIES ============ */
 function timeAgo(dateStr) {
   const diff = (Date.now() - new Date(dateStr)) / 1000 / 3600;
   if (diff < 1) return '刚刚';
@@ -314,13 +362,25 @@ function roleFromBio(bio) {
   return line.length > 44 ? line.slice(0, 42) + '…' : line;
 }
 
+function formatDate(d) {
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function formatDateLong(d) {
+  return `${d.getMonth() + 1}月${d.getDate()}日 · ${['日','一','二','三','四','五','六'][d.getDay()]}`;
+}
+
+/* ============ TODAY'S FEED ============ */
 let allData = { x: [], podcast: null };
 
 async function fetchData() {
   try {
     const [xRes, podRes] = await Promise.all([
-      fetch('https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json'),
-      fetch('https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-podcasts.json')
+      fetch(`https://raw.githubusercontent.com/${REPO}/main/${FEED_PATH}`),
+      fetch(`https://raw.githubusercontent.com/${REPO}/main/${POD_PATH}`)
     ]);
     const xJson = await xRes.json();
     const podJson = await podRes.json();
@@ -443,6 +503,152 @@ function renderFallback() {
     </div>`;
 }
 
+/* ============ ARCHIVE (GitHub commits history) ============ */
+function setArchiveStatus(text, type) {
+  const status = document.getElementById('archive-status');
+  const dot = document.querySelector('#archive-meta .dot');
+  status.textContent = text;
+  dot.className = 'dot' + (type ? ' ' + type : '');
+}
+
+function getCachedArchive() {
+  try {
+    const raw = localStorage.getItem(ARCHIVE_CACHE_KEY);
+    if (!raw) return null;
+    const obj = JSON.parse(raw);
+    const ageHours = (Date.now() - obj.cachedAt) / 1000 / 3600;
+    if (ageHours > ARCHIVE_CACHE_TTL_HOURS) return null;
+    return obj;
+  } catch (e) { return null; }
+}
+
+function setCachedArchive(days) {
+  try {
+    localStorage.setItem(ARCHIVE_CACHE_KEY, JSON.stringify({
+      cachedAt: Date.now(),
+      days: days
+    }));
+  } catch (e) {}
+}
+
+async function loadArchive() {
+  const cached = getCachedArchive();
+  if (cached) {
+    renderArchive(cached.days);
+    const ageHours = ((Date.now() - cached.cachedAt) / 1000 / 3600).toFixed(1);
+    setArchiveStatus(`从本地缓存读取 · ${ageHours} 小时前更新`, 'cache');
+    return;
+  }
+  await fetchArchiveFromGitHub();
+}
+
+async function fetchArchiveFromGitHub() {
+  setArchiveStatus('从 GitHub commits 拉取历史快照…', '');
+  try {
+    const commitsRes = await fetch(
+      `https://api.github.com/repos/${REPO}/commits?path=${FEED_PATH}&per_page=30`
+    );
+    if (!commitsRes.ok) {
+      if (commitsRes.status === 403) throw new Error('rate-limit');
+      throw new Error('api-error');
+    }
+    const commits = await commitsRes.json();
+    if (!Array.isArray(commits) || commits.length === 0) {
+      throw new Error('no-commits');
+    }
+
+    const seenDates = new Set();
+    const targetCommits = [];
+    for (const c of commits) {
+      const dateKey = c.commit.author.date.slice(0, 10);
+      if (!seenDates.has(dateKey)) {
+        seenDates.add(dateKey);
+        targetCommits.push({ sha: c.sha, date: c.commit.author.date });
+        if (targetCommits.length >= ARCHIVE_DAYS) break;
+      }
+    }
+
+    setArchiveStatus(`找到 ${targetCommits.length} 天快照，正在下载内容…`, '');
+
+    const snapshots = await Promise.all(
+      targetCommits.map(async tc => {
+        const r = await fetch(
+          `https://raw.githubusercontent.com/${REPO}/${tc.sha}/${FEED_PATH}`
+        );
+        if (!r.ok) return null;
+        const json = await r.json();
+        return {
+          date: tc.date,
+          sha: tc.sha.slice(0, 7),
+          x: json.x || []
+        };
+      })
+    );
+
+    const validSnapshots = snapshots.filter(s => s !== null);
+    if (validSnapshots.length === 0) throw new Error('all-failed');
+
+    setCachedArchive(validSnapshots);
+    renderArchive(validSnapshots);
+    setArchiveStatus(`已从 GitHub 加载 ${validSnapshots.length} 天历史`, '');
+  } catch (e) {
+    renderArchiveError(e.message);
+  }
+}
+
+function renderArchive(days) {
+  const container = document.getElementById('archive-content');
+  if (!days.length) {
+    container.innerHTML = '<div class="loading">暂无历史数据</div>';
+    return;
+  }
+
+  container.innerHTML = days.map(day => {
+    const d = new Date(day.date);
+    const builders = day.x
+      .filter(b => b.tweets && b.tweets.length > 0)
+      .slice(0, 6);
+
+    const cardsHtml = builders.map(b => renderTweet(b)).filter(Boolean).join('');
+    if (!cardsHtml) return '';
+
+    return `<div class="archive-day">
+      <div class="archive-day-header">
+        <span class="archive-day-date">${formatDateLong(d)}</span>
+        <span class="archive-day-meta">${builders.length} builders · commit ${day.sha}</span>
+      </div>
+      <div class="archive-day-cards">${cardsHtml}</div>
+    </div>`;
+  }).filter(Boolean).join('');
+
+  if (!container.innerHTML.trim()) {
+    container.innerHTML = '<div class="loading">历史数据中暂无可展示的内容</div>';
+  }
+}
+
+function renderArchiveError(reason) {
+  const container = document.getElementById('archive-content');
+  let title = '历史数据暂时无法加载';
+  let msg = '请稍后重试。';
+
+  if (reason === 'rate-limit') {
+    title = 'GitHub API 速率受限';
+    msg = '未登录访问每小时上限 60 次，已被限流。<br>请等待 1 小时后刷新，或点击下方按钮重试。<br><br>提示：在公司网络下多人共用 IP 容易触发限流。';
+  } else if (reason === 'no-commits') {
+    title = '未找到历史 commits';
+    msg = 'feed-x.json 文件可能还没有足够的历史版本。';
+  }
+
+  container.innerHTML = `<div class="error-state">
+    <div class="error-title">${title}</div>
+    <div class="error-msg">${msg}</div>
+    <button class="hero-btn" style="margin-top:20px;" onclick="localStorage.removeItem('${ARCHIVE_CACHE_KEY}'); fetchArchiveFromGitHub();">重试加载</button>
+  </div>`;
+  setArchiveStatus('加载失败', 'err');
+}
+
+/* ============ INIT ============ */
+document.getElementById('nav-home').classList.add('active');
 fetchData();
 </script>
 </body>
