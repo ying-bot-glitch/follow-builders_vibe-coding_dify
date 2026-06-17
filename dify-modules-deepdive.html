@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dify 功能模块深度指南 · AI学习小组</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap');
+
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #4a4a6a;
+    --ink-faint: #8888aa;
+    --bg: #f8f7ff;
+    --surface: #ffffff;
+    --accent: #6C5CE7;
+    --accent-2: #00CECA;
+    --accent-3: #FF7675;
+    --accent-4: #FDCB6E;
+    --border: #e8e6f0;
+    --gradient: linear-gradient(135deg, #6C5CE7 0%, #00CECA 100%);
+
+    --m1: #6C5CE7;   /* 聊天助手 紫 */
+    --m2: #00b894;   /* 知识库   绿 */
+    --m3: #e17055;   /* 工作流   橙 */
+    --m4: #0984e3;   /* 智能体   蓝 */
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans SC', 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--gradient);
+    color: white;
+    padding: 60px 40px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute;
+    top: -50px; right: -50px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 16px; border-radius: 20px;
+    font-size: 13px; letter-spacing: 0.08em; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 38px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.2; }
+  .hero .subtitle { font-size: 16px; opacity: 0.85; max-width: 520px; margin: 0 auto 28px; font-weight: 300; }
+  .hero-meta { display: flex; justify-content: center; gap: 24px; font-size: 13px; opacity: 0.7; }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── MODULE NAV ── */
+  .mod-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 900px;
+    margin: 36px auto;
+    padding: 0 24px;
+  }
+  .mod-nav a {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 6px; padding: 16px 10px;
+    border-radius: 14px; border: 2px solid transparent;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+    transition: all 0.15s;
+    color: white;
+  }
+  .mod-nav a:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .nav-m1 { background: var(--m1); }
+  .nav-m2 { background: var(--m2); }
+  .nav-m3 { background: var(--m3); }
+  .nav-m4 { background: var(--m4); }
+  .mod-nav .nav-icon { font-size: 24px; }
+
+  /* ── MODULE SECTIONS ── */
+  .module-section {
+    max-width: 900px; margin: 0 auto 40px; padding: 0 24px;
+  }
+  .module-card {
+    background: var(--surface);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .module-header {
+    padding: 28px 36px;
+    color: white;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .mh-1 { background: linear-gradient(135deg, #6C5CE7, #a29bfe); }
+  .mh-2 { background: linear-gradient(135deg, #00b894, #55efc4); }
+  .mh-3 { background: linear-gradient(135deg, #e17055, #fdcb6e); }
+  .mh-4 { background: linear-gradient(135deg, #0984e3, #74b9ff); }
+
+  .module-header-icon { font-size: 40px; flex-shrink: 0; }
+  .module-header-text h2 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .module-header-text p { font-size: 14px; opacity: 0.85; }
+  .module-body { padding: 32px 36px; }
+
+  /* ── CONCEPT BOX ── */
+  .concept {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--bg);
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 24px;
+  }
+  .concept-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .concept-text { font-size: 14px; color: var(--ink-light); line-height: 1.7; }
+  .concept-text strong { color: var(--ink); display: block; margin-bottom: 4px; font-size: 15px; }
+
+  /* ── STEPS ── */
+  .steps-title {
+    font-size: 16px; font-weight: 700; color: var(--ink);
+    margin: 24px 0 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .steps-title::before {
+    content: '';
+    display: inline-block; width: 4px; height: 18px;
+    border-radius: 2px;
+  }
+  .title-m1 .steps-title::before { background: var(--m1); }
+  .title-m2 .steps-title::before { background: var(--m2); }
+  .title-m3 .steps-title::before { background: var(--m3); }
+  .title-m4 .steps-title::before { background: var(--m4); }
+
+  .step-list { counter-reset: steps; }
+  .step-item {
+    display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start;
+  }
+  .step-num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    color: white; font-weight: 700; font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .sn-1 { background: var(--m1); }
+  .sn-2 { background: var(--m2); }
+  .sn-3 { background: var(--m3); }
+  .sn-4 { background: var(--m4); }
+
+  .step-content { flex: 1; }
+  .step-content strong { font-size: 15px; color: var(--ink); display: block; margin-bottom: 4px; }
+  .step-content p { font-size: 14px; color: var(--ink-light); margin: 0; }
+  .step-content .code-hint {
+    background: var(--ink);
+    color: #a29bfe;
+    font-family: monospace;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: block;
+    line-height: 1.6;
+  }
+
+  /* ── SCREEN MOCK ── */
+  .screen-wrap {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .screen-bar {
+    display: flex; gap: 6px; margin-bottom: 14px;
+  }
+  .screen-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+  .screen-content {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .sc-topbar {
+    background: #f4f4f8;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--ink-faint);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .sc-body { padding: 16px; }
+
+  /* chat bubbles */
+  .chat-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .bubble-user {
+    align-self: flex-end;
+    background: var(--m1);
+    color: white;
+    border-radius: 14px 14px 4px 14px;
+    padding: 10px 14px;
+    font-size: 13px;
+    max-width: 80%;
+  }
+  .bubble-ai {
+    align-self: flex-start;
+    background: #f0eeff;
+    color: var(--ink-light);
+    border-radius: 14px 14px 14px 4px;
+    padding: 10px 14px;
+    font-size: 13px;
+    max-width: 90%;
+    line-height: 1.6;
+  }
+  .bubble-ai .source-tag {
+    display: inline-block;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--ink-faint);
+    margin-top: 6px;
+  }
+
+  /* workflow canvas */
+  .wf-canvas {
+    background: #fafafa;
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .wf-node {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+    text-align: center;
+    min-width: 90px;
+    flex-shrink: 0;
+  }
+  .wf-node .n-icon { font-size: 18px; margin-bottom: 4px; display: block; }
+  .wf-node .n-label { font-weight: 600; color: var(--ink); font-size: 12px; }
+  .wf-node .n-type { font-size: 10px; color: var(--ink-faint); margin-top: 2px; }
+  .wf-node.active { border-color: var(--m3); box-shadow: 0 0 0 3px rgba(225,112,85,0.15); }
+  .wf-arrow { color: #aaa; font-size: 16px; padding: 0 6px; flex-shrink: 0; }
+  .wf-branch {
+    display: flex; flex-direction: column; gap: 6px; flex-shrink: 0;
+  }
+  .wf-branch-label { font-size: 10px; color: var(--ink-faint); text-align: center; margin-bottom: 2px; }
+
+  /* knowledge source pills */
+  .file-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  .file-pill {
+    display: flex; align-items: center; gap: 6px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px; color: var(--ink-light);
+  }
+  .pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--m2); }
+
+  /* ── TIP / WARNING ── */
+  .tip {
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 14px; display: flex; gap: 10px; margin: 14px 0;
+  }
+  .tip-yellow { background: #fffce8; border: 1px solid #fde68a; color: #78350f; }
+  .tip-blue { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
+  .tip-green { background: #f0fdf4; border: 1px solid #bbf7d0; color: #14532d; }
+  .tip-icon { flex-shrink: 0; font-size: 17px; }
+
+  /* ── COMPARISON GRID ── */
+  .cmp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .cmp-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .cmp-card .cc-head { font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--ink); }
+  .cmp-card ul { padding-left: 16px; font-size: 13px; color: var(--ink-light); line-height: 1.7; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px; background: var(--border);
+    margin: 24px 0;
+  }
+
+  /* ── WHAT vs WHY row ── */
+  .two-col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0;
+  }
+  .col-box {
+    background: var(--bg); border-radius: 12px; padding: 16px;
+  }
+  .col-box .cb-title { font-weight: 700; font-size: 14px; margin-bottom: 10px; color: var(--ink); }
+  .col-box ul { padding-left: 16px; font-size: 13px; color: var(--ink-light); line-height: 1.7; }
+
+  /* ── NODE TYPE GRID ── */
+  .node-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px; margin: 16px 0;
+  }
+  .node-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .node-card .nc-icon { font-size: 22px; margin-bottom: 6px; }
+  .node-card .nc-name { font-weight: 700; font-size: 13px; color: var(--ink); }
+  .node-card .nc-desc { font-size: 11px; color: var(--ink-faint); margin-top: 4px; line-height: 1.5; }
+
+  /* ── AGENT TOOL GRID ── */
+  .tool-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px; margin: 16px 0;
+  }
+  .tool-card {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px;
+  }
+  .tool-icon { font-size: 20px; flex-shrink: 0; }
+  .tool-name { font-weight: 600; font-size: 13px; color: var(--ink); }
+  .tool-desc { font-size: 12px; color: var(--ink-faint); margin-top: 2px; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 48px 24px;
+    color: var(--ink-faint); font-size: 13px;
+  }
+  footer .footer-logo {
+    font-size: 20px; font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 8px;
+  }
+
+  /* ── MISC ── */
+  .highlight { color: var(--accent); font-weight: 600; }
+  .badge {
+    display: inline-block; padding: 2px 10px;
+    border-radius: 20px; font-size: 12px; font-weight: 600; vertical-align: middle;
+  }
+  .badge-m1 { background: #ede9ff; color: var(--m1); }
+  .badge-m2 { background: #d1fae5; color: #065f46; }
+  .badge-m3 { background: #ffedd5; color: #9a3412; }
+  .badge-m4 { background: #dbeafe; color: #1e40af; }
+
+  @media (max-width: 640px) {
+    .mod-nav { grid-template-columns: repeat(2,1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .module-header { flex-direction: column; text-align: center; }
+    .module-body { padding: 24px 20px; }
+    .hero h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-badge">AI 学习小组 · 模块深度指南（第二篇）</div>
+  <h1>🔬 Dify 四大核心模块详解</h1>
+  <p class="subtitle">聊天助手、知识库、工作流、AI 智能体——从概念到动手搭建</p>
+  <div class="hero-meta">
+    <span>📖 约 20 分钟阅读</span>
+    <span>🛠️ 含搭建步骤</span>
+    <span>💡 含真实案例</span>
+  </div>
+</div>
+
+<!-- ═══ MODULE NAV ═══ -->
+<div class="mod-nav">
+  <a href="#chatbot" class="nav-m1"><span class="nav-icon">💬</span>聊天助手</a>
+  <a href="#knowledge" class="nav-m2"><span class="nav-icon">📚</span>知识库</a>
+  <a href="#workflow" class="nav-m3"><span class="nav-icon">🔗</span>工作流</a>
+  <a href="#agent" class="nav-m4"><span class="nav-icon">🤖</span>AI 智能体</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     MODULE 1：聊天助手
+═══════════════════════════════════════ -->
+<div class="module-section title-m1" id="chatbot">
+  <div class="module-card">
+    <div class="module-header mh-1">
+      <div class="module-header-icon">💬</div>
+      <div class="module-header-text">
+        <h2>模块一：聊天助手（Chatbot / Chatflow）</h2>
+        <p>最直观的 AI 应用类型，像微信对话一样和 AI 来回交流</p>
+      </div>
+    </div>
+    <div class="module-body">
+
+      <div class="concept">
+        <div class="concept-icon">🧠</div>
+        <div class="concept-text">
+          <strong>它是什么？</strong>
+          聊天助手是 Dify 中最基础也最常用的应用类型，就是一个能和人对话的 AI 机器人。它有「记忆」——记得你们这次对话说过什么，可以上下文连贯地交流。你可以定制它的身份、语气、能力范围，并关联知识库让它「有知识」地回答。
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="col-box">
+          <div class="cb-title">✅ 适合做什么</div>
+          <ul>
+            <li>客户服务 / 内部 FAQ 机器人</li>
+            <li>新员工入职引导助手</li>
+            <li>产品介绍对话机器人</li>
+            <li>部门日常问答（HR、IT、财务）</li>
+            <li>24 小时自动应答</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <div class="cb-title">⚡ 核心能力</div>
+          <ul>
+            <li>多轮对话（记住上下文）</li>
+            <li>可关联知识库精准回答</li>
+            <li>自定义开场白和引导问题</li>
+            <li>可嵌入网页 / 生成分享链接</li>
+            <li>支持语音输入（配置后）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 效果预览 -->
+      <div class="steps-title">🖥️ 实际效果长这样</div>
+      <div class="screen-wrap">
+        <div class="screen-bar">
+          <div class="screen-dot" style="background:#ff5f57"></div>
+          <div class="screen-dot" style="background:#febc2e"></div>
+          <div class="screen-dot" style="background:#28c840"></div>
+        </div>
+        <div class="screen-content">
+          <div class="sc-topbar">💬 HR 小助手 · 在线</div>
+          <div class="sc-body">
+            <div class="chat-wrap">
+              <div class="bubble-ai">👋 你好！我是部门 HR 助手，可以帮你查询年假、报销、入职流程等信息，请问有什么可以帮你？</div>
+              <div class="bubble-user">我的年假还剩多少天，怎么申请？</div>
+              <div class="bubble-ai">
+                根据公司假期管理制度，年假申请步骤如下：<br>
+                ① 登录 OA 系统 → 假期管理 → 新建申请<br>
+                ② 选择「年假」类型，填写日期和原因<br>
+                ③ 提交后由直接上级审批，HR 备案<br><br>
+                剩余年假天数请在 OA 个人主页查看。如需核对，可联系 HR-sg@company.com。
+                <div class="source-tag">📄 来源：员工手册 2025 第 3 章</div>
+              </div>
+              <div class="bubble-user">好的，审批一般要多久？</div>
+              <div class="bubble-ai">通常 1-2 个工作日内完成审批。紧急情况可直接联系你的直属主管加急处理。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 搭建步骤 -->
+      <div class="steps-title">🔧 手把手搭建步骤</div>
+      <div class="step-list">
+
+        <div class="step-item">
+          <div class="step-num sn-1">1</div>
+          <div class="step-content">
+            <strong>创建新应用</strong>
+            <p>登录 Dify → 点击「创建应用」→ 选择 <span class="badge badge-m1">聊天助手</span> 或 <span class="badge badge-m1">Chatflow</span>（推荐 Chatflow，更灵活）→ 输入应用名称，如「HR 小助手」→ 点击「创建」。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-1">2</div>
+          <div class="step-content">
+            <strong>设置系统提示词（最关键的一步）</strong>
+            <p>系统提示词就是「给 AI 的说明书」，告诉它是谁、能做什么、用什么风格回答。写法示例：</p>
+            <span class="code-hint">你是XX公司的 HR 助手小薇。你只根据公司内部文件回答问题，回答要简洁、友好。如果问题超出你的知识范围，请如实告知并建议用户联系 HR 部门（hr@company.com）。始终用中文回答。</span>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-1">3</div>
+          <div class="step-content">
+            <strong>选择 AI 模型</strong>
+            <p>在「模型」下拉菜单选择 AI 大脑，如 GPT-4o、Claude、通义千问等。日常问答用 GPT-4o Mini 或 Claude Haiku 即可，便宜且快。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-1">4</div>
+          <div class="step-content">
+            <strong>关联知识库（让 AI 有「专业知识」）</strong>
+            <p>在设置页找到「知识库」选项 → 勾选已创建的知识库。如果还没有知识库，先去第二个模块创建（见下文），再回来关联。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-1">5</div>
+          <div class="step-content">
+            <strong>设置开场白和推荐问题</strong>
+            <p>在「对话开场白」填写机器人的第一句话；在「推荐问题」添加 3-5 个常见问题按钮，方便用户快速点击提问，降低使用门槛。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-1">6</div>
+          <div class="step-content">
+            <strong>调试 → 发布</strong>
+            <p>右侧「调试与预览」面板直接输入问题测试。满意后点「发布」→ 选择「嵌入网页」或「分享链接」，把链接发给同事即可使用。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tip tip-yellow">
+        <div class="tip-icon">💡</div>
+        <div><strong>提示词写作小技巧：</strong> 提示词越具体效果越好。除了说「友好回答」，还要说「用第一人称」「回答控制在 200 字以内」「列举步骤时用数字编号」这类细节要求。</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     MODULE 2：知识库
+═══════════════════════════════════════ -->
+<div class="module-section title-m2" id="knowledge">
+  <div class="module-card">
+    <div class="module-header mh-2">
+      <div class="module-header-icon">📚</div>
+      <div class="module-header-text">
+        <h2>模块二：知识库（Knowledge Base）</h2>
+        <p>把你的文件变成 AI 可以搜索和引用的「大脑」</p>
+      </div>
+    </div>
+    <div class="module-body">
+
+      <div class="concept">
+        <div class="concept-icon">🔍</div>
+        <div class="concept-text">
+          <strong>RAG——知识库背后的技术原理（用大白话讲）</strong>
+          普通 AI（如 ChatGPT）只知道训练时学到的公开知识，不了解你公司的内部文件。<br><br>
+          知识库用的是 <strong>RAG（检索增强生成）</strong> 技术：用户提问 → AI 先在你上传的文件里「搜索」最相关的段落 → 把这些段落作为「参考资料」一起发给 AI → AI 根据参考资料给出准确答案并注明来源。<br><br>
+          就像考试时可以带资料一样，AI 有了你的文件就能回答你的私有问题。
+        </div>
+      </div>
+
+      <!-- 文件格式 -->
+      <div class="steps-title">📁 支持哪些文件格式？</div>
+      <div class="file-pills">
+        <div class="file-pill"><div class="pill-dot"></div>PDF</div>
+        <div class="file-pill"><div class="pill-dot"></div>Word (.docx)</div>
+        <div class="file-pill"><div class="pill-dot"></div>纯文本 (.txt)</div>
+        <div class="file-pill"><div class="pill-dot"></div>CSV 表格</div>
+        <div class="file-pill"><div class="pill-dot"></div>Markdown (.md)</div>
+        <div class="file-pill"><div class="pill-dot"></div>HTML 网页</div>
+        <div class="file-pill"><div class="pill-dot"></div>Excel (.xlsx)</div>
+      </div>
+
+      <div class="tip tip-yellow">
+        <div class="tip-icon">⚠️</div>
+        <div><strong>注意：</strong> 避免上传「扫描版 PDF」（即把纸质文件拍照或扫描成的 PDF），因为里面的文字是图片，AI 无法直接读取。请使用可以复制文字的「文字版 PDF」。</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 搭建步骤 -->
+      <div class="steps-title">🔧 手把手搭建步骤</div>
+      <div class="step-list">
+
+        <div class="step-item">
+          <div class="step-num sn-2">1</div>
+          <div class="step-content">
+            <strong>创建知识库</strong>
+            <p>Dify 左侧菜单 → 「知识库」→「创建知识库」→ 给它取个名字，如「HR 政策文档」或「产品说明手册」。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-2">2</div>
+          <div class="step-content">
+            <strong>上传文件</strong>
+            <p>点击「上传文件」，可以一次上传多个文档。Dify 会自动把文件内容拆分成「小段落」（称为「分块」），方便 AI 精准检索相关内容。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-2">3</div>
+          <div class="step-content">
+            <strong>等待处理（通常 1-5 分钟）</strong>
+            <p>Dify 会自动对文件内容做「向量化」处理——把文字转换成 AI 能理解的数学格式，便于快速搜索。处理完成后状态显示「已索引」即可使用。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-2">4</div>
+          <div class="step-content">
+            <strong>测试检索效果</strong>
+            <p>在知识库界面点击「召回测试」，输入一个问题，查看 AI 能否找到相关段落。如果找不到，可以考虑：① 检查文件是否是文字版 ② 适当调整「分块大小」参数。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-2">5</div>
+          <div class="step-content">
+            <strong>关联到应用</strong>
+            <p>在聊天助手或工作流中，把这个知识库关联进去（参见「聊天助手」搭建第 4 步）。一个知识库可以同时被多个应用使用。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 效果演示 -->
+      <div class="steps-title">🖥️ 知识库召回测试界面示例</div>
+      <div class="screen-wrap">
+        <div class="screen-bar">
+          <div class="screen-dot" style="background:#ff5f57"></div>
+          <div class="screen-dot" style="background:#febc2e"></div>
+          <div class="screen-dot" style="background:#28c840"></div>
+        </div>
+        <div class="screen-content">
+          <div class="sc-topbar">📚 知识库 · 召回测试</div>
+          <div class="sc-body">
+            <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:10px 14px; font-size:13px; color:#166534; margin-bottom:12px;">
+              🔍 测试问题：「员工生育假有多少天？」
+            </div>
+            <div style="font-size:12px; color:var(--ink-faint); margin-bottom:8px;">检索到 3 个相关段落（得分从高到低）：</div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="background:white; border:1px solid var(--border); border-radius:8px; padding:10px; font-size:12px; color:var(--ink-light);">
+                <div style="font-weight:700; color:var(--m2); margin-bottom:4px;">📄 员工手册2025.pdf · 第12页 · 相关度 0.92</div>
+                「…女性员工产假为 98 天，其中产前可休 15 天。难产的，增加产假 15 天……男性员工陪产假为 7 个工作日…」
+              </div>
+              <div style="background:white; border:1px solid var(--border); border-radius:8px; padding:10px; font-size:12px; color:var(--ink-light);">
+                <div style="font-weight:700; color:#86efac; margin-bottom:4px;">📄 假期申请流程.docx · 第3页 · 相关度 0.78</div>
+                「…生育假申请需提前 30 天通知 HR，并提交医院证明文件…」
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip tip-green">
+        <div class="tip-icon">✅</div>
+        <div><strong>最佳实践：</strong> 建议按主题分开建多个小知识库（如「HR 文档库」「产品文档库」「IT 操作指南库」），而不是把所有文件塞进一个知识库，这样检索精度更高。</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     MODULE 3：工作流
+═══════════════════════════════════════ -->
+<div class="module-section title-m3" id="workflow">
+  <div class="module-card">
+    <div class="module-header mh-3">
+      <div class="module-header-icon">🔗</div>
+      <div class="module-header-text">
+        <h2>模块三：工作流（Workflow）</h2>
+        <p>把多个步骤串联起来，让 AI 自动完成复杂任务</p>
+      </div>
+    </div>
+    <div class="module-body">
+
+      <div class="concept">
+        <div class="concept-icon">🏭</div>
+        <div class="concept-text">
+          <strong>什么是工作流？</strong>
+          如果说聊天助手是「和 AI 聊天」，那工作流就是「让 AI 自动做事情」。你可以把任务拆成几个步骤，用「节点」表示每一步，用「连线」决定顺序，AI 会按照你设计的流水线自动运行——不需要你一步一步手动操作。<br><br>
+          就像工厂的流水线：原材料进去，经过多个工位加工，最终产品出来。工作流的「原材料」是你的输入（比如一段文字），「产品」是 AI 处理后的结果（比如一份摘要或回复草稿）。
+        </div>
+      </div>
+
+      <!-- 节点类型 -->
+      <div class="steps-title">🧩 工作流的「积木」——常用节点类型</div>
+      <div class="node-grid">
+        <div class="node-card">
+          <div class="nc-icon">▶️</div>
+          <div class="nc-name">开始节点</div>
+          <div class="nc-desc">流程的起点，接收用户输入</div>
+        </div>
+        <div class="node-card">
+          <div class="nc-icon">🤖</div>
+          <div class="nc-name">LLM 节点</div>
+          <div class="nc-desc">调用 AI 大模型处理文字、生成内容</div>
+        </div>
+        <div class="node-card">
+          <div class="nc-icon">📚</div>
+          <div class="nc-name">知识检索节点</div>
+          <div class="nc-desc">在知识库里搜索相关内容</div>
+        </div>
+        <div class="node-card">
+          <div class="nc-icon">🔀</div>
+          <div class="nc-name">条件判断节点</div>
+          <div class="nc-desc">根据条件走不同分支（如果/否则）</div>
+        </div>
+        <div class="node-card">
+          <div class="nc-icon">🔄</div>
+          <div class="nc-name">循环节点</div>
+          <div class="nc-desc">重复执行某步骤直到条件满足</div>
+        </div>
+        <div class="node-card">
+          <div class="nc-icon">🌐</div>
+          <div class="nc-name">HTTP 请求节点</div>
+          <div class="nc-desc">调用外部 API，获取实时数据</div>
+        </div>
+        <div class="node-card">
+          <div class="nc-icon">📝</div>
+          <div class="nc-name">模板节点</div>
+          <div class="nc-desc">按模板格式化输出内容</div>
+        </div>
+        <div class="node-card">
+          <div class="nc-icon">⏹️</div>
+          <div class="nc-name">结束节点</div>
+          <div class="nc-desc">流程的终点，返回最终结果</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 案例：邮件分类工作流 -->
+      <div class="steps-title">📧 实际案例：客户邮件自动分类 &amp; 回复</div>
+      <p style="font-size:14px; color:var(--ink-light); margin-bottom:16px;">以下是一个典型工作流的可视化示意，展示客户邮件从输入到输出回复草稿的完整过程：</p>
+
+      <div class="screen-wrap">
+        <div class="screen-bar">
+          <div class="screen-dot" style="background:#ff5f57"></div>
+          <div class="screen-dot" style="background:#febc2e"></div>
+          <div class="screen-dot" style="background:#28c840"></div>
+        </div>
+        <div class="screen-content">
+          <div class="sc-topbar">🔗 工作流画布 · 邮件处理助手</div>
+          <div class="sc-body" style="overflow-x:auto;">
+            <div class="wf-canvas">
+              <!-- Row 1 -->
+              <div class="wf-node" style="border-color:var(--m3);">
+                <span class="n-icon">▶️</span>
+                <div class="n-label">开始</div>
+                <div class="n-type">粘贴邮件内容</div>
+              </div>
+              <div class="wf-arrow">→</div>
+              <div class="wf-node active">
+                <span class="n-icon">🤖</span>
+                <div class="n-label">AI 分类</div>
+                <div class="n-type">LLM 节点</div>
+              </div>
+              <div class="wf-arrow">→</div>
+              <div class="wf-node">
+                <span class="n-icon">🔀</span>
+                <div class="n-label">条件判断</div>
+                <div class="n-type">类型路由</div>
+              </div>
+              <div class="wf-arrow">→</div>
+              <div class="wf-branch">
+                <div class="wf-branch-label">投诉类</div>
+                <div class="wf-node" style="background:#fff0f0;">
+                  <span class="n-icon">😤</span>
+                  <div class="n-label">投诉回复</div>
+                  <div class="n-type">LLM 节点</div>
+                </div>
+                <div class="wf-branch-label">咨询类</div>
+                <div class="wf-node" style="background:#f0fdf4;">
+                  <span class="n-icon">💡</span>
+                  <div class="n-label">知识库查询</div>
+                  <div class="n-type">检索节点</div>
+                </div>
+              </div>
+              <div class="wf-arrow">→</div>
+              <div class="wf-node" style="border-color:var(--m3);">
+                <span class="n-icon">📄</span>
+                <div class="n-label">输出草稿</div>
+                <div class="n-type">结束节点</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 搭建步骤 -->
+      <div class="steps-title">🔧 手把手搭建步骤（以「会议纪要生成器」为例）</div>
+      <div class="step-list">
+
+        <div class="step-item">
+          <div class="step-num sn-3">1</div>
+          <div class="step-content">
+            <strong>创建工作流应用</strong>
+            <p>「创建应用」→ 选择 <span class="badge badge-m3">工作流（Workflow）</span>→ 命名为「会议纪要生成器」→ 「创建」。你会看到一个空白画布，上面有一个「开始」节点。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-3">2</div>
+          <div class="step-content">
+            <strong>设置「开始」节点的输入</strong>
+            <p>点击「开始」节点 → 添加输入变量，如 <code style="background:var(--bg);padding:2px 6px;border-radius:4px;font-size:12px;">meeting_text</code>（会议记录文字），类型选「段落」。这就是用户要粘贴进来的内容。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-3">3</div>
+          <div class="step-content">
+            <strong>添加「LLM」节点——生成纪要</strong>
+            <p>点击画布右键 → 添加「LLM」节点 → 与开始节点连线。在 LLM 节点的「提示词」里写：</p>
+            <span class="code-hint">请根据以下会议记录生成结构化会议纪要，包含：<br>1. 会议摘要（3句话内）<br>2. 主要讨论事项（要点列表）<br>3. 待办事项（含负责人和截止时间）<br><br>会议记录：{{meeting_text}}</span>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-3">4</div>
+          <div class="step-content">
+            <strong>添加「结束」节点</strong>
+            <p>添加「结束」节点，与 LLM 节点连线，设置输出变量为 LLM 节点的输出内容。这就是用户最终看到的结果。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-3">5</div>
+          <div class="step-content">
+            <strong>运行测试</strong>
+            <p>点击右上角「运行」→ 粘贴一段会议记录文字 → 点击「开始运行」。你会看到每个节点依次变绿（表示成功执行），最终输出结构化纪要。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-3">6</div>
+          <div class="step-content">
+            <strong>发布使用</strong>
+            <p>测试满意后，点击「发布」。同事打开链接后，只需粘贴会议记录，点击「生成」，纪要自动出现——整个过程 30 秒以内。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tip tip-blue">
+        <div class="tip-icon">💡</div>
+        <div><strong>工作流 vs 聊天助手选哪个？</strong><br>
+          如果任务是「一问一答的对话」→ 聊天助手<br>
+          如果任务是「输入内容 → 自动处理 → 输出结果」（固定流程）→ 工作流<br>
+          例如：翻译、纪要生成、文章改写、数据提取，都适合用工作流。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     MODULE 4：AI 智能体
+═══════════════════════════════════════ -->
+<div class="module-section title-m4" id="agent">
+  <div class="module-card">
+    <div class="module-header mh-4">
+      <div class="module-header-icon">🤖</div>
+      <div class="module-header-text">
+        <h2>模块四：AI 智能体（Agent）</h2>
+        <p>给 AI 装上「手」和「脑」，让它自主使用工具完成任务</p>
+      </div>
+    </div>
+    <div class="module-body">
+
+      <div class="concept">
+        <div class="concept-icon">🧩</div>
+        <div class="concept-text">
+          <strong>AI 智能体是什么？</strong>
+          前面的聊天助手和工作流，流程都是你提前设计好的。AI 智能体不同：它能「自主思考」——根据你的目标，自己决定用哪些工具、按什么顺序来完成任务，不需要你一步步指定。<br><br>
+          打个比方：<br>
+          • 聊天助手 = 收银员（只做对话这一件事）<br>
+          • 工作流 = 流水线工人（按固定顺序做事）<br>
+          • 智能体 = 助理（你说目标，它自己想办法完成——查资料、写稿、发邮件都行）
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 工具 -->
+      <div class="steps-title">🛠️ 智能体可以用哪些「工具」？</div>
+      <div class="tool-grid">
+        <div class="tool-card">
+          <div class="tool-icon">🔍</div>
+          <div>
+            <div class="tool-name">网络搜索</div>
+            <div class="tool-desc">实时搜索网络上的信息</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📄</div>
+          <div>
+            <div class="tool-name">文件读取</div>
+            <div class="tool-desc">读取并分析上传的文件</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🌐</div>
+          <div>
+            <div class="tool-name">网页访问</div>
+            <div class="tool-desc">打开并提取网页内容</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📊</div>
+          <div>
+            <div class="tool-name">代码执行</div>
+            <div class="tool-desc">运行 Python 代码做数据分析</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📅</div>
+          <div>
+            <div class="tool-name">日历 / 邮件</div>
+            <div class="tool-desc">连接 Google / Outlook（需配置）</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🗄️</div>
+          <div>
+            <div class="tool-name">知识库</div>
+            <div class="tool-desc">查询公司内部知识</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🔌</div>
+          <div>
+            <div class="tool-name">插件市场</div>
+            <div class="tool-desc">Dify 插件市场中的各类工具</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">⚙️</div>
+          <div>
+            <div class="tool-name">自定义 API</div>
+            <div class="tool-desc">连接公司内部系统（高级）</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 实际案例 -->
+      <div class="steps-title">🌐 实际案例：竞品调研智能体</div>
+      <p style="font-size:14px; color:var(--ink-light); margin-bottom:14px;">你输入「帮我调研竞争对手A公司最新的产品发布情况」，智能体会自主执行以下步骤：</p>
+
+      <div style="border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-bottom:16px;">
+        <div style="background:#f0f4ff; padding:12px 18px; font-size:13px; color:#1e3a8a; font-weight:600; border-bottom:1px solid var(--border);">
+          🤖 智能体思考过程（可见面板）
+        </div>
+        <div style="padding:16px 18px;">
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
+              <span style="background:#dbeafe; color:#1e40af; border-radius:6px; padding:2px 8px; font-weight:700; flex-shrink:0; font-size:11px;">第1步</span>
+              <span style="color:var(--ink-light);">🔍 使用「网络搜索」工具 → 搜索「A公司 新产品 2025」</span>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
+              <span style="background:#dbeafe; color:#1e40af; border-radius:6px; padding:2px 8px; font-weight:700; flex-shrink:0; font-size:11px;">第2步</span>
+              <span style="color:var(--ink-light);">🌐 打开搜索结果中的3个相关网页，提取产品信息</span>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
+              <span style="background:#dbeafe; color:#1e40af; border-radius:6px; padding:2px 8px; font-weight:700; flex-shrink:0; font-size:11px;">第3步</span>
+              <span style="color:var(--ink-light);">📚 查询内部知识库 → 对比我方产品差异</span>
+            </div>
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
+              <span style="background:#dbeafe; color:#1e40af; border-radius:6px; padding:2px 8px; font-weight:700; flex-shrink:0; font-size:11px;">第4步</span>
+              <span style="color:var(--ink-light);">📝 综合以上信息，生成结构化竞品分析报告</span>
+            </div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4; padding:12px 18px; border-top:1px solid var(--border); font-size:13px; color:#166534;">
+          ✅ 任务完成！输出：一份含产品特性对比、定价分析、市场影响的调研报告
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 搭建步骤 -->
+      <div class="steps-title">🔧 手把手搭建步骤（以「研究助手智能体」为例）</div>
+      <div class="step-list">
+
+        <div class="step-item">
+          <div class="step-num sn-4">1</div>
+          <div class="step-content">
+            <strong>创建智能体应用</strong>
+            <p>「创建应用」→ 选择 <span class="badge badge-m4">智能体（Agent）</span>→ 命名为「研究助手」→「创建」。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-4">2</div>
+          <div class="step-content">
+            <strong>写智能体的「使命说明」</strong>
+            <p>在系统提示词中描述智能体的目标和行为准则，比如：</p>
+            <span class="code-hint">你是一个专业研究助手，擅长收集和整合信息。接到调研任务后：<br>1. 先用搜索工具收集最新信息<br>2. 与知识库中的内部资料对比<br>3. 最终输出结构清晰的分析报告<br>所有引用信息请注明来源。</span>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-4">3</div>
+          <div class="step-content">
+            <strong>添加工具</strong>
+            <p>在「工具」区域，从插件市场选择要给智能体配备的工具，如「网络搜索」「网页访问」「知识库查询」。每个工具都有说明，AI 会自动判断什么时候用哪个工具。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-4">4</div>
+          <div class="step-content">
+            <strong>选择推理策略</strong>
+            <p>Dify 提供「Function Calling」（精准调用工具）和「ReAct」（边思考边行动）两种模式。新手推荐选默认的 <span class="badge badge-m4">Function Calling</span>，更稳定可控。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-4">5</div>
+          <div class="step-content">
+            <strong>测试智能体</strong>
+            <p>在调试面板，输入一个实际任务，比如「调研XX市场近期趋势」。观察 AI 的「思考过程」面板，查看它用了哪些工具、得出什么结论。如果结果不对，调整提示词或工具配置。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num sn-4">6</div>
+          <div class="step-content">
+            <strong>发布</strong>
+            <p>测试满意后发布。智能体比聊天助手和工作流响应慢一些（因为要执行多个步骤），通常需要 15-60 秒不等，属于正常现象。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tip tip-yellow">
+        <div class="tip-icon">⚠️</div>
+        <div><strong>新手注意：</strong> 智能体是四个模块中最复杂的，建议先熟练掌握聊天助手和工作流再来尝试。另外，智能体调用的工具越多，成本也越高，建议只添加任务真正需要的工具。</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ 四大模块对比汇总 ═══ -->
+<div style="max-width:900px; margin:0 auto 40px; padding:0 24px;">
+  <div style="background:white; border:1px solid var(--border); border-radius:20px; padding:32px 36px;">
+    <div style="font-size:12px; font-weight:700; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">总结对比</div>
+    <h2 style="font-size:22px; font-weight:700; margin-bottom:20px;">四大模块怎么选？一图搞定</h2>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <thead>
+          <tr>
+            <th style="background:var(--gradient); color:white; padding:12px 14px; text-align:left; border-radius:12px 0 0 0; font-size:12px;">对比维度</th>
+            <th style="background:linear-gradient(135deg,#6C5CE7,#a29bfe); color:white; padding:12px 14px; text-align:left;">💬 聊天助手</th>
+            <th style="background:linear-gradient(135deg,#00b894,#55efc4); color:white; padding:12px 14px; text-align:left;">📚 知识库</th>
+            <th style="background:linear-gradient(135deg,#e17055,#fdcb6e); color:white; padding:12px 14px; text-align:left;">🔗 工作流</th>
+            <th style="background:linear-gradient(135deg,#0984e3,#74b9ff); color:white; padding:12px 14px; text-align:left; border-radius:0 12px 0 0;">🤖 智能体</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink); font-weight:600;">使用方式</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">多轮对话</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">辅助其他模块</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">输入→处理→输出</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">说目标，AI自主完成</td>
+          </tr>
+          <tr style="background:var(--bg);">
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink); font-weight:600;">上手难度</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">🟢 很容易</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">🟢 容易</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">🟡 中等</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">🔴 较难</td>
+          </tr>
+          <tr>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink); font-weight:600;">响应速度</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">秒级</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">—</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">秒级~十秒级</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">15~60 秒</td>
+          </tr>
+          <tr style="background:var(--bg);">
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink); font-weight:600;">适合场景</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">FAQ / 客服 / 引导</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">内部文档检索</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">批量处理 / 自动化</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink-light);">调研 / 复杂任务</td>
+          </tr>
+          <tr>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border); color:var(--ink); font-weight:600;">新手建议</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">⭐ 最先尝试</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">⭐ 配合聊天助手</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">第二步尝试</td>
+            <td style="padding:11px 14px; border-bottom:1px solid var(--border);">进阶后再玩</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:20px; background:linear-gradient(135deg,#f0eeff,#e8fdfb); border-radius:12px; padding:18px 20px;">
+      <div style="font-weight:700; margin-bottom:8px; color:var(--ink);">🗺️ 推荐学习路径</div>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:14px; color:var(--ink-light);">
+        <span style="background:var(--m1); color:white; padding:4px 14px; border-radius:20px; font-size:13px;">①建知识库</span>
+        <span style="color:var(--ink-faint);">→</span>
+        <span style="background:var(--m2); color:white; padding:4px 14px; border-radius:20px; font-size:13px;">②做聊天助手</span>
+        <span style="color:var(--ink-faint);">→</span>
+        <span style="background:var(--m3); color:white; padding:4px 14px; border-radius:20px; font-size:13px;">③搭工作流</span>
+        <span style="color:var(--ink-faint);">→</span>
+        <span style="background:var(--m4); color:white; padding:4px 14px; border-radius:20px; font-size:13px;">④玩智能体</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-logo">Dify 模块深度指南</div>
+  <p>AI 学习小组 · 第二篇 · 配合《Dify 入门手册》一起使用</p>
+  <p style="margin-top:6px; font-size:12px;">如有问题欢迎在组内讨论 💬</p>
+</footer>
+
+</body>
+</html>
