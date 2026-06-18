@@ -49,6 +49,16 @@
       "frequency": "weekly",
       "created_at": "2026-06-18",
       "active": true
+    },
+    {
+      "email": "diana@example.com",
+      "topics": [
+        "AI产品",
+        "技术研究"
+      ],
+      "frequency": "daily",
+      "created_at": "2026-06-18",
+      "active": true
     }
   ]
 }
