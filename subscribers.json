@@ -59,6 +59,16 @@
       "frequency": "daily",
       "created_at": "2026-06-18",
       "active": true
+    },
+    {
+      "email": "elena@example.com",
+      "topics": [
+        "AI 产品与工具",
+        "创业 & 融资"
+      ],
+      "frequency": "daily",
+      "created_at": "2026-06-18",
+      "active": true
     }
   ]
 }
