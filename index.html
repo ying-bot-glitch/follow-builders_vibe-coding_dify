@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -335,7 +336,9 @@ function showToast(msg) {
 }
 
 /* ============ DIFY WEBHOOK CONFIG ============ */
-const DIFY_WEBHOOK_URL = 'https://trigger.ai-plugin.io/triggers/webhook/EcmeYh2MOpBkCKeGTGbiSE1e';
+/* 通过 Cloudflare Worker 代理解决 CORS 跨域问题
+   Worker 负责把请求转发到 Dify webhook，并加上正确的 CORS headers */
+const DIFY_WEBHOOK_URL = 'https://dify-webhook-proxy.yingying-feng0303.workers.dev/';
 
 async function handleSubmit() {
   const emailInput = document.getElementById('email-input');
