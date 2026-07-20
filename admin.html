@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 情报助手 · 配置管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --paper:#F8F5EF;
+  --surface:#FFFFFF;
+  --ink:#1A1A1A;
+  --ink-soft:#2a2a2a;
+  --accent:#3B5BA5;
+  --accent-light:#EBF0FA;
+  --accent-deep:#2e4a8a;
+  --muted:#6B6B6B;
+  --muted-light:#9c9a92;
+  --border:#E2E0DA;
+  --border-strong:#C8C5BB;
+  --danger:#A32D2D;
+  --danger-light:#FCEBEB;
+  --success:#1B5E20;
+  --success-light:#E8F5E9;
+}
+html,body{height:100%;}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+
+/* Masthead */
+.masthead{border-bottom:1px solid var(--ink);padding:16px 32px;background:var(--paper);display:flex;align-items:baseline;justify-content:space-between;}
+.masthead-left{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+.masthead-right{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.06em;}
+
+/* Gate screen */
+.gate{min-height:calc(100vh - 60px);display:flex;align-items:center;justify-content:center;padding:32px;}
+.gate-card{max-width:420px;width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:40px 36px;}
+.gate-title{font-family:'Newsreader',serif;font-style:italic;font-size:28px;color:var(--ink);margin-bottom:10px;}
+.gate-sub{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:28px;}
+.gate input{width:100%;padding:12px 14px;font-family:'JetBrains Mono',monospace;font-size:14px;border:1px solid var(--border-strong);border-radius:4px;background:var(--paper);color:var(--ink);margin-bottom:14px;}
+.gate input:focus{outline:none;border-color:var(--accent);}
+.gate button{width:100%;padding:12px;background:var(--ink);color:var(--paper);border:none;border-radius:4px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;}
+.gate button:hover{background:var(--accent-deep);}
+.gate-error{font-size:13px;color:var(--danger);margin-top:10px;display:none;}
+.gate-note{font-size:12px;color:var(--muted-light);margin-top:20px;line-height:1.6;}
+
+/* Main app (hidden until unlocked) */
+#app{display:none;}
+
+.container{max-width:920px;margin:0 auto;padding:40px 32px 100px;}
+
+.page-title{font-family:'Newsreader',serif;font-style:italic;font-size:38px;color:var(--ink);margin-bottom:8px;}
+.page-sub{font-size:14px;color:var(--muted);margin-bottom:40px;}
+
+/* Section nav (jump links) */
+.section-nav{display:flex;gap:4px;margin-bottom:40px;border-bottom:1px solid var(--border);padding-bottom:0;}
+.section-nav button{padding:10px 18px;background:none;border:none;font-family:'Inter',sans-serif;font-size:13.5px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;}
+.section-nav button.active{color:var(--ink);border-bottom-color:var(--accent);font-weight:500;}
+.section-nav button:hover{color:var(--ink);}
+
+/* Config sections */
+.config-section{display:none;}
+.config-section.active{display:block;}
+
+.section-header{margin-bottom:24px;}
+.section-header h2{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:26px;color:var(--ink);margin-bottom:6px;}
+.section-header p{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* Cards / rows */
+.row-list{margin-bottom:16px;}
+.item-row{display:grid;gap:10px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:8px;align-items:center;}
+.item-row input, .item-row select{padding:8px 10px;font-size:13.5px;border:1px solid var(--border-strong);border-radius:4px;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;width:100%;}
+.item-row input:focus, .item-row select:focus{outline:none;border-color:var(--accent);}
+.item-row .mono{font-family:'JetBrains Mono',monospace;font-size:13px;}
+
+.remove-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;line-height:1;padding:4px 8px;border-radius:4px;}
+.remove-btn:hover{background:var(--danger-light);color:var(--danger);}
+
+.add-btn{padding:9px 16px;background:var(--paper);border:1px dashed var(--border-strong);border-radius:4px;color:var(--muted);font-size:13px;cursor:pointer;font-family:'Inter',sans-serif;}
+.add-btn:hover{border-color:var(--accent);color:var(--accent);}
+
+/* Recipients */
+.recipient-row{grid-template-columns:2fr 1fr auto;}
+
+/* Sources */
+.source-row{grid-template-columns:1.2fr 1fr 1.8fr auto auto auto;}
+.toggle-pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);cursor:pointer;white-space:nowrap;}
+.toggle-pill input{width:auto;padding:0;}
+
+/* Weight groups */
+.weight-group{margin-bottom:32px;}
+.weight-group-title{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;}
+.weight-row{grid-template-columns:2fr 1fr auto;}
+.weight-row.negative{grid-template-columns:2fr 1fr auto;}
+
+.inline-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:6px;}
+.field-block label{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;}
+.field-block input{width:100%;padding:9px 10px;font-size:13.5px;border:1px solid var(--border-strong);border-radius:4px;background:var(--paper);font-family:'JetBrains Mono',monospace;}
+.field-block input:focus{outline:none;border-color:var(--accent);}
+
+/* Schedule form */
+.schedule-form{display:flex;flex-direction:column;gap:20px;max-width:480px;}
+.field-full label{display:block;font-size:13px;font-weight:500;color:var(--ink);margin-bottom:8px;}
+.field-full select, .field-full input{width:100%;padding:11px 12px;font-size:14px;border:1px solid var(--border-strong);border-radius:4px;background:var(--surface);color:var(--ink);font-family:'Inter',sans-serif;}
+.field-full select:focus, .field-full input:focus{outline:none;border-color:var(--accent);}
+.field-hint{font-size:12px;color:var(--muted);margin-top:6px;}
+
+/* Save bar */
+.save-bar{display:flex;align-items:center;gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid var(--border);}
+.save-btn{padding:11px 24px;background:var(--ink);color:var(--paper);border:none;border-radius:4px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;}
+.save-btn:hover{background:var(--accent-deep);}
+.save-btn:disabled{opacity:0.5;cursor:not-allowed;}
+.save-status{font-size:13px;color:var(--muted);}
+.save-status.success{color:var(--success);}
+.save-status.error{color:var(--danger);}
+
+/* Loading state */
+.loading-msg{font-size:13.5px;color:var(--muted);padding:24px 0;}
+
+@media (max-width:700px){
+  .container{padding:28px 20px 80px;}
+  .page-title{font-size:28px;}
+  .section-nav{overflow-x:auto;}
+  .source-row{grid-template-columns:1fr;}
+  .inline-fields{grid-template-columns:1fr 1fr;}
+  .recipient-row{grid-template-columns:1fr auto;}
+  .recipient-row select{grid-column:1/-1;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-left">AI 情报助手 · 配置管理</div>
+  <div class="masthead-right" id="statusIndicator">未连接</div>
+</header>
+
+<!-- ACCESS GATE -->
+<div class="gate" id="gateScreen">
+  <div class="gate-card">
+    <div class="gate-title">需要管理密钥</div>
+    <div class="gate-sub">此页面用于管理 AI 情报助手的收件人、推送频率、信息来源与权重规则。请输入管理密钥继续。</div>
+    <input type="password" id="tokenInput" placeholder="管理密钥" autocomplete="off">
+    <button onclick="unlockApp()">进入配置页</button>
+    <div class="gate-error" id="gateError">密钥错误，或保存时会被服务端拒绝。请与管理员确认。</div>
+    <div class="gate-note">密钥仅在本次会话中保存于内存，关闭页面后需重新输入。真正的校验发生在服务端，前端输入仅作为第一道提示。</div>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+  <div class="container">
+    <div class="page-title">配置管理</div>
+    <div class="page-sub">修改后点击对应板块底部的"保存"，更新会写入配置仓库并在下次推送时生效。</div>
+
+    <div class="section-nav">
+      <button class="active" onclick="showSection('recipients')">收件人</button>
+      <button onclick="showSection('schedule')">推送频率</button>
+      <button onclick="showSection('sources')">信息来源</button>
+      <button onclick="showSection('weights')">权重配置</button>
+    </div>
+
+    <!-- SECTION: RECIPIENTS -->
+    <div class="config-section active" id="section-recipients">
+      <div class="section-header">
+        <h2>收件人清单</h2>
+        <p>周报会发送给下列邮箱。分组标签用于未来按部门筛选，MVP 阶段所有人收到相同内容。</p>
+      </div>
+      <div class="loading-msg" id="recipients-loading">加载中...</div>
+      <div class="row-list" id="recipients-list"></div>
+      <button class="add-btn" onclick="addRecipient()">+ 添加收件人</button>
+      <div class="save-bar">
+        <button class="save-btn" onclick="saveConfig('recipients')">保存收件人清单</button>
+        <span class="save-status" id="status-recipients"></span>
+      </div>
+    </div>
+
+    <!-- SECTION: SCHEDULE -->
+    <div class="config-section" id="section-schedule">
+      <div class="section-header">
+        <h2>推送频率</h2>
+        <p>控制周报多久生成一次、在哪一天、什么时间发送。</p>
+      </div>
+      <div class="loading-msg" id="schedule-loading">加载中...</div>
+      <div class="schedule-form" id="schedule-form" style="display:none;">
+        <div class="field-full">
+          <label>推送频率</label>
+          <select id="sched-frequency">
+            <option value="weekly">每周</option>
+            <option value="biweekly">每两周</option>
+            <option value="monthly">每月</option>
+          </select>
+        </div>
+        <div class="field-full">
+          <label>发送星期</label>
+          <select id="sched-day">
+            <option value="0">周一</option>
+            <option value="1">周二</option>
+            <option value="2">周三</option>
+            <option value="3">周四</option>
+            <option value="4">周五</option>
+            <option value="5">周六</option>
+            <option value="6">周日</option>
+          </select>
+          <div class="field-hint">"每两周"和"每月"时，此项决定具体在哪一天推送</div>
+        </div>
+        <div class="field-full">
+          <label>发送时间</label>
+          <input type="time" id="sched-time" value="09:00">
+        </div>
+      </div>
+      <div class="save-bar">
+        <button class="save-btn" onclick="saveConfig('schedule')">保存推送设置</button>
+        <span class="save-status" id="status-schedule"></span>
+      </div>
+    </div>
+
+    <!-- SECTION: SOURCES -->
+    <div class="config-section" id="section-sources">
+      <div class="section-header">
+        <h2>信息来源</h2>
+        <p>管理数据抓取的来源。禁用某个来源后，下次生成周报时会跳过它，不会删除历史数据。</p>
+      </div>
+      <div class="loading-msg" id="sources-loading">加载中...</div>
+      <div class="row-list" id="sources-list"></div>
+      <button class="add-btn" onclick="addSource()">+ 添加信息来源</button>
+      <div class="save-bar">
+        <button class="save-btn" onclick="saveConfig('sources')">保存信息来源</button>
+        <span class="save-status" id="status-sources"></span>
+      </div>
+    </div>
+
+    <!-- SECTION: WEIGHTS -->
+    <div class="config-section" id="section-weights">
+      <div class="section-header">
+        <h2>权重配置</h2>
+        <p>决定每条资讯的排序优先级。命中关键词会按下列分值加分或减分，得分越高越靠前展示。</p>
+      </div>
+      <div class="loading-msg" id="weights-loading">加载中...</div>
+      <div id="weights-body" style="display:none;">
+
+        <div class="weight-group">
+          <div class="weight-group-title">重点实体关键词</div>
+          <div class="row-list" id="weights-entities-list"></div>
+          <button class="add-btn" onclick="addWeightItem('entities')">+ 添加实体关键词</button>
+        </div>
+
+        <div class="weight-group">
+          <div class="weight-group-title">主题领域关键词</div>
+          <div class="row-list" id="weights-topics-list"></div>
+          <button class="add-btn" onclick="addWeightItem('topics')">+ 添加主题关键词</button>
+        </div>
+
+        <div class="weight-group">
+          <div class="weight-group-title">业务场景关键词</div>
+          <div class="row-list" id="weights-scenarios-list"></div>
+          <button class="add-btn" onclick="addWeightItem('scenarios')">+ 添加业务场景关键词</button>
+        </div>
+
+        <div class="weight-group">
+          <div class="weight-group-title">负向过滤关键词（命中则减分）</div>
+          <div class="row-list" id="weights-negative-list"></div>
+          <button class="add-btn" onclick="addWeightItem('negative_filter')">+ 添加负向关键词</button>
+        </div>
+
+        <div class="weight-group">
+          <div class="weight-group-title">时效性加分 与 其他参数</div>
+          <div class="inline-fields">
+            <div class="field-block">
+              <label>0-1 天内</label>
+              <input type="number" id="fresh-1day" value="20">
+            </div>
+            <div class="field-block">
+              <label>2-3 天内</label>
+              <input type="number" id="fresh-3day" value="10">
+            </div>
+            <div class="field-block">
+              <label>4-7 天内</label>
+              <input type="number" id="fresh-7day" value="0">
+            </div>
+            <div class="field-block">
+              <label>内网来源加成</label>
+              <input type="number" id="intranet-bonus" value="15">
+            </div>
+            <div class="field-block">
+              <label>每板块 Top N</label>
+              <input type="number" id="top-n" value="5">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="save-bar">
+        <button class="save-btn" onclick="saveConfig('weights')">保存权重配置</button>
+        <span class="save-status" id="status-weights"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ============ CONFIG ============ */
+/* 读取：直接从 GitHub raw 拉取当前配置（公开只读，跟 subscribers.json 同一套机制）*/
+const CONFIG_READ_BASE = 'https://raw.githubusercontent.com/ying-bot-glitch/follow-builders_vibe-coding_dify/main/config/';
+
+/* 写入：通过 Cloudflare Worker 转发到 Dify Workflow C（配置更新工作流）
+   TODO：Workflow C 搭好后，把这里换成真实的 Worker URL */
+const CONFIG_WRITE_URL = 'https://ai-news-agent-config-proxy.yingying-feng0303.workers.dev/';
+
+let adminToken = '';
+let recipientsData = [];
+let sourcesData = [];
+let weightsData = null;
+let scheduleData = null;
+
+/* ============ GATE ============ */
+function unlockApp() {
+  const val = document.getElementById('tokenInput').value.trim();
+  if (!val) {
+    document.getElementById('gateError').style.display = 'block';
+    document.getElementById('gateError').textContent = '请输入管理密钥。';
+    return;
+  }
+  adminToken = val;
+  document.getElementById('gateScreen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('statusIndicator').textContent = '已解锁（本地会话）';
+  loadAllConfigs();
+}
+
+document.getElementById('tokenInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') unlockApp();
+});
+
+/* 如果是从主站"内部管理"入口跳转过来的，sessionStorage 里会有 token，
+   直接沿用，不用再输一遍。仍然会把这个 token 传给 Dify 做真正的校验。*/
+(function tryAutoUnlock() {
+  const carried = sessionStorage.getItem('ai_news_admin_token');
+  if (carried) {
+    adminToken = carried;
+    document.getElementById('gateScreen').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    document.getElementById('statusIndicator').textContent = '已解锁（本地会话）';
+    loadAllConfigs();
+  }
+})();
+
+/* ============ NAV ============ */
+function showSection(name) {
+  document.querySelectorAll('.config-section').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.section-nav button').forEach(el => el.classList.remove('active'));
+  document.getElementById('section-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+/* ============ LOAD CONFIGS ============ */
+async function loadAllConfigs() {
+  await Promise.all([
+    loadRecipients(),
+    loadSchedule(),
+    loadSources(),
+    loadWeights()
+  ]);
+}
+
+async function fetchConfig(filename, fallback) {
+  try {
+    const res = await fetch(CONFIG_READ_BASE + filename + '?t=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    return await res.json();
+  } catch (e) {
+    console.warn('无法加载 ' + filename + '，使用空白模板', e);
+    return fallback;
+  }
+}
+
+/* ---- Recipients ---- */
+async function loadRecipients() {
+  const data = await fetchConfig('recipients.json', { recipients: [] });
+  recipientsData = data.recipients || [];
+  document.getElementById('recipients-loading').style.display = 'none';
+  renderRecipients();
+}
+
+function renderRecipients() {
+  const container = document.getElementById('recipients-list');
+  container.innerHTML = '';
+  recipientsData.forEach((r, i) => {
+    const row = document.createElement('div');
+    row.className = 'item-row recipient-row';
+    row.innerHTML = `
+      <input class="mono" type="email" placeholder="name@cn.bosch.com" value="${escapeAttr(r.email || '')}" oninput="recipientsData[${i}].email=this.value">
+      <input type="text" placeholder="分组（可选，如 AI核心组）" value="${escapeAttr(r.group || '')}" oninput="recipientsData[${i}].group=this.value">
+      <button class="remove-btn" onclick="removeRecipient(${i})" aria-label="删除">×</button>
+    `;
+    container.appendChild(row);
+  });
+}
+
+function addRecipient() {
+  recipientsData.push({ email: '', group: '' });
+  renderRecipients();
+}
+
+function removeRecipient(i) {
+  recipientsData.splice(i, 1);
+  renderRecipients();
+}
+
+/* ---- Schedule ---- */
+async function loadSchedule() {
+  const data = await fetchConfig('schedule.json', { send_frequency: 'weekly', send_day: 4, send_time: '09:00' });
+  scheduleData = data;
+  document.getElementById('sched-frequency').value = data.send_frequency || 'weekly';
+  document.getElementById('sched-day').value = data.send_day ?? 4;
+  document.getElementById('sched-time').value = data.send_time || '09:00';
+  document.getElementById('schedule-loading').style.display = 'none';
+  document.getElementById('schedule-form').style.display = 'flex';
+}
+
+/* ---- Sources ---- */
+async function loadSources() {
+  const data = await fetchConfig('sources.json', { sources: [] });
+  sourcesData = data.sources || [];
+  document.getElementById('sources-loading').style.display = 'none';
+  renderSources();
+}
+
+function renderSources() {
+  const container = document.getElementById('sources-list');
+  container.innerHTML = '';
+  sourcesData.forEach((s, i) => {
+    const row = document.createElement('div');
+    row.className = 'item-row source-row';
+    row.innerHTML = `
+      <input type="text" placeholder="来源名称" value="${escapeAttr(s.source_name || '')}" oninput="sourcesData[${i}].source_name=this.value">
+      <select onchange="sourcesData[${i}].source_type=this.value">
+        <option value="github" ${s.source_type === 'github' ? 'selected' : ''}>github</option>
+        <option value="rss" ${s.source_type === 'rss' ? 'selected' : ''}>rss</option>
+        <option value="intranet" ${s.source_type === 'intranet' ? 'selected' : ''}>intranet</option>
+      </select>
+      <input class="mono" type="text" placeholder="URL" value="${escapeAttr(s.url || '')}" oninput="sourcesData[${i}].url=this.value">
+      <select onchange="sourcesData[${i}].category=this.value">
+        <option value="外网" ${s.category === '外网' ? 'selected' : ''}>外网</option>
+        <option value="内网" ${s.category === '内网' ? 'selected' : ''}>内网</option>
+      </select>
+      <label class="toggle-pill">
+        <input type="checkbox" ${s.enabled ? 'checked' : ''} onchange="sourcesData[${i}].enabled=this.checked">
+        启用
+      </label>
+      <button class="remove-btn" onclick="removeSource(${i})" aria-label="删除">×</button>
+    `;
+    container.appendChild(row);
+  });
+}
+
+function addSource() {
+  sourcesData.push({ source_name: '', source_type: 'github', url: '', category: '外网', enabled: true });
+  renderSources();
+}
+
+function removeSource(i) {
+  sourcesData.splice(i, 1);
+  renderSources();
+}
+
+/* ---- Weights ---- */
+async function loadWeights() {
+  const data = await fetchConfig('weights.json', {
+    entities: [], topics: [], scenarios: [], negative_filter: [],
+    freshness: { within_1_day: 20, within_3_days: 10, within_7_days: 0 },
+    intranet_bonus: 15, top_n: 5
+  });
+  weightsData = data;
+  weightsData.entities = weightsData.entities || [];
+  weightsData.topics = weightsData.topics || [];
+  weightsData.scenarios = weightsData.scenarios || [];
+  weightsData.negative_filter = weightsData.negative_filter || [];
+
+  document.getElementById('fresh-1day').value = data.freshness?.within_1_day ?? 20;
+  document.getElementById('fresh-3day').value = data.freshness?.within_3_days ?? 10;
+  document.getElementById('fresh-7day').value = data.freshness?.within_7_days ?? 0;
+  document.getElementById('intranet-bonus').value = data.intranet_bonus ?? 15;
+  document.getElementById('top-n').value = data.top_n ?? 5;
+
+  document.getElementById('weights-loading').style.display = 'none';
+  document.getElementById('weights-body').style.display = 'block';
+
+  renderWeightGroup('entities');
+  renderWeightGroup('topics');
+  renderWeightGroup('scenarios');
+  renderWeightGroup('negative_filter');
+}
+
+function renderWeightGroup(groupKey) {
+  const container = document.getElementById('weights-' + groupKey.replace('_filter','') + '-list');
+  container.innerHTML = '';
+  const scoreLabel = groupKey === 'negative_filter' ? '减分' : '加分';
+  weightsData[groupKey].forEach((item, i) => {
+    const row = document.createElement('div');
+    row.className = 'item-row weight-row';
+    const scoreVal = groupKey === 'negative_filter' ? (item.penalty ?? 0) : (item.boost ?? 0);
+    row.innerHTML = `
+      <input type="text" placeholder="关键词" value="${escapeAttr(item.keyword || '')}" oninput="weightsData['${groupKey}'][${i}].keyword=this.value">
+      <input class="mono" type="number" placeholder="${scoreLabel}" value="${scoreVal}" oninput="updateWeightScore('${groupKey}', ${i}, this.value)">
+      <button class="remove-btn" onclick="removeWeightItem('${groupKey}', ${i})" aria-label="删除">×</button>
+    `;
+    container.appendChild(row);
+  });
+}
+
+function updateWeightScore(groupKey, i, val) {
+  const num = Number(val) || 0;
+  if (groupKey === 'negative_filter') {
+    weightsData[groupKey][i].penalty = num;
+  } else {
+    weightsData[groupKey][i].boost = num;
+  }
+}
+
+function addWeightItem(groupKey) {
+  if (groupKey === 'negative_filter') {
+    weightsData[groupKey].push({ keyword: '', penalty: 0 });
+  } else {
+    weightsData[groupKey].push({ keyword: '', boost: 0 });
+  }
+  renderWeightGroup(groupKey);
+}
+
+function removeWeightItem(groupKey, i) {
+  weightsData[groupKey].splice(i, 1);
+  renderWeightGroup(groupKey);
+}
+
+/* ============ SAVE ============ */
+async function saveConfig(configType) {
+  const statusEl = document.getElementById('status-' + configType);
+  statusEl.className = 'save-status';
+  statusEl.textContent = '保存中...';
+
+  let payload;
+  if (configType === 'recipients') {
+    payload = { recipients: recipientsData };
+  } else if (configType === 'schedule') {
+    payload = {
+      send_frequency: document.getElementById('sched-frequency').value,
+      send_day: Number(document.getElementById('sched-day').value),
+      send_time: document.getElementById('sched-time').value
+    };
+  } else if (configType === 'sources') {
+    payload = { sources: sourcesData };
+  } else if (configType === 'weights') {
+    payload = {
+      entities: weightsData.entities,
+      topics: weightsData.topics,
+      scenarios: weightsData.scenarios,
+      negative_filter: weightsData.negative_filter,
+      freshness: {
+        within_1_day: Number(document.getElementById('fresh-1day').value),
+        within_3_days: Number(document.getElementById('fresh-3day').value),
+        within_7_days: Number(document.getElementById('fresh-7day').value)
+      },
+      intranet_bonus: Number(document.getElementById('intranet-bonus').value),
+      top_n: Number(document.getElementById('top-n').value)
+    };
+  }
+
+  try {
+    const res = await fetch(CONFIG_WRITE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({
+        config_type: configType,
+        admin_token: adminToken,
+        payload: payload
+      })
+    });
+    const result = await res.json();
+    if (result.success) {
+      statusEl.className = 'save-status success';
+      statusEl.textContent = '已保存 ✓';
+    } else {
+      statusEl.className = 'save-status error';
+      statusEl.textContent = '保存失败：' + (result.message || '未知错误，请确认管理密钥是否正确');
+    }
+  } catch (e) {
+    statusEl.className = 'save-status error';
+    statusEl.textContent = '保存失败：无法连接服务，请检查网络或稍后重试';
+  }
+}
+
+/* ============ UTIL ============ */
+function escapeAttr(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+}
+</script>
+
+</body>
+</html>
