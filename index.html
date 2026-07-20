@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -25,6 +24,24 @@
 
 html,body{height:100%;}
 body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);font-size:14px;line-height:1.65;}
+
+/* ADMIN ENTRY (低调入口，不放进主导航) */
+.admin-entry{position:fixed;bottom:16px;right:20px;font-size:11px;color:var(--muted);opacity:.45;cursor:pointer;font-family:'Inter',sans-serif;background:none;border:none;padding:6px 8px;z-index:90;transition:opacity 150ms;}
+.admin-entry:hover{opacity:1;}
+
+.admin-modal-overlay{display:none;position:fixed;inset:0;background:rgba(26,26,26,.4);z-index:998;align-items:center;justify-content:center;}
+.admin-modal-overlay.show{display:flex;}
+.admin-modal{background:var(--surface);border-radius:8px;padding:32px 28px;width:100%;max-width:340px;margin:0 20px;}
+.admin-modal-title{font-family:'Newsreader',serif;font-style:italic;font-size:22px;color:var(--ink);margin-bottom:6px;}
+.admin-modal-sub{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;}
+.admin-modal input{width:100%;padding:10px 12px;font-family:'JetBrains Mono',monospace;font-size:13.5px;border:1px solid var(--border);border-radius:4px;background:var(--paper);color:var(--ink);margin-bottom:12px;}
+.admin-modal input:focus{outline:none;border-color:var(--accent);}
+.admin-modal-actions{display:flex;gap:8px;}
+.admin-modal-actions button{flex:1;padding:10px;border-radius:4px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;border:none;}
+.admin-modal-confirm{background:var(--ink);color:#fff;}
+.admin-modal-confirm:hover{background:var(--accent);}
+.admin-modal-cancel{background:none;color:var(--muted);border:1px solid var(--border) !important;}
+.admin-modal-error{font-size:12px;color:#A32D2D;margin-top:-4px;margin-bottom:12px;display:none;}
 
 /* NAV */
 .nav{background:var(--surface);border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:100;}
@@ -297,6 +314,21 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
 
 <div class="toast" id="toast"></div>
 
+<button class="admin-entry" onclick="openAdminGate()">内部管理</button>
+
+<div class="admin-modal-overlay" id="adminGateOverlay">
+  <div class="admin-modal">
+    <div class="admin-modal-title">管理密钥</div>
+    <div class="admin-modal-sub">输入管理密钥进入配置页（收件人、推送频率、信息来源、权重）。</div>
+    <input type="password" id="adminGateInput" placeholder="管理密钥" autocomplete="off">
+    <div class="admin-modal-error" id="adminGateError">密钥错误，请确认后重试。</div>
+    <div class="admin-modal-actions">
+      <button class="admin-modal-cancel" onclick="closeAdminGate()">取消</button>
+      <button class="admin-modal-confirm" onclick="submitAdminGate()">进入</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 const REPO = 'zarazhangrui/follow-builders';
@@ -334,6 +366,43 @@ function showToast(msg) {
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2800);
 }
+
+/* ============ ADMIN ENTRY (低调门槛，真正校验在 Dify 后端) ============ */
+/* 这里的校验只是前端第一道提示，用来避免路人随手点进配置页。
+   即使有人绕过这一步直接访问 admin.html，没有正确的管理密钥，
+   Dify Workflow 侧也会拒绝任何保存请求。
+   ⚠️ 请把下面这个占位密钥换成你们内部约定的值，不要用示例值。 */
+const ADMIN_GATE_HINT_CODE = 'admin123456';
+const ADMIN_CONFIG_PAGE_URL = 'admin.html'; // 如果配置页文件名不同，改这里
+
+function openAdminGate() {
+  document.getElementById('adminGateOverlay').classList.add('show');
+  document.getElementById('adminGateError').style.display = 'none';
+  document.getElementById('adminGateInput').value = '';
+  document.getElementById('adminGateInput').focus();
+}
+
+function closeAdminGate() {
+  document.getElementById('adminGateOverlay').classList.remove('show');
+}
+
+function submitAdminGate() {
+  const val = document.getElementById('adminGateInput').value.trim();
+  if (val !== ADMIN_GATE_HINT_CODE) {
+    document.getElementById('adminGateError').style.display = 'block';
+    return;
+  }
+  // 会话内传递给配置页，避免再次输入；标签页关闭后自动清除
+  sessionStorage.setItem('ai_news_admin_token', val);
+  window.location.href = ADMIN_CONFIG_PAGE_URL;
+}
+
+document.getElementById('adminGateInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') submitAdminGate();
+});
+document.getElementById('adminGateOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeAdminGate();
+});
 
 /* ============ DIFY WEBHOOK CONFIG ============ */
 /* 通过 Cloudflare Worker 代理解决 CORS 跨域问题
