@@ -222,6 +222,7 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);fon
       <div class="section-header">
         <h2>信息来源</h2>
         <p>管理数据抓取的来源。禁用某个来源后，下次生成周报时会跳过它，不会删除历史数据。</p>
+        <p style="color:var(--danger);margin-top:6px;">⚠️ 请勿在此填写任何账号密码、Cookie 或 Token。内网来源的认证信息统一存在 Dify 环境变量里，这里只登记"要抓哪个地址"。</p>
       </div>
       <div class="loading-msg" id="sources-loading">加载中...</div>
       <div class="row-list" id="sources-list"></div>
@@ -438,9 +439,10 @@ function renderSources() {
     row.innerHTML = `
       <input type="text" placeholder="来源名称" value="${escapeAttr(s.source_name || '')}" oninput="sourcesData[${i}].source_name=this.value">
       <select onchange="sourcesData[${i}].source_type=this.value">
-        <option value="github" ${s.source_type === 'github' ? 'selected' : ''}>github</option>
-        <option value="rss" ${s.source_type === 'rss' ? 'selected' : ''}>rss</option>
-        <option value="intranet" ${s.source_type === 'intranet' ? 'selected' : ''}>intranet</option>
+        <option value="github_raw" ${s.source_type === 'github_raw' ? 'selected' : ''}>github_raw（JSON 文件）</option>
+        <option value="rss" ${s.source_type === 'rss' ? 'selected' : ''}>rss（订阅源）</option>
+        <option value="api" ${s.source_type === 'api' ? 'selected' : ''}>api（有现成接口）</option>
+        <option value="html_page" ${s.source_type === 'html_page' ? 'selected' : ''}>html_page（需解析网页）</option>
       </select>
       <input class="mono" type="text" placeholder="URL" value="${escapeAttr(s.url || '')}" oninput="sourcesData[${i}].url=this.value">
       <select onchange="sourcesData[${i}].category=this.value">
@@ -458,7 +460,7 @@ function renderSources() {
 }
 
 function addSource() {
-  sourcesData.push({ source_name: '', source_type: 'github', url: '', category: '外网', enabled: true });
+  sourcesData.push({ source_name: '', source_type: 'github_raw', url: '', category: '外网', enabled: true });
   renderSources();
 }
 
