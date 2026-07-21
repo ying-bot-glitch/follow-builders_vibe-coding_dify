@@ -1,0 +1,30 @@
+{
+  "entities": [
+    { "keyword": "SAP", "boost": 50 },
+    { "keyword": "Bosch", "boost": 40 },
+    { "keyword": "OpenAI", "boost": 30 },
+    { "keyword": "Anthropic", "boost": 30 }
+  ],
+  "topics": [
+    { "keyword": "Agent", "boost": 25 },
+    { "keyword": "多模态", "boost": 20 },
+    { "keyword": "RAG", "boost": 20 },
+    { "keyword": "大模型", "boost": 15 }
+  ],
+  "scenarios": [
+    { "keyword": "企业AI", "boost": 20 },
+    { "keyword": "自动化", "boost": 15 },
+    { "keyword": "效率提升", "boost": 15 }
+  ],
+  "negative_filter": [
+    { "keyword": "游戏", "penalty": 30 },
+    { "keyword": "娱乐八卦", "penalty": 30 }
+  ],
+  "freshness": {
+    "within_1_day": 20,
+    "within_3_days": 10,
+    "within_7_days": 0
+  },
+  "intranet_bonus": 15,
+  "top_n": 5
+}
