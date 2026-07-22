@@ -439,10 +439,11 @@ function renderSources() {
     row.innerHTML = `
       <input type="text" placeholder="来源名称" value="${escapeAttr(s.source_name || '')}" oninput="sourcesData[${i}].source_name=this.value">
       <select onchange="sourcesData[${i}].source_type=this.value">
-        <option value="github_raw" ${s.source_type === 'github_raw' ? 'selected' : ''}>github_raw（JSON 文件）</option>
-        <option value="rss" ${s.source_type === 'rss' ? 'selected' : ''}>rss（订阅源）</option>
-        <option value="api" ${s.source_type === 'api' ? 'selected' : ''}>api（有现成接口）</option>
-        <option value="html_page" ${s.source_type === 'html_page' ? 'selected' : ''}>html_page（需解析网页）</option>
+        <option value="follow_builders_x" ${s.source_type === 'follow_builders_x' ? 'selected' : ''}>follow_builders_x（推文结构）</option>
+        <option value="follow_builders_podcast" ${s.source_type === 'follow_builders_podcast' ? 'selected' : ''}>follow_builders_podcast（播客结构）</option>
+        <option value="generic_json_array" ${s.source_type === 'generic_json_array' ? 'selected' : ''}>generic_json_array（通用扁平数组）</option>
+        <option value="rss" ${s.source_type === 'rss' ? 'selected' : ''}>rss（订阅源，待接入）</option>
+        <option value="html_page" ${s.source_type === 'html_page' ? 'selected' : ''}>html_page（网页解析，待接入）</option>
       </select>
       <input class="mono" type="text" placeholder="URL" value="${escapeAttr(s.url || '')}" oninput="sourcesData[${i}].url=this.value">
       <select onchange="sourcesData[${i}].category=this.value">
@@ -460,7 +461,7 @@ function renderSources() {
 }
 
 function addSource() {
-  sourcesData.push({ source_name: '', source_type: 'github_raw', url: '', category: '外网', enabled: true });
+  sourcesData.push({ source_name: '', source_type: 'generic_json_array', url: '', category: '外网', enabled: true });
   renderSources();
 }
 
