@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "source_name": "Follow Builders - X",
+      "source_type": "follow_builders_x",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json",
+      "category": "外网",
+      "enabled": true
+    },
+    {
+      "source_name": "Follow Builders - Podcasts",
+      "source_type": "follow_builders_podcast",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-podcasts.json",
+      "category": "外网",
+      "enabled": true
+    }
+  ]
+}
