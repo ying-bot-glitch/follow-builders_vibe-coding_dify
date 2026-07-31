@@ -645,17 +645,20 @@ async function saveConfig(configType) {
 
   // 第二步：等待后台异步处理完成（校验密钥 → 读文件 → 写 GitHub 有一定耗时）
   statusEl.textContent = '已提交，正在确认是否生效...';
-  await sleep(4000);
+  await sleep(6000);
 
   // 第三步：重新拉取 GitHub 上的文件，自己比对内容是否已经变成刚提交的样子。
-  // 最多重试 3 次，每次间隔加长，应对偶尔的延迟。
+  // 实测发现 GitHub 写入本身很快成功，但 raw.githubusercontent.com 这层
+  // CDN 有时需要更长时间才能反映最新内容（即使加了 cache-busting 的查询参数），
+  // 所以这里把总等待时间拉长到最多 4 次尝试、间隔逐步加大。
   const filename = CONFIG_FILENAME_MAP[configType];
   let verified = false;
   let lastRemote = null;
+  const retryDelays = [5000, 6000, 8000]; // 第2/3/4次尝试前分别多等这么久
 
-  for (let attempt = 0; attempt < 3; attempt++) {
+  for (let attempt = 0; attempt < 4; attempt++) {
     try {
-      const res = await fetch(CONFIG_READ_BASE + filename + '?t=' + Date.now());
+      const res = await fetch(CONFIG_READ_BASE + filename + '?t=' + Date.now(), { cache: 'no-store' });
       if (res.ok) {
         lastRemote = await res.json();
         if (deepEqualIgnoreOrder(lastRemote, payload)) {
@@ -666,9 +669,9 @@ async function saveConfig(configType) {
     } catch (e) {
       // 忽略，进入下一次重试
     }
-    if (attempt < 2) {
-      statusEl.textContent = `正在确认（第 ${attempt + 2} 次尝试）...`;
-      await sleep(3000);
+    if (attempt < 3) {
+      statusEl.textContent = `正在确认（第 ${attempt + 2} 次尝试，GitHub 缓存刷新可能需要一点时间）...`;
+      await sleep(retryDelays[attempt]);
     }
   }
 
@@ -677,7 +680,7 @@ async function saveConfig(configType) {
     statusEl.textContent = '已保存并确认生效 ✓';
   } else {
     statusEl.className = 'save-status error';
-    statusEl.textContent = '未能确认保存是否生效：可能是管理密钥错误、GitHub 写入失败，或者只是延迟较久。可以手动刷新页面查看当前内容，或稍后重试。';
+    statusEl.textContent = '未能在预期时间内确认生效：Dify 和 GitHub 那边实际上很可能已经写入成功，只是 raw.githubusercontent.com 的缓存刷新较慢。建议等 30 秒后手动刷新本页面查看最新内容，而不要重复提交。';
   }
 }
 
