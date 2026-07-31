@@ -2,7 +2,7 @@
   "entities": [
     {
       "keyword": "SAP",
-      "boost": 66
+      "boost": 33
     },
     {
       "keyword": "Bosch",
