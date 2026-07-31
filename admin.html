@@ -592,7 +592,26 @@ async function saveConfig(configType) {
 
   let payload;
   if (configType === 'recipients') {
-    payload = { recipients: recipientsData };
+    // 保存前做基础校验：过滤掉没填邮箱的空行，并检查格式是否合法。
+    // 之前没做这层校验，点"添加收件人"后忘了填就直接保存，会把一条
+    // 空邮箱写进 recipients.json，真正发送周报时这一条会白白失败一次。
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const validRecipients = recipientsData.filter(r => r.email && r.email.trim());
+    const invalidOnes = validRecipients.filter(r => !emailPattern.test(r.email.trim()));
+
+    if (invalidOnes.length > 0) {
+      statusEl.className = 'save-status error';
+      statusEl.textContent = '保存已取消：以下邮箱格式不正确，请修正后再保存：' + invalidOnes.map(r => r.email).join('、');
+      return;
+    }
+
+    const emptyCount = recipientsData.length - validRecipients.length;
+    payload = { recipients: validRecipients.map(r => ({ email: r.email.trim(), group: (r.group || '').trim() })) };
+
+    if (emptyCount > 0) {
+      // 不阻止保存，但提前让用户知道有空行被自动跳过了
+      statusEl.textContent = `已自动忽略 ${emptyCount} 条未填写邮箱的空行，提交中...`;
+    }
   } else if (configType === 'schedule') {
     payload = {
       send_frequency: document.getElementById('sched-frequency').value,
