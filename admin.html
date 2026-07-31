@@ -656,18 +656,24 @@ async function saveConfig(configType) {
   let lastRemote = null;
   const retryDelays = [5000, 6000, 8000]; // 第2/3/4次尝试前分别多等这么久
 
+  console.log('[调试] 本次提交的 payload：', JSON.stringify(payload, null, 2));
+
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
       const res = await fetch(CONFIG_READ_BASE + filename + '?t=' + Date.now(), { cache: 'no-store' });
       if (res.ok) {
         lastRemote = await res.json();
+        console.log(`[调试] 第 ${attempt + 1} 次拉取，GitHub 上读到的内容：`, JSON.stringify(lastRemote, null, 2));
+        console.log(`[调试] 第 ${attempt + 1} 次比对结果：`, deepEqualIgnoreOrder(lastRemote, payload));
         if (deepEqualIgnoreOrder(lastRemote, payload)) {
           verified = true;
           break;
         }
+      } else {
+        console.log(`[调试] 第 ${attempt + 1} 次拉取失败，HTTP 状态码：`, res.status);
       }
     } catch (e) {
-      // 忽略，进入下一次重试
+      console.log(`[调试] 第 ${attempt + 1} 次拉取抛出异常：`, e.message);
     }
     if (attempt < 3) {
       statusEl.textContent = `正在确认（第 ${attempt + 2} 次尝试，GitHub 缓存刷新可能需要一点时间）...`;
