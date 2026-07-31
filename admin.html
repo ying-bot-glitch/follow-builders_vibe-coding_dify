@@ -557,12 +557,29 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// 简单粗暴但可靠的比对：把两边都转成排序后的 JSON 字符串比较，
-// 避免因为 key 顺序不同、GitHub 返回多包了一层等原因导致误判。
+// 真正递归排序所有层级的 key，再转成字符串比较——
+// 之前用 JSON.stringify(obj, keys) 的写法有 bug：数组形式的
+// replacer 会被递归应用到所有嵌套层级，导致 entities/topics 这些
+// 嵌套数组里的 keyword/boost 字段（不在外层 key 名单里）被直接
+// 过滤掉，比较的实际上是"剥空内容的空壳"，只要最外层字段名对得上
+// 就会被误判为相等——这就是之前"前端说成功但 GitHub 没变"的原因。
+function canonicalize(value) {
+  if (Array.isArray(value)) {
+    return value.map(canonicalize);
+  }
+  if (value && typeof value === 'object') {
+    const sorted = {};
+    Object.keys(value).sort().forEach(key => {
+      sorted[key] = canonicalize(value[key]);
+    });
+    return sorted;
+  }
+  return value;
+}
+
 function deepEqualIgnoreOrder(a, b) {
-  const normalize = (obj) => JSON.stringify(obj, Object.keys(obj || {}).sort());
   try {
-    return JSON.stringify(a) === JSON.stringify(b) || normalize(a) === normalize(b);
+    return JSON.stringify(canonicalize(a)) === JSON.stringify(canonicalize(b));
   } catch (e) {
     return false;
   }
@@ -600,9 +617,11 @@ async function saveConfig(configType) {
     };
   }
 
-  // 第一步：提交请求。这里的返回内容不代表业务结果，只代表"请求送达了"。
+  // 第一步：提交请求。这里的返回内容不代表"业务是否真的成功"，
+  // 但如果连请求本身都被明确拒绝了（比如 Worker 转发到了错误/失效的
+  // 地址），应该尽早发现，不要傻乎乎地继续走"等待+核实"流程。
   try {
-    await fetch(CONFIG_WRITE_URL, {
+    const submitRes = await fetch(CONFIG_WRITE_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body: JSON.stringify({
@@ -611,6 +630,13 @@ async function saveConfig(configType) {
         payload: payload
       })
     });
+    const submitText = await submitRes.text();
+    // 明显的错误信号：调试地址失效、404、500 等，直接判定失败，不再往下走
+    if (!submitRes.ok || /No active debug listener|error/i.test(submitText)) {
+      statusEl.className = 'save-status error';
+      statusEl.textContent = '提交被拒绝：' + submitText.slice(0, 200) + '（请检查 Worker 转发地址是否正确、Workflow 是否已发布）';
+      return;
+    }
   } catch (e) {
     statusEl.className = 'save-status error';
     statusEl.textContent = '提交失败：无法连接服务，请检查网络或稍后重试';
