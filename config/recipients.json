@@ -1,5 +1,12 @@
 {
   "recipients": [
-    { "email": "ying.feng3@cn.bosch.com", "group": "AI核心组" }
+    {
+      "email": "ying.feng3@cn.bosch.com",
+      "group": "AI核心组"
+    },
+    {
+      "email": "felix.zhang@cn.bosch.com",
+      "group": ""
+    }
   ]
 }
