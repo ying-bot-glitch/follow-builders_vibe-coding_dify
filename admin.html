@@ -539,10 +539,39 @@ function removeWeightItem(groupKey, i) {
 }
 
 /* ============ SAVE ============ */
+/* 重要说明：这套 Dify 平台（agents.bosch-genai.com）用的 Webhook Trigger
+   节点，它的 Response Body 是"请求一到达就立刻返回的固定文案"，跟后面
+   Code/IF-ELSE/写 GitHub 这些节点是否真的执行成功完全无关（官方文档已确认
+   这是设计如此，不是配置遗漏）。所以这里不能依赖 HTTP 响应内容判断成功与否，
+   改用"提交后等几秒，再重新拉取 GitHub 上的文件，自己比对内容有没有变成
+   刚提交的样子"这种更可靠的方式确认结果。 */
+
+const CONFIG_FILENAME_MAP = {
+  recipients: 'recipients.json',
+  schedule: 'schedule.json',
+  sources: 'sources.json',
+  weights: 'weights.json'
+};
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// 简单粗暴但可靠的比对：把两边都转成排序后的 JSON 字符串比较，
+// 避免因为 key 顺序不同、GitHub 返回多包了一层等原因导致误判。
+function deepEqualIgnoreOrder(a, b) {
+  const normalize = (obj) => JSON.stringify(obj, Object.keys(obj || {}).sort());
+  try {
+    return JSON.stringify(a) === JSON.stringify(b) || normalize(a) === normalize(b);
+  } catch (e) {
+    return false;
+  }
+}
+
 async function saveConfig(configType) {
   const statusEl = document.getElementById('status-' + configType);
   statusEl.className = 'save-status';
-  statusEl.textContent = '保存中...';
+  statusEl.textContent = '提交中...';
 
   let payload;
   if (configType === 'recipients') {
@@ -571,8 +600,9 @@ async function saveConfig(configType) {
     };
   }
 
+  // 第一步：提交请求。这里的返回内容不代表业务结果，只代表"请求送达了"。
   try {
-    const res = await fetch(CONFIG_WRITE_URL, {
+    await fetch(CONFIG_WRITE_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body: JSON.stringify({
@@ -581,17 +611,47 @@ async function saveConfig(configType) {
         payload: payload
       })
     });
-    const result = await res.json();
-    if (result.success) {
-      statusEl.className = 'save-status success';
-      statusEl.textContent = '已保存 ✓';
-    } else {
-      statusEl.className = 'save-status error';
-      statusEl.textContent = '保存失败：' + (result.message || '未知错误，请确认管理密钥是否正确');
-    }
   } catch (e) {
     statusEl.className = 'save-status error';
-    statusEl.textContent = '保存失败：无法连接服务，请检查网络或稍后重试';
+    statusEl.textContent = '提交失败：无法连接服务，请检查网络或稍后重试';
+    return;
+  }
+
+  // 第二步：等待后台异步处理完成（校验密钥 → 读文件 → 写 GitHub 有一定耗时）
+  statusEl.textContent = '已提交，正在确认是否生效...';
+  await sleep(4000);
+
+  // 第三步：重新拉取 GitHub 上的文件，自己比对内容是否已经变成刚提交的样子。
+  // 最多重试 3 次，每次间隔加长，应对偶尔的延迟。
+  const filename = CONFIG_FILENAME_MAP[configType];
+  let verified = false;
+  let lastRemote = null;
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const res = await fetch(CONFIG_READ_BASE + filename + '?t=' + Date.now());
+      if (res.ok) {
+        lastRemote = await res.json();
+        if (deepEqualIgnoreOrder(lastRemote, payload)) {
+          verified = true;
+          break;
+        }
+      }
+    } catch (e) {
+      // 忽略，进入下一次重试
+    }
+    if (attempt < 2) {
+      statusEl.textContent = `正在确认（第 ${attempt + 2} 次尝试）...`;
+      await sleep(3000);
+    }
+  }
+
+  if (verified) {
+    statusEl.className = 'save-status success';
+    statusEl.textContent = '已保存并确认生效 ✓';
+  } else {
+    statusEl.className = 'save-status error';
+    statusEl.textContent = '未能确认保存是否生效：可能是管理密钥错误、GitHub 写入失败，或者只是延迟较久。可以手动刷新页面查看当前内容，或稍后重试。';
   }
 }
 
