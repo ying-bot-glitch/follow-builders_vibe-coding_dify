@@ -1,7 +1,207 @@
 {
   "date": "2026-08-12",
-  "item_count": 1,
+  "item_count": 26,
   "items": [
+    {
+      "title": "Thibault Sottiaux：We did it, finally... Codex &amp; ChatGP",
+      "summary": "We did it, finally... Codex &amp; ChatGPT desktop, now on Linux. \n\nThanks for waiting and you can cancel that MacBook order if you got impatient. It’s that good.\n\n👀 https://t.co/QiiDPFct2v",
+      "url": "https://x.com/thsottiaux/status/2087254026232775052",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：I previously promised a reset for every ",
+      "summary": "I previously promised a reset for every 1M in additional active users for Codex, until 10M. \n\nWe blew past that and have been silent since 10M. Little surprise for you tomorrow.",
+      "url": "https://x.com/thsottiaux/status/2087423996115681767",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Boris Cherny：LLMs still produce bugs, but those bugs ",
+      "summary": "LLMs still produce bugs, but those bugs are different than what they used to be. It’s less off-by-ones and more about system design, ui usability, missing broader context. Some kinds of coding has been solved, but not all.\n\nWhile models continue to improve, adversarial code review has been an incredibly powerful tool to catch many of these kinds of bugs.\n\nIt can be as simple as a one line prompt - “use a dynamic workflow to adversarial test every edge case in an iOS simulator”, or use Claude’s built in /code-review (or /code-review low, /code-review medium, etc.)",
+      "url": "https://x.com/bcherny/status/2087284684103537011",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Import your world. Codex. Run. https://t",
+      "summary": "Import your world. Codex. Run. https://t.co/Epj4ULlAC6",
+      "url": "https://x.com/thsottiaux/status/2087252528513814773",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：This is part of working with the EU AI A",
+      "summary": "This is part of working with the EU AI Act, other labs are adding similar watermarking.\n\nIt’s hard to identify AI-generated text, and this gives people better tools to do that.  We’ll also be a shipping text detection API that you can use yourself. https://t.co/OZtG0fNsqc",
+      "url": "https://x.com/trq212/status/2087258090169414008",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Deep alignment of your AI with you and y",
+      "summary": "Deep alignment of your AI with you and your context is massively important\n\nImportant new work by @ibab and team https://t.co/TijcK96ckO",
+      "url": "https://x.com/garrytan/status/2087154547580088470",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：if a founder cancels on you on a schedul",
+      "summary": "if a founder cancels on you on a scheduled meeting, that’s a sign of great respect in their culture",
+      "url": "https://x.com/nikunj/status/2087341164752240860",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：The growth of @aisdk has been astonishin",
+      "summary": "The growth of @aisdk has been astonishing. ~80.5M downloads every 30 days, and growing faster than all AI labs SDKs. Most importantly: open and provider-agnostic. https://t.co/EZxyu94gk0 https://t.co/sdVZTZhsCP",
+      "url": "https://x.com/rauchg/status/2087339038781161858",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Trying to onboard my parents to ChatGPT ",
+      "summary": "Trying to onboard my parents to ChatGPT desktop app and the separation between Chat, Work, and Codex and the lack of consistency across ChatGPT web, desktop, and mobile apps is all incredibly messy.\n\nI think the team should do a clean up / quality pass or maybe ask Codex to do it.\n\n(I say all this as a Codex fan)",
+      "url": "https://x.com/petergyang/status/2087340277874995223",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Keep an eye on this view\nhttps://t.co/ii",
+      "summary": "Keep an eye on this view\nhttps://t.co/iir02GoUUw https://t.co/iYEI1rO9Jy https://t.co/0ey1ut4h70",
+      "url": "https://x.com/rauchg/status/2087314071519707288",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Anish is a G. Excited for our convo to d",
+      "summary": "Anish is a G. Excited for our convo to drop! https://t.co/8rCH3YhHWl",
+      "url": "https://x.com/garrytan/status/2087256959913541812",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Madhu Guru：There’s going to be a ton of money in ma",
+      "summary": "There’s going to be a ton of money in making open-weight models exceptional at boring, specific business domains.\n\nPick a size x domain combination and go deep. Eg mid-market legal, smb retail, enterprise logistics. \n\nThe hyperscalers have the primitives but will struggle with domain depth, scrappiness and sheer will to make a model exceptional for one particular kind of business.\n\nAnd that is your opportunity.",
+      "url": "https://x.com/realmadhuguru/status/2087198985685750013",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Getting many messages like these for /hu",
+      "summary": "Getting many messages like these for /human-review.\n\nIt's now at 717 GitHub stars! \n\nTry it here for free and ⭐ it if you like it: https://t.co/iKZH4GceFn https://t.co/xVT7rH0nEI https://t.co/AfjdpMbwTX",
+      "url": "https://x.com/petergyang/status/2087345374633824486",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Many people are saying https://t.co/iluZ",
+      "summary": "Many people are saying https://t.co/iluZF3d1Iu",
+      "url": "https://x.com/rauchg/status/2087354092914122896",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Build both the job centers and the housi",
+      "summary": "Build both the job centers and the housing\n\nCalifornia will fall if we don’t do both https://t.co/lws98Go2ux",
+      "url": "https://x.com/garrytan/status/2087253768920556011",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：All Claude generated text will have this",
+      "summary": "All Claude generated text will have this embedded watermarking. For example, you could check if a PR was generated by Claude Code.\n\nThat said, it does have limitations. https://t.co/umfn6nU5up",
+      "url": "https://x.com/trq212/status/2087258091821949074",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Josh Woodward：🌏On behalf of the whole Gemini team, th",
+      "summary": "🌏On behalf of the whole Gemini team, thank you\nWhether you use Gemini on the Web, Android, iOS, or inside Chrome, we’ll keep listening to your feedback as we keep building for the next billion!",
+      "url": "https://x.com/joshwoodward/status/2087223963525284091",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：Good post on how to think about FDEs. Th",
+      "summary": "Good post on how to think about FDEs. The key is that FDEs are real and not going away for AI any time soon.\n\nThe reason this is happening now at a scale that has never been seen before is because AI is fundamentally about adding a non-deterministic, rapidly changing system to workflows that largely have never been automated before. This looks very little like implementing traditional software.\n\n“If you're building an AI agent for accounting in 2026, there is no established workflow, because literally nobody has ever used one of these. Nobody knows what the user journey looks like — not you, and importantly, not your customer either. They can't tell you what they want, because the thing they'd want doesn't have a shape yet.”\n\nSoftware has largely always been deterministic and once implemented effectively worked the same for customers. This meant the upfront implementation work was *relatively* uniform across similar customers, and the system wasn’t regularly being upgraded in fundamental ways. \n\nAI agents are entirely different on nearly every dimension. The customer’s business process has to change to work with agents, there is heavy -necessary- customization to get agents to work in the customers end-state process, evals need to be run constantly, the AI models are constantly changing and updates need to keep getting incorporated, the underlying harness and broader system are often changing due to customer feedback, and much more. \n\nThis is real work for the customer, systems integrators, and the applied AI vendors. Even as AI capabilities improve dramatically, this work remains (or even gets more complicated) given enterprises will just throw increasingly more complex processes at agents. Great time to be an FDE.",
+      "url": "https://x.com/levie/status/2087385493684335064",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Josh Woodward：🍎Apple users are turning to Gemini\n+ Ov",
+      "summary": "🍎Apple users are turning to Gemini\n+ Over 100M+ active users on iOS\n+ macOS power users prompt ~2x more frequently than other surfaces",
+      "url": "https://x.com/joshwoodward/status/2087223962229186577",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：If you got a lot of “believe in yourself",
+      "summary": "If you got a lot of “believe in yourself” texts from your VC, they may have read this blog post last night.. https://t.co/dzPrpTQhhg",
+      "url": "https://x.com/nikunj/status/2087190092716904666",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：There are more details in the help cente",
+      "summary": "There are more details in the help center &amp; we’ll share more as we roll this out: https://t.co/td69rBzrr4",
+      "url": "https://x.com/trq212/status/2087258093499695106",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Josh Woodward：🤖Android users love Gemini\n+ Gemini can",
+      "summary": "🤖Android users love Gemini\n+ Gemini can automate actions across 40+ popular apps\n+ Great for booking rides, reserving tables, and more\n+ More updates coming tomorrow at @madebygoogle!",
+      "url": "https://x.com/joshwoodward/status/2087223960807330234",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：i am claude's stay-at-home boyfriend htt",
+      "summary": "i am claude's stay-at-home boyfriend https://t.co/7NIYL15uLk",
+      "url": "https://x.com/danshipper/status/2087226736186470821",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：https://t.co/Y1Y3jTUtSq https://t.co/dha",
+      "summary": "https://t.co/Y1Y3jTUtSq https://t.co/dhaD0WIl0R",
+      "url": "https://x.com/adityaag/status/2087263990728569246",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：I think @X should ship this button or be",
+      "summary": "I think @X should ship this button or better yet make @CommunityNotes cover this use case. https://t.co/sKJkqrqpGP",
+      "url": "https://x.com/petergyang/status/2087300215388979282",
+      "published_at": "2026-08-12",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
     {
       "title": "The Biggest AI Deployment Nobody Talks About | Samsara CEO Sanjit Biswas",
       "summary": "Speaker 1 | 00:00 - 00:21\nThese are not the tokens you're gonna find online. Like, you can't crawl Reddit and find out about what happened on a construction site. The Samsara system, in a given day, we're driving 99% of The US roads, usually multiple times a day. I was just in the field last week wi",
