@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-12",
+  "subject": "【AI 情报周报】2026-08-12",
+  "weekly_insight": "AI Agent 的落地实施正成为新的挑战与机遇，其非确定性和快速变化性要求企业进行深度流程改造和持续的定制化工作。",
+  "sections": {
+    "产品情报站/主流模型": [
+      {
+        "title": "Aaron Levie：Good post on how to think about FDEs. Th",
+        "brief": "Aaron Levie 指出，AI Agent 的落地实施（FDEs）将是未来一段时间内的重点。与传统软件不同，AI Agent 引入了非确定性和快速变化性，要求客户业务流程进行深度调整和持续定制化，这使得 FDEs 工作复杂且持续，是当前 AI 应用的关键挑战。",
+        "weight_score": 45
+      }
+    ]
+  }
+}
