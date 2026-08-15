@@ -1,0 +1,214 @@
+{
+  "date": "2026-08-15",
+  "item_count": 26,
+  "items": [
+    {
+      "title": "Boris Cherny：A weird experiment I've been trying the ",
+      "summary": "A weird experiment I've been trying the last few weeks is having Claude take over day-to-day maintenance of our apps. Seeing early signs of life that this might be possible.\n\nThe setup is straightforward: we have a Slack channel called proj-claude-maintains-apps. In it, Claude Tag runs a bunch of daily routines across iOS, Android, Desktop, web, CLI, and Agent SDK:\n\n- Crash fuzzer: open the app in a simulator and tap around to find ways to crash it, then root cause and fix the crashes\n- Dup unifier: scans the codebase for similar-yet-slightly-divergent abstractions, and puts up PRs to unify them\n- Dead-code remover: removes statically unreachable code, and adds logging to suspected dead code to check if it's really dead and if so, remove it the next day\n- Abstraction police: fixes leaky abstractions\n- a bunch more..\n\nResults have been surprisingly positive. Over the last few weeks, these routines have opened 388 PRs across our repos, 180 of which we merged after Claude Code Review + human review. We're now thinking about how to streamline this to make merging these kinds of mechanical changes easier.\n\nClaude generally gets these PRs right on the first shot, and if it doesn't, we ask Claude to tune its routines so it's better the next day. Sometimes it takes a few days of tuning. \n\nTo try a similar workflow, ask Claude Code or Tag, or create some routines directly at https://t.co/Z70hStEBH6. A few of the actual prompts I used below.\n\nHas anyone experimented with similar workflows?",
+      "url": "https://x.com/bcherny/status/2088014489438621990",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Sometimes you have have to go /ultrafast",
+      "summary": "Sometimes you have have to go /ultrafast. https://t.co/rMP7sfxpB5",
+      "url": "https://x.com/thsottiaux/status/2088019704803897705",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Sam Altman：/ultrafast https://t.co/UxnKkABuKQ",
+      "summary": "/ultrafast https://t.co/UxnKkABuKQ",
+      "url": "https://x.com/sama/status/2088101491802243121",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Work with Google docs, sheets and slides",
+      "summary": "Work with Google docs, sheets and slides right inside ChatGPT.\n\nThis has changed how I write documents, brainstorm or proofread things. I just open it and then chat or talk my way through changes and it all happens right there in the flow. https://t.co/iiz1eKyp46",
+      "url": "https://x.com/thsottiaux/status/2088103609477238858",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Ask ChatGPT to roast your computer usage",
+      "summary": "Ask ChatGPT to roast your computer usage after a day. Install the Computer History plugin, do things as usual and kindly ask it to roast your behavior. It's ... insightful 👀\n\n=====\n\n- You don’t use Slack. Slack uses you. It accounted for 48% of your recorded activity. Your Mac is essentially a $3,000 Slack notification with a keyboard.\n- Your productivity system is clicking “Clear” until God intervenes. You clicked it 339 times while submitting 253 Slack messages. You are playing Whac-A-Mole against an organization chart.\n- Your most-used keyboard shortcut is Delete. 1,191 times, including 1,065 in Slack. You’re not drafting messages. You’re negotiating peace treaties between your first thought and your executive function.\n- You pressed ⌘C 133 times and ⌘V just 26 times. You acquire information like a Victorian gentleman collecting exotic birds and then apparently release most of it into the clipboard wilderness.\n- You opened 42 tabs and closed 53. Technically, this makes browser-tab management your most successful project of the day.\n- You switched between actual applications more than 200 times, while reading an X post that literally said, “You probably hate tab switching.” The call is coming from inside the Chrome window.\n- Your busiest hour was 9 p.m., with more than 1,500 Slack events. Apparently “end of day” is less a time than a theoretical concept you enjoy discussing in meetings.\n- Your document at the center of several important workstreams was called “Hello.” Nothing says organizational clarity like running half the company through a Google Doc named after the first thing software prints.",
+      "url": "https://x.com/thsottiaux/status/2088133823619895712",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：By next year, using a computer will be o",
+      "summary": "By next year, using a computer will be optional. Work will radically change.",
+      "url": "https://x.com/amasad/status/2088110851681386864",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Josh Woodward：3.7 Flash: Fast, 50% cheaper, happened i",
+      "summary": "3.7 Flash: Fast, 50% cheaper, happened in ~3 weeks https://t.co/LUq90z935F",
+      "url": "https://x.com/joshwoodward/status/2088016871710957587",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：everything truly is code https://t.co/Db",
+      "summary": "everything truly is code https://t.co/DbVE4jdQ7x",
+      "url": "https://x.com/trq212/status/2088049989306192106",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：The best things in life are free https:/",
+      "summary": "The best things in life are free https://t.co/OHr6NcWPnD",
+      "url": "https://x.com/rauchg/status/2087900672083857815",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：It’s certainly true at Replit. https://t",
+      "summary": "It’s certainly true at Replit. https://t.co/tYRRVJYUf6",
+      "url": "https://x.com/amasad/status/2088112901852971056",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：I agree, you need topics per-bot please!",
+      "summary": "I agree, you need topics per-bot please! https://t.co/fwYOWLvu17",
+      "url": "https://x.com/garrytan/status/2088029937714565260",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Matt Turck：Right now, you're either:\n\n* an AI-nativ",
+      "summary": "Right now, you're either:\n\n* an AI-native rocketship, which sounds fun until you realize it means being in a permanent fundraising situation at ever more scary valuations to hoover up capital and talent, and in a constant death match with other rocketships to capture customers, sacrificing gross margins; or\n\n* basically left for dead, regardless of how good a company you actually are\n\nThis has been the case for a while, but feels like it just escalated a notch.",
+      "url": "https://x.com/mattturck/status/2087978386195103916",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Try https://t.co/L9YIua3HSf with 🆓 GLM ",
+      "summary": "Try https://t.co/L9YIua3HSf with 🆓 GLM 5.2 @ up to 500TPS from @blackboxai https://t.co/A6TgFHSIlR",
+      "url": "https://x.com/rauchg/status/2087982033499042205",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Ryo Lu：matic is the first robot i’ve owned that",
+      "summary": "matic is the first robot i’ve owned that actually feels like it gets smarter with every update https://t.co/2Giw0IgRlr",
+      "url": "https://x.com/ryolu_/status/2087992867918864668",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：YC is the YC for hard tech https://t.co/",
+      "summary": "YC is the YC for hard tech https://t.co/OtXE3Jd81Q",
+      "url": "https://x.com/garrytan/status/2087929926070710381",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：The elimination of engineers was one of ",
+      "summary": "The elimination of engineers was one of the wilder hypotheses out there. Just like absurdly wrong. We just gave engineers a power tool that can accelerate the development of whatever we want. \n\nOf course their value not only remains critical in that world, but actually goes up in many domains because we can apply engineering to far more work than before.\n\nIf you’re trying to automate drug discovery, you need engineers. If you’re trying to automate manufacturing, you need engineers. If you’re taking on larger and larger software projects, you need engineers.\n\nThis will happen in domains beyond engineering too. AI causes companies to take on way more work than before, which leads to needing more experts to oversee the work. \n\nEven as models get better and better, they can be better utilized by the experts in those fields than the novices. Great time to be an expert.",
+      "url": "https://x.com/levie/status/2088105350201270529",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Grok Bot is a fantastic release.. the UX",
+      "summary": "Grok Bot is a fantastic release.. the UX, the design, the onboarding :chefs-kiss:\n\nBut I go back and forth on this a lot: Will users (personal and business) want one super agent that holds all the context or sub agents that are designated to do a slice of tasks?\n\nIf we treat agents as humans, then the Grok Bot design makes a ton of sense. It allows us to compartmentalize tools, context, outcomes for that person’s division. You reach out to that bot for that specific goal that you have in mind. \n\nBut, if you treat agents as Jarvis, you want a master agent that just gets the job done. It might create and coordinate all the bots (and dare I say the communication/context) that might be needed to do the task. But the interface is 1:1 vs. 1:many. \n\nMy guess is it’ll veer towards the one master agent over time who can then act as an orchestrator who reads / understands the bots you create. But starts narrow as most of the companies are doing it now. \n\nPS: I understand the core engineering constraints (context windows, tool use, simplicity, cost etc) why companies are choosing task/singular outcomes today. Primarily thinking this from a design / product side.",
+      "url": "https://x.com/nikunj/status/2087906119914340540",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：One command to rule them all (tokens).\n\n",
+      "summary": "One command to rule them all (tokens).\n\nI predict that this will become the default way of using coding AI at scale. Uptime, model choice, lower costs, observability, ZDR…\n\nThe cool thing is that this command configures every *existing* coding harness, like Claude Code & Codex!",
+      "url": "https://x.com/rauchg/status/2088020529039180204",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：So great to host who we hope is our next",
+      "summary": "So great to host who we hope is our next Governor of California, @XavierBecerra for a @garryslist citizen’s union gathering. \n\nWe can make California the best win-win place: support building businesses AND make it affordable and livable for the every Californian. https://t.co/kM6ocS7s9T",
+      "url": "https://x.com/garrytan/status/2088066634074443901",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：I'm dealing with a family health situati",
+      "summary": "I'm dealing with a family health situation and thought I would be using AI to research and understand the illness but in reality it's been most helpful to navigate the healthcare system bureaucracy.",
+      "url": "https://x.com/petergyang/status/2087946170274570385",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Zara Zhang：Ironic that many people thought AI codin",
+      "summary": "Ironic that many people thought AI coding would make engineers less valuable when in reality the most in-demand jobs all have the word “engineer” in them: \n\nforward-deployed engineer, design engineer, product engineer, growth engineer…",
+      "url": "https://x.com/zarazhangrui/status/2088087765267386564",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：human i/o is costly, so after listening ",
+      "summary": "human i/o is costly, so after listening to @mattpocockuk and @trq212 i made an /align-me modification which allows for batches of questions instead of round-by-round. same intuition as spec decoding, you speed up by looking ahead 2-10 steps\n\nworks INCREDIBLY for design explorations",
+      "url": "https://x.com/swyx/status/2088073777779515615",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Cat Wu：Join office hours with the Cowork team \n",
+      "summary": "Join office hours with the Cowork team \n\nIf you're in marketing, sales, finance, legal, ops, or any non-eng role, book a 15 min slot to show us how you use Cowork so we can make it better for you: https://t.co/UxOKEjoala\n\nThank you for sharing your feedback!",
+      "url": "https://x.com/_catwu/status/2088006642189361564",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：ARC-AGI-3 is nearly solved by merely add",
+      "summary": "ARC-AGI-3 is nearly solved by merely adding a coding harness. As predicted, coding generalizes LLMs. https://t.co/ynhHVkdObE https://t.co/8KPQvVsNb0",
+      "url": "https://x.com/amasad/status/2088124774824521786",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：It would be amazing to host @JeffDean at",
+      "summary": "It would be amazing to host @JeffDean at @spc for a fireside chat.\n\nHow do we make that happen?",
+      "url": "https://x.com/adityaag/status/2088058783767658541",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "What Chess.com Teaches US About Superhuman Capabilities, with CEO Erik Allebest",
+      "summary": "Speaker 1 | 00:00 - 00:24\nCOVID happened, Queen's Gambit happened, some news cycles happened, and we're like, oh, this might just be a flash in the pan, like treadmills and sourdough bread. But then in 2023, we had another crazy wave where all these kids started playing in schools because of short f",
+      "url": "https://www.youtube.com/@NoPriorsPodcast",
+      "published_at": "2026-08-15",
+      "category": "外网",
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
