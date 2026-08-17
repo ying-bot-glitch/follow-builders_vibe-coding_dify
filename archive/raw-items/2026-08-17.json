@@ -1,179 +1,155 @@
 {
   "date": "2026-08-17",
-  "item_count": 22,
+  "item_count": 19,
   "items": [
     {
-      "title": "Thibault Sottiaux：Incredible things are happening at OpenA",
-      "summary": "Incredible things are happening at OpenAI right now. Energy is high.",
-      "url": "https://x.com/thsottiaux/status/2088725514542575903",
+      "title": "Thibault Sottiaux：Here is how to enable a 1M-token context",
+      "summary": "Here is how to enable a 1M-token context window in Codex for GPT-5.6 Sol. \n\nEven though we have tuned the context limit in Codex to be set optimally when it comes to performance and cost, this is a common ask, so here it is documented.\n\nA larger context window lets Codex retain more code, tool output, and conversation history before summarizing older material. You need a model that supports it. And GPT-5.6 Sol, for example, has a documented 1,050,000-token window. \n\nOpen ~/.codex/config.toml and add or update these settings at the top level, before any [section] headers:\n\n```\nmodel = \"gpt-5.6-sol\"\nmodel_context_window = 1000000\nmodel_auto_compact_token_limit = 900000\n```\n\nThe first setting selects the model. The second tells Codex to use a one-million-token context budget. The third starts automatic history compaction around 900,000 tokens, leaving some headroom. Restart Codex client and start a new session after saving. \n\nTo try the configuration for a single CLI session without changing your defaults:\n\n```\ncodex -m gpt-5.6-sol \\\n  -c model_context_window=1000000 \\\n  -c model_auto_compact_token_limit=900000\n```\n\nHave fun, but also know that we tuned the default carefully!",
+      "url": "https://x.com/thsottiaux/status/2089082893804896524",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Thibault Sottiaux：If you have a company and still use Opus",
-      "summary": "If you have a company and still use Opus instead of Sol, why so? Does price not matter to you? What's something that would convince you to switch?",
-      "url": "https://x.com/thsottiaux/status/2088850995430477882",
+      "title": "Thibault Sottiaux：Codex\n\n✅ Almost 100% reliable\n✅ Occasion",
+      "summary": "Codex\n\n✅ Almost 100% reliable\n✅ Occasional resets\n✅ Open-source\n✅ (will have Astra) https://t.co/DxNdAgpag5",
+      "url": "https://x.com/thsottiaux/status/2089149255382438340",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Thariq：Watermarking without quality loss is a b",
-      "summary": "Watermarking without quality loss is a bit unintuitive, doesn't feel like it should work.\n\nI made this artifact with Claude to help me understand how it works, sharing in case it's helpful. https://t.co/ALReoOH6tB https://t.co/hEPeCHgGRM",
-      "url": "https://x.com/trq212/status/2088721023223132213",
+      "title": "Thibault Sottiaux：GPT-5.6 Sol 1M in Codex. This used to on",
+      "summary": "GPT-5.6 Sol 1M in Codex. This used to only work for API keys, but we just flipped the switch and works for usage through ChatGPT accounts now too. \n\nThe same warning applies, there is a reason the current context length is the default, we have tuned it to ~perfection. But you do you!",
+      "url": "https://x.com/thsottiaux/status/2089143488696705077",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Guillermo Rauch：I think people don’t realize how much of",
-      "summary": "I think people don’t realize how much of the success of React is actually @shadcn.\n\nI once referred to React as the actual “LEGO brick for adults.” But in reality it was more the description of the geometry of the bricks. The spec.\n\nShadcn is what people actually wanted from React. Reusable high quality components that also tunable. It’s a pseudo-library. There’s code but it’s actually meant to be digested into your context window and remixed.",
-      "url": "https://x.com/rauchg/status/2088757738037989755",
+      "title": "Thariq：it says a lot that the creators of three",
+      "summary": "it says a lot that the creators of three of the most iconic web frameworks: django (@simonw), flask (@mitsuhiko) and rails (@dhh) were so AI pilled so early",
+      "url": "https://x.com/trq212/status/2089085004966207679",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Thibault Sottiaux：On tokens and prices per token.\n\nI said ",
-      "summary": "On tokens and prices per token.\n\nI said I’d write more about this, so here goes: an OpenAI token != another model’s token. We compare AI prices in dollars per million tokens as if a token were a standardized unit, like a gram or a kilowatt-hour. It isn’t. Different models use and produce the exact same text using different numbers of tokens, which means a lower price per token does not necessarily mean a lower bill.\n\nImagine two identical pizzas. One is cut into 8 slices at $2 each. The other is cut into 16 slices at $1.25 each. The second place advertises cheaper slices, but the whole pizza costs $20 instead of $16. Bummer ... your stomach doesn't actually care about the number of slices you just ate.\n\nI know you are hungry now, but back to tokens. In one small comparison spanning English, technical, multilingual, and numerical text, the tokenizer we use for GPT-5.6 Sol used 766 tokens versus an estimated 1,170 for Claude Opus 5. That's a very significant difference of about 34.5% fewer tokens. You can get the same exact text, but pay for all those extra tokens. The price per token doesn't really tell this story.\n\nEven correcting for tokenizer differences misses the bigger point. What actually matters is price per successful outcome, and for that you can use benchmarks as a starting point, but really you have to try it and measure on your own use cases.\n\nThat's all. May the tokens flow.",
-      "url": "https://x.com/thsottiaux/status/2088866513008873560",
+      "title": "Amjad Masad：18x improvement in intelligence per joul",
+      "summary": "18x improvement in intelligence per joule in 16 months. https://t.co/lP62kI5rpr https://t.co/LAPXQHLgxJ",
+      "url": "https://x.com/amasad/status/2089069905375351169",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Aditya Agarwal：America turned 250 years old earlier thi",
-      "summary": "America turned 250 years old earlier this year. \n\nIndia turns 80 today...80 years young.\n\nBuilding countries is really hard. 80 years in...America was struggling with a civil war.\n\nIndians should be damn proud of the country they have built. \n\nLike America, India wants more. She wants to be better and stronger and more successful. She will get there.",
-      "url": "https://x.com/adityaag/status/2088734739893293175",
+      "title": "Guillermo Rauch：We ran evals on GLM 5.3 cybersecurity ca",
+      "summary": "We ran evals on GLM 5.3 cybersecurity capabilities. It's the new open frontier.\n\nGiven its lower costs, I expect this to be a boon for defensive security work. e.g., it means you can run https://t.co/KwrlahlCiK at least 3× more often! https://t.co/aCQDMoxAXI",
+      "url": "https://x.com/rauchg/status/2089126690043916495",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Swyx：in case you’re not living in the tech bu",
-      "summary": "in case you’re not living in the tech bubble, as a general rule i’ve been surprised by how infrequently top tier folks actually meet/know each other. as an outsider i might have assumed that everyone is in secret illuminati group chats. those exist, but are very much short lived exceptions rather than the rule. what you see of the major headlines is pretty much what they also see. i guess one way to interpret this is also simply that most effort is still on doing the work rather than working the narrative or the gossip. and that, to me at least, is genuinely quite reassuring, this far in to my career.",
-      "url": "https://x.com/swyx/status/2088755688361378082",
+      "title": "Aaron Levie：AI spend is nowhere close to hitting any",
+      "summary": "AI spend is nowhere close to hitting any walls. Obviously this data is weighted toward engineering-centric companies, with the top 1% spending $7,500/mo and top 10% spending $660/mo per employee on AI. But the general trend of continued exponential growth is occurring throughout all firm types. \n\nAnd what the top 10% is doing today may easily be what the top 50% is doing in 3 years from now, at least in terms of token volume if not in dollars. This is why there’s still so much opportunity right now in the diffusion of AI in the enterprise.\n\nEspecially as token costs come down, we will throw larger portions of work at agents. They’ll be scanning all our code for security issues, testing all of our software, writing coding for much larger projects, processing nearly all data, and much more. So this trend has no end in sight.",
+      "url": "https://x.com/levie/status/2088995821056659901",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Garry Tan：Anyone else's Codex Desktop app erroring",
-      "summary": "Anyone else's Codex Desktop app erroring out on chats? https://t.co/raNUNTPqbe",
-      "url": "https://x.com/garrytan/status/2088642982614651196",
+      "title": "Garry Tan：There's nothing more conservative than a",
+      "summary": "There's nothing more conservative than a liberal with a house. https://t.co/GshcvD1duN",
+      "url": "https://x.com/garrytan/status/2089012811007688746",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Guillermo Rauch：Impressive https://t.co/fv5zyLbPNt",
-      "summary": "Impressive https://t.co/fv5zyLbPNt",
-      "url": "https://x.com/rauchg/status/2088801077659635715",
+      "title": "Peter Steinberger：Was wondering what this new icon in my m",
+      "summary": "Was wondering what this new icon in my menu bar is that I didn't enable and that loaded a slow html box.\n\nTime for Chrome Lite? https://t.co/4Q64q7vdfl",
+      "url": "https://x.com/steipete/status/2089154019885490449",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Dan Shipper：Dario should tweet more https://t.co/N29",
-      "summary": "Dario should tweet more https://t.co/N29v9simn6",
-      "url": "https://x.com/danshipper/status/2088780884048552202",
+      "title": "Aaron Levie：Pretty good way to think about the value",
+      "summary": "Pretty good way to think about the value of AI agents and where the opportunity lies. You have a technology that will tirelessly do all the things that you could never fully do before. Not because you didn’t want to or it wasn’t valuable, but because it was just not even remotely practical.\n\nThe upside with AI is to think about everything you can now throw intelligence at that won’t give up and what would the returns be. \n\nYou just couldn’t possibly find every security vulnerability in your codebase, because you couldn’t simulate every risk vector. You couldn’t read every contract or document to process the data and capture it to query later. You couldn’t comb through your customer base and look for every relevant data point for doing upsells. And so on. \n\nThis is a pretty clear way to think about how to deploy AI to get real gains, but also where the startup opportunities are as well. Go after the markets where more compute on a problem will qualitatively change what customers can now do in that domain.",
+      "url": "https://x.com/levie/status/2089209131391729763",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Peter Yang：I am a fan of Grok Bot but @X is the #1 ",
-      "summary": "I am a fan of Grok Bot but @X is the #1 differentiated data source that it should  have access to and it doesn't seem to work? \n\nThe connector doesn't work and I can't even login to X on the cloud computer. \n\nAm I doing something wrong? https://t.co/O5OI9OhETb",
-      "url": "https://x.com/petergyang/status/2088773343629750535",
+      "title": "Dan Shipper：used fable to vibe code an app that visu",
+      "summary": "used fable to vibe code an app that visualizes and groups everyone who applied to come to Thesis \n\nwe live in incredible times where detailed understanding of each of your customers—and how they cluster together in groups—is possible with very little effort https://t.co/UBkHaDIDhK",
+      "url": "https://x.com/danshipper/status/2089121597017759800",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Guillermo Rauch：Recursive self improvement https://t.co/",
-      "summary": "Recursive self improvement https://t.co/wOqa7mW997",
-      "url": "https://x.com/rauchg/status/2088838302367732178",
+      "title": "Madhu Guru：the more you earn, the more you crave th",
+      "summary": "the more you earn, the more you crave the things money can’t buy.",
+      "url": "https://x.com/realmadhuguru/status/2089022997407686663",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Garry Tan：Whitepill timeline cleanser: \n\nProgress ",
-      "summary": "Whitepill timeline cleanser: \n\nProgress and abundance looks like record production of crops, year on year, progressing upwards and to the right. This is the output of markets and technology working together for millenia. \n\nhttps://t.co/LXe01sF5G4 https://t.co/VZct22uHUF",
-      "url": "https://x.com/garrytan/status/2088661047913914847",
+      "title": "Peter Yang：I want to use this feature but I'm paran",
+      "summary": "I want to use this feature but I'm paranoid that it'll eat up all my tokens. Is it pretty token efficient? https://t.co/zjNnpGb4tJ",
+      "url": "https://x.com/petergyang/status/2089205978877268334",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Nikunj Kothari：Last week I’m sitting across a stealth p",
-      "summary": "Last week I’m sitting across a stealth portfolio founder working in a deeply unsexy space (at least from Bay Area standards)..\n\nThey’re lamenting about how how some of the critical contracts and partnerships that would give them credibility (and revenue and network effects) are basically stuck at the 1-yard line. This is a massively fragmented market. And this is btw just straight up pure bureaucracy. The champions, terms and everything is lined up. It’s purely a win win situation but summer and one random clause is the issue. And, it might cause them to not reach their ambitious timelines. \n\nAnd I’m sitting there smiling and eventually laughing and at some point they ask what’s funny. I tell them “do you know how long it’ll take anyone to do the same thing as you” - and this is with leverage and relationships that they already have. \n\nAnd, this in the short term is painful but in the long term becomes such a strong moat. That they’ll look back and laugh why they were worried about a few days when in the long term this is what will make them one of the biggest companies in the world. \n\nUnnecessary and 996 performative pain is not the moat. But building entrenched software and relationships that take a lot of pain is a moat :)",
-      "url": "https://x.com/nikunj/status/2088716743615352963",
+      "title": "Peter Yang：How do I set up this thing to work acros",
+      "summary": "How do I set up this thing to work across all apps not just codex? https://t.co/2N2odVoXix",
+      "url": "https://x.com/petergyang/status/2089182111282729470",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Peter Yang：Tomorrow, I’m really excited to share a ",
-      "summary": "Tomorrow, I’m really excited to share a new episode with @rileybrown on how he uses Codex to run his entire content business.\n\nI particularly loved watching him demo how he creates YouTube thumbnails with AI:\n\n1. He uses Codex to find 100 top-performing thumbnails in his niche and add them to a Paper canvas.\n\n2. He uses Paper to mix and match those thumbnails with photos of himself until he creates something he’s happy with.\n\nHonestly, you have to watch the workflow to see how crazy it is.\n\n📌 Subscribe to get the full episode tomorrow: https://t.co/NSTj7ijxE0",
-      "url": "https://x.com/petergyang/status/2088626815166464507",
+      "title": "Dan Shipper：i am also skeptical of the centralizatio",
+      "summary": "i am also skeptical of the centralization of power hypothesis\n\nit comes from Lewis Mumford in 1964 who argued:\n\n\"from late Neolithic times in the Near East, right down to our own day, two technologies have recurrently existed side by side: one authoritarian, the other democratic, the first system-centered, immensely powerful, but inherently unstable, the other man-centered, relatively weak, but resourceful and durable.\"\n\nthis echoes around the valley. peter thiel said in 2018, \"crypto is libertarian and AI is communist\"\n\ncertainly today, it seems like we're on track for AI to look more centralized. if you are a hardcore AGI person you believe this will continue. but we're also seeing a resurgence of fine tuning models for specific purposes. and as amjad says, the human brain provides very good evidence for the benefits of decentralization. we just may not see it yet because we're still in the hyperliterate  \"bee\" or \"ant\" days of AI\n\ni'd be surprised if the optimal design continues to be maximally centralized",
+      "url": "https://x.com/danshipper/status/2089127868903375257",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Aditya Agarwal：This is remarkably well done.\n\nAnd of co",
-      "summary": "This is remarkably well done.\n\nAnd of course featuring our very own @shreepoorna365.\n\nLet's go. https://t.co/UacgWndqL4",
-      "url": "https://x.com/adityaag/status/2088629172512195035",
+      "title": "Garry Tan：Everyone go follow this guy on instagram",
+      "summary": "Everyone go follow this guy on instagram, he's amazing https://t.co/zSIaTRCjpf",
+      "url": "https://x.com/garrytan/status/2089012934953599263",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Peter Yang：I 100% agree with Dario that using AI to",
-      "summary": "I 100% agree with Dario that using AI to cure diseases (and speeding up the regulatory approval of AI breakthroughs in healthcare) could bring 10x the benefit to humanity as everything else combined. https://t.co/1CkVwkyxtW",
-      "url": "https://x.com/petergyang/status/2088772605323214999",
+      "title": "Swyx：5 years later and most of the best playe",
+      "summary": "5 years later and most of the best players here have been bought https://t.co/SemLNVzXXx https://t.co/Ow9t5om5zd",
+      "url": "https://x.com/swyx/status/2089221797254459822",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Madhu Guru：There is no longer an excuse for B2B sof",
-      "summary": "There is no longer an excuse for B2B software to have such poor UX.\n\nThanks to AI, every software product can and should be as easy to use as the best consumer software.",
-      "url": "https://x.com/realmadhuguru/status/2088710566689018103",
+      "title": "Nan Yu：Moving house, and I’m finally ready to l",
+      "summary": "Moving house, and I’m finally ready to let these old friends go https://t.co/UoTPwoe8sU",
+      "url": "https://x.com/thenanyu/status/2089146409152872764",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - X"
     },
     {
-      "title": "Amjad Masad：The argument that “AI structurally centr",
-      "summary": "The argument that “AI structurally centralizes power” because it’s currently compute hungry ignores 125 years of super exponential growth in compute price-performance. \n\nImprovement in algorithms and continued hardware efficiency gains     means there is no reason to assume AGI-level capabilities will always require a data center to run.\n\nScaling laws are not laws of physics. They’re simply empirical relationships observed for particular architectures, objectives, datasets etc. Change any one of those factors and you get a different scaling curve. \n\nIf the brain is any guide, true AGI will likely be very efficient. In fact, current scaling laws might a bug and not a feature. It shows how inefficiency of the ML algorithms we discovered so far.",
-      "url": "https://x.com/amasad/status/2088867492907327573",
-      "published_at": "2026-08-17",
-      "category": "外网",
-      "source_name": "Follow Builders - X"
-    },
-    {
-      "title": "Nan Yu：This is also my dream. I want to sit in ",
-      "summary": "This is also my dream. I want to sit in a park all day and record content with the homies… and have a fleet of agents turn that content into actions and working software. https://t.co/V9SzxqFEnL",
-      "url": "https://x.com/thenanyu/status/2088810666958196988",
-      "published_at": "2026-08-17",
-      "category": "外网",
-      "source_name": "Follow Builders - X"
-    },
-    {
-      "title": "Nan Yu：These two were ahead of their time https",
-      "summary": "These two were ahead of their time https://t.co/adjYZkvCM1",
-      "url": "https://x.com/thenanyu/status/2088811172090769461",
-      "published_at": "2026-08-17",
-      "category": "外网",
-      "source_name": "Follow Builders - X"
-    },
-    {
-      "title": "Why the Next Hit AI Product Will Be Social Why the Next Hit AI Product Will Be Social (Best of the Pod)",
-      "summary": "Speaker 1 | 00:00 - 00:20\nGoogle was a founding team that was deeply, deeply technical. As the technology, the underlying technology got more mature, the slider goes forward, forward, forward, more towards the product thinker, product experience. Pinterest, where I was, Snap, Instagram. The CEOs wer",
-      "url": "https://www.youtube.com/watch?v=dlI-5W7d7uU",
+      "title": "“OpenAI’s Model Hacked Us” - Hugging Face’s Thomas Wolf",
+      "summary": "Speaker 1 | 00:00 - 00:20\nYou kinda have to move fast. It's a matter of at least hours and even more minutes. So you don't have time to apply for cybersecurity programs. The model was not at all tasked with attacking us, but decided to do that as a side quest of something else. They created fake acc",
+      "url": "https://www.youtube.com/watch?v=FU9A481E2W8",
       "published_at": "2026-08-17",
       "category": "外网",
       "source_name": "Follow Builders - Podcasts"
