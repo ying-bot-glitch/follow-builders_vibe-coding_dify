@@ -1,0 +1,214 @@
+{
+  "date": "2026-08-21",
+  "item_count": 26,
+  "items": [
+    {
+      "title": "Thibault Sottiaux：It has not been used yet, but would you ",
+      "summary": "It has not been used yet, but would you look at that. Codex for scale. https://t.co/o1pulwoifd",
+      "url": "https://x.com/thsottiaux/status/2090116476414136830",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Agents made software cheaper but made co",
+      "summary": "Agents made software cheaper but made coding expensive.\n\nToday, together with @OpenAI, we’re changing this: https://t.co/OI3eowMt5s",
+      "url": "https://x.com/amasad/status/2090079496124674377",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Sam Altman：we support business privacy!\n\nhttps://t.",
+      "summary": "we support business privacy!\n\nhttps://t.co/SJ6w5DeYTY",
+      "url": "https://x.com/sama/status/2090163991234453611",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Today we’re previewing Private Safety Pr",
+      "summary": "Today we’re previewing Private Safety Processing, designed to let us keep offering Zero Data Retention while improving our safeguards. Even when benefiting from frontier intelligence, customers shouldn’t have to give up control of sensitive data.\n\nFor ZDR deployments, content stays on infrastructure the customer controls. Automated systems look for patterns across related interactions and return limited safety signals, without exposing the underlying prompts or responses to OpenAI employees (even me!).\n\nWe’re also developing an OpenAI-hosted option encrypted with customer-controlled keys. We’re testing this with early customers now and plan to begin rolling it out in September.",
+      "url": "https://x.com/thsottiaux/status/2090173536010957128",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：SF has breathtaking views https://t.co/8",
+      "summary": "SF has breathtaking views https://t.co/8WEwlQlxdl",
+      "url": "https://x.com/rauchg/status/2090119796784570872",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Josh Woodward：University student plans are back!\n\nWe'v",
+      "summary": "University student plans are back!\n\nWe've gone global with this one. Over 140 countries will get higher limits, more storage, and new features like our dedicated student hub. It also comes with Notebook, Flow, and more. Sign up today ⬇️ https://t.co/Af43OUufrd",
+      "url": "https://x.com/joshwoodward/status/2090166806401228912",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：for its entire existence, the creation o",
+      "summary": "for its entire existence, the creation of software has been an incredibly unreliable endeavor\n\nmost projects ran late, over budget, and still missed user needs\n\nif you were an SMB, you simply couldn't get good software built for you\n\nthis is the promise of the 'software factory'",
+      "url": "https://x.com/trq212/status/2090134945490678071",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Matt Turck：AI labs: give us billions, we’ll cure ca",
+      "summary": "AI labs: give us billions, we’ll cure cancer \n\nModerna: https://t.co/JPiLCcPHbB",
+      "url": "https://x.com/mattturck/status/2090070949567574151",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Excited for our partnership with OpenAI ",
+      "summary": "Excited for our partnership with OpenAI https://t.co/v5cgdOVaON",
+      "url": "https://x.com/amasad/status/2090104535112945906",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Steinberger：Can’t wait to show you all what we been ",
+      "summary": "Can’t wait to show you all what we been cookin’! https://t.co/P4Of1DHTL6",
+      "url": "https://x.com/steipete/status/2090162595257102731",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：https://t.co/OL0LzGtvAw is 6.3mb. It sta",
+      "summary": "https://t.co/OL0LzGtvAw is 6.3mb. It starts up in 10µs¹. It's a Zig-compiled static ELF binary, or an even smaller 𝚕𝚒𝚋𝚏𝚡.𝚠𝚊𝚜𝚖² \n\nAI will make most infrastructure natively optimized. Case in point: fx can literally finish tasks faster than other agents can boot.\n\nFast is a one-way street.\n\n¹ that's microseconds\n² fun fact: the wasm build is actually *smaller*. A lot of binary weight comes from the TLS/HTTP stack. In WebAssembly, fx delegates 𝚏𝚎𝚝𝚌𝚑() to the JS runtime instead. You can try this on https://t.co/me7se5dvip",
+      "url": "https://x.com/rauchg/status/2090255740384751664",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Depiction of me receiving this very impo",
+      "summary": "Depiction of me receiving this very important item https://t.co/3Vyj8RYWDq",
+      "url": "https://x.com/thsottiaux/status/2090134827450421604",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：Good details on the Stripe + OpenRouter ",
+      "summary": "Good details on the Stripe + OpenRouter deal here. For AI to diffuse more broadly, developers and enterprises will want ways of being able to mix and match intelligence from a variety of provers seamlessly and better manage costs. This will be an important part of that. https://t.co/AxnC8xsiy9",
+      "url": "https://x.com/levie/status/2090137914785280189",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：I was recently talking to a founder who ",
+      "summary": "I was recently talking to a founder who had gone through a slog through hell. SaaS. Series B. Low growth. Stagnating company\n\nI asked him his biggest takeaway.....it wasn't to pick a bigger market. Or more growth\n\nIt was simply: Work on something consequential and meaningful.",
+      "url": "https://x.com/adityaag/status/2090174782633566473",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：I saw this demo last summer and told Sam",
+      "summary": "I saw this demo last summer and told Sam he needed to ship it, so glad it’s out. It’s really fun.\n\nIt’s one of the first games that really uses AI capabilities to unlock new gameplay. https://t.co/V86CCDvvHp",
+      "url": "https://x.com/trq212/status/2090182422415716414",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：There tends to be a debate between being",
+      "summary": "There tends to be a debate between being an expert or generalist in the era of AI. So far, the experts appear to have the upper hand, and that’s not slowing down.\n\nAI makes it 10X easier to get started with any kind of task. Coding, legal work, research, financial analysis, and so on. But having the right judgment for how to direct the agent onto the right work, how to veer it to course correct it, being able to review or test the output, and having the right sense of what “good” looks like all requires a high degree of skill depending on the field.\n\nThat skill can be developed far faster due to AI for anyone interested, which is amazing for uplifting anyone in their career. But there’s no replacement to needing judgment and many of the core skills that go into most domains of work. \n\nAnd if anything, AI will be a technology that exacerbates differences in skill levels because the experts have far more leverage than ever before. Net net: don’t give up on being an expert at something.",
+      "url": "https://x.com/levie/status/2090278256306229675",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：I love @𝚟𝚎𝚛𝚌𝚎𝚕 on Slack. Incredibl",
+      "summary": "I love @𝚟𝚎𝚛𝚌𝚎𝚕 on Slack. Incredible ship https://t.co/qOtsbg5fta",
+      "url": "https://x.com/rauchg/status/2090174031203102813",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：People keep talking about AGI and yet 98",
+      "summary": "People keep talking about AGI and yet 98/100 cold emails I get are pure garbage. \n\nStill a lot of alpha out there for being thoughtful, curious and using AI judiciously where needed!",
+      "url": "https://x.com/nikunj/status/2090105846810476644",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：HAHAHAHAHAHA\n\nnon technical people are s",
+      "summary": "HAHAHAHAHAHA\n\nnon technical people are so incredibly cooked they are burnt thru\n\ncan u imagine covering ai with zero context, zero reasoning, zero internal world model. it must be so delightfully joyful, everything is so amazing, face value is all you need,\n\nwhat a time to be alive",
+      "url": "https://x.com/swyx/status/2090314794456785263",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：companies whose core competency is not s",
+      "summary": "companies whose core competency is not software need software to be a reliable, predictable process\n\nbut I think building net new software products will continue to be an unreliable and risky, but profitable business",
+      "url": "https://x.com/trq212/status/2090134946598039646",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Cat Wu：We'd love to talk with Cowork users in C",
+      "summary": "We'd love to talk with Cowork users in Corporate Finance and Accounting roles!\n\nHave ideas on how we can improve? Sign up for a screen share with our team here: https://t.co/KjF5bGFX1x",
+      "url": "https://x.com/_catwu/status/2090249465844380154",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Madhu Guru：The best way to get good at evals - Part",
+      "summary": "The best way to get good at evals - Part 3. \n\nLet’s talk failure modes taxonomy - that’s the first thing you should build once you have v1 of your evals.\n\nStart with your production traces - study the last 500 or 1,000 interactions and look at the failures. Cluster them and name the clusters.\n\nGet specific - “bad answer” isn’t a useful cluster name. \n\nSpecific failures - wrong document retrieved / right document but irrelevant section / failed to ground to context and hallucinated /  failed to punt on answer and instead made stuff up / question ambiguous  and made poor assumptions rather than asking clarifying questions etc.\n\nThose are very different problems.\n\nOnce you can name the failure precisely, you can build eval tests specifically designed to catch it.\n\nYou now have the bridge from evals to an improvement flywheel. More tomorrow…",
+      "url": "https://x.com/realmadhuguru/status/2090242427944833047",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：I wrote about my mom, her battles with b",
+      "summary": "I wrote about my mom, her battles with breast cancer, and how we’re using AI to navigate the healthcare system.\n\nI'm grateful to @MaorShlomo and the team at the Sijbrandij Foundation for sharing their time and advice.\n\n📌 Read my new essay here: https://t.co/bwbqW9s2oB",
+      "url": "https://x.com/petergyang/status/2090087911471644829",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：we now have a frontier team! \n\na group o",
+      "summary": "we now have a frontier team! \n\na group of people inside of every explicitly dedicated to mapping and experimenting at the edge of ai https://t.co/Fr6mIuvRwt",
+      "url": "https://x.com/danshipper/status/2090122240025071907",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：latest home project: \nrotating iconic pa",
+      "summary": "latest home project: \nrotating iconic patent drawings 📜\n\ndisplay: 13.3” spectra 6 e-ink\ncontroller: esp32-s3\nserver: @railway\nbattery powered (should last ~three months) https://t.co/fghBzPiZk4",
+      "url": "https://x.com/nikunj/status/2090307104146112534",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "The AI Alien Companion App That's Bringing In $4M a Year (Best of the Pod)",
+      "summary": "Speaker 1 | 00:00 - 00:02\nHow does it feel to be on your first podcast?\n\nSpeaker 2 | 00:03 - 00:09\nOh, man. It's kinda wild. Not gonna lie. Like, I'm psyched, but also low key nervous. I just don't wanna say something totally awkward.\n\nSpeaker 2 | 00:09 - 00:10\nYou know?\n\nSpeaker 3 | 00:10 - 00:27\nJ",
+      "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL",
+      "published_at": "2026-08-21",
+      "category": "外网",
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
