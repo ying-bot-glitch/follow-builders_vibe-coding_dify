@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-21",
+  "subject": "【AI 情报周报】2026-08-21",
+  "weekly_insight": "AI Agent 技术正推动软件开发模式和基础设施效率的变革，同时强调了在 AI 辅助下专业判断和核心技能的重要性。",
+  "sections": {
+    "商业大事件/行业事件": [
+      {
+        "title": "Amjad Masad：Agents made software cheaper but made co",
+        "brief": "Amjad Masad 指出，AI Agent 降低了软件开发成本，但可能推高了编码的成本。OpenAI 与其合作，旨在改变这一现状。",
+        "weight_score": 75,
+        "url": "https://x.com/amasad/status/2090079496124674377"
+      },
+      {
+        "title": "Thibault Sottiaux：Today we’re previewing Private Safety Pr",
+        "brief": "OpenAI 正在预览私有安全处理功能，旨在实现零数据保留并加强安全防护。新方案允许客户控制数据，并对自动化系统产生的安全信号进行有限访问，同时保护用户敏感数据不被 OpenAI 员工接触。",
+        "weight_score": 50,
+        "url": "https://x.com/thsottiaux/status/2090173536010957128"
+      },
+      {
+        "title": "Amjad Masad：Excited for our partnership with OpenAI ",
+        "brief": "Amjad Masad 对其与 OpenAI 的合作表示兴奋，具体合作内容未在推文中详述，但预示着双方将有进一步的动态。",
+        "weight_score": 50,
+        "url": "https://x.com/amasad/status/2090104535112945906"
+      }
+    ],
+    "产品情报站/主流模型": [
+      {
+        "title": "Aaron Levie：There tends to be a debate between being",
+        "brief": "Aaron Levie 认为，在 AI 时代，专业技能的重要性依然突出。AI 虽能降低任务门槛，但判断力、指导 AI 以及评估输出质量等核心能力仍需专业知识，AI 反而可能放大技能差距。",
+        "weight_score": 65,
+        "url": "https://x.com/levie/status/2090278256306229675"
+      },
+      {
+        "title": "Guillermo Rauch：https://t.co/OL0LzGtvAw is 6.3mb. It sta",
+        "brief": "Guillermo Rauch 展示了基于 Zig 编译的静态 ELF 二进制文件 fx，其启动速度极快（10微秒），并有更小的 WebAssembly 版本。他认为 AI 将推动基础设施原生优化，实现任务处理速度的飞跃。",
+        "weight_score": 45,
+        "url": "https://x.com/rauchg/status/2090255740384751664"
+      },
+      {
+        "title": "Josh Woodward：University student plans are back!\n\nWe'v",
+        "brief": "Josh Woodward 宣布，面向全球学生的计划已重新上线，覆盖超过140个国家，提供更高的额度、存储空间及学生专属功能，并包含 Notebook 和 Flow 等服务。",
+        "weight_score": 40,
+        "url": "https://x.com/joshwoodward/status/2090166806401228912"
+      }
+    ]
+  }
+}
