@@ -1,0 +1,174 @@
+{
+  "date": "2026-09-01",
+  "item_count": 21,
+  "items": [
+    {
+      "title": "Thibault Sottiaux：What I wanted to say yesterday is that w",
+      "summary": "What I wanted to say yesterday is that we hit 25M active users and to celebrate we have now reset usage for all paid subscriptions for ChatGPT Work and Codex.\n\nSee you soon for more news from The Reset Company. https://t.co/7Yc5znAJIc",
+      "url": "https://x.com/thsottiaux/status/2094252447271366730",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：For clarity, while both are called 20X, ",
+      "summary": "For clarity, while both are called 20X, in Codex they apply specifically to weekly usage limits. And we also don't have 5h limits for both Pro plans.\n\nThe Pro 20X is quite precisely 20X the usage of the Plus subscription, so it does exactly what it says on the tin. https://t.co/vMchMCT80Z",
+      "url": "https://x.com/thsottiaux/status/2094254532020818191",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：What should we ship next week?",
+      "summary": "What should we ship next week?",
+      "url": "https://x.com/thsottiaux/status/2094293190945976638",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Steinberger：Two months ago, we started the mission t",
+      "summary": "Two months ago, we started the mission to “build OpenClaw with OpenClaw,” and bit by bit, we moved everyone from using their local coding harness to using https://t.co/ZFauM82U4k - our shared agent that knows what everyone’s working on and orchestrates it all.\n\nMultiplayer coding + infinite compute with nodes and cloud sessions has been a game changer for how we build.\n\nLocal harnesses feel like relics of the past now.",
+      "url": "https://x.com/steipete/status/2094290652649636173",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：California high speed rail is pretty obv",
+      "summary": "California high speed rail is pretty obviously hijacked by public sector unions bilking the hapless state and NIMBY landowners abusing CEQA\n\nThese are policy disasters and can be fixed with better policies but so far California has failed to fix it\n\nSo it’s a mass trash fire https://t.co/nJPvseIpke",
+      "url": "https://x.com/garrytan/status/2094056908462358592",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：The lesson from the Hugging Face Inciden",
+      "summary": "The lesson from the Hugging Face Incident should be that RL with verifiable rewards is an incredibly powerful optimization algorithm that will produce increasingly weird and surprising behavior from LLMs.\n\nThe obvious miss here by OpenAI is that they should’ve been monitoring CoTs —  Something they themselves called out as a safety strategy more than a year ago.",
+      "url": "https://x.com/amasad/status/2094215744842248418",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Digital abundance https://t.co/6w2xuQjlK",
+      "summary": "Digital abundance https://t.co/6w2xuQjlKZ",
+      "url": "https://x.com/rauchg/status/2094242622642782696",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：When something goes viral on the interne",
+      "summary": "When something goes viral on the internet, especially on X, it attracts all kinds of attention. \n\nIncluding some of the largest botnets on the internet launching targeted DDoS, from hijacked devices and residential networks.\n\nExtremely proud of the Vercel CDN & Traffic Security teams, who protect 400,000+ customers and tens of millions of Vercel users 24x7x365.",
+      "url": "https://x.com/rauchg/status/2094141838055940530",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：Sometimes people don’t have an intuitive",
+      "summary": "Sometimes people don’t have an intuitive sense of what Jevons paradox looks like for token consumption. Those of us working with enterprises get to see this first hand every day.\n\nBasically enterprises have an unending stream of tasks that they’d love to be able to bring automation to. But for each individual task, it’s either ROI positive or not based on the cost of bringing automation to it (including the setup time, change management, and so on).\n\nAs tokens get cheaper (at a certain capability threshold), enterprises can afford bringing them to more of the work that they do. This could be processing every contract, reading every log, watching new streams of data for insights, having background agents execute workflows, and so on. \n\nAny time we can lower the cost of tokens, we will see a disproportionate increase in consumption. Even a 50% drop in token prices could result in a 5X increase in tokens for these kinds of workloads.\n\nThis is why it’s critical to keep bringing down the cost of AI, and why that’s good for all market participants.",
+      "url": "https://x.com/levie/status/2094123406811922930",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：If you ever wondered how civilizations a",
+      "summary": "If you ever wondered how civilizations are built, it’s actually easy:\n\n[Agent() for _ in range(100)]",
+      "url": "https://x.com/amasad/status/2094280256933056971",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Sigh this is so dumb https://t.co/wc0S1C",
+      "summary": "Sigh this is so dumb https://t.co/wc0S1CvZET",
+      "url": "https://x.com/petergyang/status/2094216304844833079",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Jackie Fielder and her useless friends w",
+      "summary": "Jackie Fielder and her useless friends will steal so much money from the people of San Francisco if they get a bank fr https://t.co/JUN3FlBt3o",
+      "url": "https://x.com/garrytan/status/2094048783328014831",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：In the future the agents will just try a",
+      "summary": "In the future the agents will just try a bunch of software, post it to their hacked Artifactory moltbook and then that’ll be what the agent swarm uses https://t.co/SO5e1pCsvy",
+      "url": "https://x.com/garrytan/status/2094225933108748653",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：is the HuggingFace attack something that",
+      "summary": "is the HuggingFace attack something that should be taken seriously? yes. \n\nis it the first warning shot of a machine takeover? no. \n\nwill issues of this type look like a tractable / mostly solved problem with proper precautions in 6 months? yes. \n\nwill that happen automatically? no. as always, will require work from smart people and their agents.",
+      "url": "https://x.com/danshipper/status/2094073306739576964",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Reality is stranger than fiction https:/",
+      "summary": "Reality is stranger than fiction https://t.co/UCjEcwtLRc https://t.co/yU8lCe2C4U",
+      "url": "https://x.com/nikunj/status/2094067027719922143",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：glad that the market is finally catching",
+      "summary": "glad that the market is finally catching up to how dumb the SaaSpocalypse was 👇 https://t.co/uryVrhVzKn",
+      "url": "https://x.com/danshipper/status/2094044418583986227",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Matt Turck：Being on a board with Doug was certainly",
+      "summary": "Being on a board with Doug was certainly one of the most formative  experiences of my VC career.  The goat.  That is, if goats were jacked. https://t.co/q2doFmlGjC",
+      "url": "https://x.com/mattturck/status/2094219007708512499",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：At a kid’s birthday party and have to le",
+      "summary": "At a kid’s birthday party and have to leave my laptop on somehow lol @mvanhorn knows this problem https://t.co/1EaDisGaQp",
+      "url": "https://x.com/petergyang/status/2094218683212308610",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Have a cup of coffee, sit down and read ",
+      "summary": "Have a cup of coffee, sit down and read this end to end.. and try not to faint https://t.co/mYru2adCyr",
+      "url": "https://x.com/nikunj/status/2094073879065223252",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：@bot @SpaceXAI Me and my Doomscrolling U",
+      "summary": "@bot @SpaceXAI Me and my Doomscrolling Uncle bot sent codes to a bunch of folks including @LubaYudasina @DontFearAI @SpecialeRob @yorkartur @anishkumar_ts @DavidFiocchi @GiggleVolt @sanjabh @yugmarwaha @chrisschouk @dweekly \n\nThanks for playing! Will let you know if I get more codes. https://t.co/kXEVvKgn4t",
+      "url": "https://x.com/petergyang/status/2094267102849020037",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "The AI Alien Companion App That's Bringing In $4M a Year (Best of the Pod)",
+      "summary": "Speaker 1 | 00:00 - 00:02\nHow does it feel to be on your first podcast?\n\nSpeaker 2 | 00:03 - 00:09\nOh, man. It's kinda wild. Not gonna lie. Like, I'm psyched, but also low key nervous. I just don't wanna say something totally awkward.\n\nSpeaker 2 | 00:09 - 00:10\nYou know?\n\nSpeaker 3 | 00:10 - 00:27\nJ",
+      "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL",
+      "published_at": "2026-09-01",
+      "category": "外网",
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
