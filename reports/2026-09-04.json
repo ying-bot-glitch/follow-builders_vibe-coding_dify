@@ -6,7 +6,7 @@
     "产品情报站/主流模型": [
       {
         "title": "Garry Tan：I just made some new GBrain evals that h",
-        "brief": "Garry Tan 发布了新的 GBrain 评估，证明其开源的 retrieval-for-AI-agent 方案在无需 LLM 参与的情况下，能够高效地从记忆中检索信息。同时，他还增加了从代理对话记录中节省记忆的评估方法。",
+        "brief": "Garry Tan 发布了新的 GBrain 评估，证明其开源的检索层在无需 LLM 参与的情况下，能够高效地从记忆中检索信息，并支持从代理对话记录中丰富记忆。",
         "weight_score": 90,
         "url": "https://x.com/garrytan/status/2094462971598754010",
         "source_name": "Follow Builders - X",
@@ -14,7 +14,7 @@
       },
       {
         "title": "Aaron Levie：At Box, we’ve been testing Fable 5.1 in ",
-        "brief": "Box 团队在企业级非结构化数据任务上测试了 Fable 5.1，相比 Fable 5 提升了 7%。Fable 5.1 在金融、生命科学、公共部门等领域的复杂企业场景中展现出显著的分析、数学和逻辑能力提升。",
+        "brief": "Box 在企业级非结构化数据任务上测试 Fable 5.1，相比 Fable 5 提升了 7%。新模型在金融、生命科学、公共部门等领域的复杂企业场景中表现出显著的分析、数学和逻辑能力提升。",
         "weight_score": 80,
         "url": "https://x.com/levie/status/2094851976769257770",
         "source_name": "Follow Builders - X",
@@ -24,7 +24,7 @@
     "商业大事件/行业事件": [
       {
         "title": "Boris Cherny：Fable 5.1 makes Claude Tag even more use",
-        "brief": "Fable 5.1 增强了 Claude Tag 在 Slack 中的应用能力，能够从表格和 Slack 数据中快速构建领导层演示文稿，并能识别和标记与数据不符的供应商报告。",
+        "brief": "Fable 5.1 提升了 Claude Tag 在 Slack 中的实用性，能够从电子表格和 Slack 数据中快速构建领导层演示文稿，并能识别和标记不一致的供应商报告。",
         "weight_score": 90,
         "url": "https://x.com/bcherny/status/2095276133214491086",
         "source_name": "Follow Builders - X",
@@ -32,7 +32,7 @@
       },
       {
         "title": "Thibault Sottiaux：I think the best way to describe OpenAI'",
-        "brief": "Thibault Sottiaux 描述 OpenAI 的文化为“巨型创业公司”，强调其极高的主人翁意识、投入度和发展节奏。",
+        "brief": "Thibault Sottiaux 描述 OpenAI 文化为“超级创业公司”，强调其极端的责任感、投入度和快速迭代的特点。",
         "weight_score": 80,
         "url": "https://x.com/thsottiaux/status/2095369901137654271",
         "source_name": "Follow Builders - X",
@@ -40,7 +40,7 @@
       },
       {
         "title": "Thibault Sottiaux：We unfortunately have decided that we ca",
-        "brief": "OpenAI 宣布终止与 Cursor 的合作，原因涉及信任问题，并计划于 11 月 12 日生效。OpenAI 将继续支持开发者通过自有 API 密钥或 IDE 扩展使用其模型。",
+        "brief": "OpenAI 宣布终止与 Cursor 的合作，原因涉及信任问题，并提供了替代方案，包括使用自有 API 密钥或 IDE 扩展。OpenAI 承诺将继续支持开发者生态系统。",
         "weight_score": 75,
         "url": "https://x.com/thsottiaux/status/2093515916076343774",
         "source_name": "Follow Builders - X",
@@ -48,7 +48,7 @@
       },
       {
         "title": "Claude：Available in beta on Pro and Max plans, ",
-        "brief": "Claude 在 macOS 桌面应用 Pro 和 Max 版本中提供 Beta 测试，用户可在设置中启用“电脑使用”功能。该功能旨在增强 Claude 在处理电脑相关任务时的能力。",
+        "brief": "Claude 在 macOS 桌面应用 Pro 和 Max 版本中提供 Beta 测试，用户可在设置中开启“电脑使用”功能，以安全地使用该功能。",
         "weight_score": 75,
         "url": "https://x.com/claudeai/status/2095226835743158320",
         "source_name": "Follow Builders - X",
@@ -56,7 +56,7 @@
       },
       {
         "title": "Sam Altman：Over the summer, we have been sprinting ",
-        "brief": "Sam Altman 表示 OpenAI 在夏季期间专注于安全优先级，并取得了显著进展。公司正为发布下一代模型做准备，同时强调在能力提升的同时，安全和对齐的同步发展至关重要，并会根据安全标准调整模型发布节奏。",
+        "brief": "Sam Altman 表示 OpenAI 在夏季专注于安全优先级，并将在不久后发布新模型。公司在能力和安全保障同步发展方面取得进展，并强调了在 AI 快速发展阶段谨慎行事的必要性。",
         "weight_score": 70,
         "url": "https://x.com/sama/status/2094934592062959832",
         "source_name": "Follow Builders - X",
