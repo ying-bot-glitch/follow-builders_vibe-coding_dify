@@ -15,6 +15,30 @@
     {
       "keyword": "Anthropic",
       "boost": 30
+    },
+    {
+      "keyword": "Google",
+      "boost": 25
+    },
+    {
+      "keyword": "Microsoft",
+      "boost": 25
+    },
+    {
+      "keyword": "NVIDIA",
+      "boost": 25
+    },
+    {
+      "keyword": "Claude",
+      "boost": 25
+    },
+    {
+      "keyword": "GPT",
+      "boost": 25
+    },
+    {
+      "keyword": "Meta",
+      "boost": 20
     }
   ],
   "topics": [
@@ -23,11 +47,31 @@
       "boost": 25
     },
     {
-      "keyword": "多模态",
+      "keyword": "LLM",
       "boost": 20
     },
     {
       "keyword": "RAG",
+      "boost": 20
+    },
+    {
+      "keyword": "multimodal",
+      "boost": 20
+    },
+    {
+      "keyword": "fine-tuning",
+      "boost": 15
+    },
+    {
+      "keyword": "open source",
+      "boost": 15
+    },
+    {
+      "keyword": "enterprise",
+      "boost": 15
+    },
+    {
+      "keyword": "多模态",
       "boost": 20
     },
     {
@@ -41,14 +85,50 @@
       "boost": 20
     },
     {
-      "keyword": "自动化",
+      "keyword": "automation",
       "boost": 15
     },
     {
-      "keyword": "效率提升",
+      "keyword": "workflow",
       "boost": 15
+    },
+    {
+      "keyword": "copilot",
+      "boost": 15
+    },
+    {
+      "keyword": "coding",
+      "boost": 12
+    },
+    {
+      "keyword": "manufacturing",
+      "boost": 18
+    },
+    {
+      "keyword": "automotive",
+      "boost": 18
     }
   ],
+  "substance": {
+    "verbs": [
+      "launch",
+      "release",
+      "announce",
+      "unveil",
+      "introduce",
+      "open source",
+      "ga ",
+      "beta",
+      "ship",
+      "发布",
+      "上线"
+    ],
+    "verb_boost": 20,
+    "min_length": 120,
+    "short_penalty": 15,
+    "likes_threshold": 50,
+    "likes_boost": 10
+  },
   "negative_filter": [
     {
       "keyword": "游戏",
@@ -57,6 +137,10 @@
     {
       "keyword": "娱乐八卦",
       "penalty": 30
+    },
+    {
+      "keyword": "meme",
+      "penalty": 10
     }
   ],
   "freshness": {
