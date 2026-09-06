@@ -1,0 +1,222 @@
+{
+  "date": "2026-09-06",
+  "item_count": 24,
+  "items": [
+    {
+      "title": "Thibault Sottiaux：Because we are beyond happy to have Astr",
+      "summary": "Because we are beyond happy to have Astra rolled out today ahead of schedule and you have been super patient with us (not really, but it’s ok!)… we will do the full banked reset today too for all Plus, Pro and Business users. Lands end of day.\n\nHappy Astra day and enjoy a phenomenal weekend. \n\nPS: If you create the account or upgrade before 8pm PT you will get it too. Still time!",
+      "url": "https://x.com/thsottiaux/status/2096035437299237298",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 17706,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Sam Altman：GPT-6 Astra is now available to all Pro,",
+      "summary": "GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Work/Codex, and is available in the API.\n\nWe will start rollout to Plus and Business users next.\n\nThank you for the patience.",
+      "url": "https://x.com/sama/status/2095973658867171733",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 15960,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Sam Altman：Now out to all Plus and Business users.\n",
+      "summary": "Now out to all Plus and Business users.\n\nHappy building! https://t.co/66tabg3Yid",
+      "url": "https://x.com/sama/status/2096008528834244741",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 12851,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Astra was probably our biggest competiti",
+      "summary": "Astra was probably our biggest competitive advantage while it wasn’t generally available.\n\nSince we’ve had it our productivity jumped so much that we shifted some of our plans 6 months ahead and will ship them at DevDay instead of mid next year.",
+      "url": "https://x.com/thsottiaux/status/2096101429832552872",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 7364,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：And the team will have some nice sleep n",
+      "summary": "And the team will have some nice sleep now. See you next week for some more ships.",
+      "url": "https://x.com/thsottiaux/status/2096035748130795560",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 3232,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：AI software factories will yield bug-fre",
+      "summary": "AI software factories will yield bug-free, self-improving software https://t.co/m8J9LT2wbR",
+      "url": "https://x.com/rauchg/status/2095926173293572467",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 780,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Super bullish on WebMCP. Much like Tesla",
+      "summary": "Super bullish on WebMCP. Much like Tesla FSD meets the world where it is (streets, stoplights, potholes and all), agents *need* to ride the existing WWW infrastructure… WebMCP makes it more efficient.\n\nSome pretty unique wins too. e.g: Next.js dev pages could expose debugging tools directly to agents in the specific tab they’re testing, with page-specific context, instead of sifting through server logs. No separate MCP server to find and configure because the page directly exposes its own 'agent tools'.\n\ne.g: in this world 𝚏𝚡 + 𝚊𝚐𝚎𝚗𝚝-𝚋𝚛𝚘𝚠𝚜𝚎𝚛 is a complete web dev stack with zero loss in debugging depth",
+      "url": "https://x.com/rauchg/status/2096065378598441431",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 550,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：The singularity is here, it’s just not e",
+      "summary": "The singularity is here, it’s just not evenly distributed https://t.co/8osY33GqLS",
+      "url": "https://x.com/amasad/status/2096022087035195647",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 512,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Absolutely insane experience using @Asid",
+      "summary": "Absolutely insane experience using @AsideAI as an AI harness - trying to setup OpenClaw with Slack was a 2 hour experience. \n\nAside's harness with full integrations AND browser integration did it in less than 3 minutes, and it's fully featured with smart access control defaults https://t.co/ja81EcaMUh",
+      "url": "https://x.com/garrytan/status/2095971990645755941",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 296,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：It’s coming 🤗 https://t.co/FUYGCMIFmV h",
+      "summary": "It’s coming 🤗 https://t.co/FUYGCMIFmV https://t.co/K9SJQxdAj6",
+      "url": "https://x.com/amasad/status/2095792059647234204",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 285,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：GStack now uses @AsideAI browser as it's",
+      "summary": "GStack now uses @AsideAI browser as it's preferred remote session browser\n\nDoes your AI agent need access to web and credentials as you? Aside is now the #1 absolute best way to do it I've found out of all AI agent tools. \n\nAside is a/ an amazing browser, b/ great at credentials, c/ has all the integrations you need and c/ actually an amazing harness and memory system in its own right\n\nIt's my new favorite AI browser",
+      "url": "https://x.com/garrytan/status/2095948689823121872",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 271,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Astra on Replit ✨ https://t.co/ONm0dLAwo",
+      "summary": "Astra on Replit ✨ https://t.co/ONm0dLAwoD",
+      "url": "https://x.com/amasad/status/2095986658185453928",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 233,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Madhu Guru：Here’s one practical thing you can do th",
+      "summary": "Here’s one practical thing you can do this weekend to get better at building AI products.\n\nPick a workflow you know well - from your personal life or your work.\n\nAutomate the whole thing with AI.\n\nUse the AI product you’re comfortable with - you’ll probably have to experiment with a few.\n\nThis exercise will force you to think about\n\n1/ What does a great end-to-end experience look like?\n2/ How should you use MCPs and tools?\n3/ Where should humans stay in the loop?\n4/ How do you evaluate it?\n\nThen keep expanding the ambition.\n\nYou’ll learn more by doing this once than by reading about AI product building for a month.\n\nThe only way to learn is to build.",
+      "url": "https://x.com/realmadhuguru/status/2095907570540335174",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 129,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：Me: I totally understand how RL, inferen",
+      "summary": "Me: I totally understand how RL, inference time scaling, modern data-verification loops work.\n\nAlso Me: These models are total sorcery. There is no way that they should be able to do what they do.",
+      "url": "https://x.com/adityaag/status/2095910036652577028",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 88,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：i've got Astra doing film study for our ",
+      "summary": "i've got Astra doing film study for our @every fantasy football draft \n\nwe going to take over this league 😤 https://t.co/kMKz5XscV8",
+      "url": "https://x.com/danshipper/status/2095882683729490108",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 62,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：OpenAI should ship an app for Apple Watc",
+      "summary": "OpenAI should ship an app for Apple Watch where I can just voice dictate to my Codex threads and it'll reply back with voice too. \n\nThen I won't have to carry my phone around and have screen addiction.\n\nOr maybe this is what the rumored OpenAI device does.",
+      "url": "https://x.com/petergyang/status/2096086845159563476",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 58,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Matt Turck：Hugging Face and @Thom_Wolf cannot stop ",
+      "summary": "Hugging Face and @Thom_Wolf cannot stop winning, first the acquisition and now this comment lol https://t.co/Mj4Iy4ssT4",
+      "url": "https://x.com/mattturck/status/2095885284801982779",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 58,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Astra generated the most stereotypical i",
+      "summary": "Astra generated the most stereotypical image of a PM I've ever seen for my game https://t.co/kTHOWcVSWP",
+      "url": "https://x.com/petergyang/status/2096036429159973348",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 42,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：can’t help myself https://t.co/ZEZh9Olqv",
+      "summary": "can’t help myself https://t.co/ZEZh9OlqvI",
+      "url": "https://x.com/danshipper/status/2095925615467659637",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 27,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Would you all want to play my roguelike ",
+      "summary": "Would you all want to play my roguelike deckbuilder https://t.co/5XUsQU7S83",
+      "url": "https://x.com/petergyang/status/2096020213775118765",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 19,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Zara Zhang：Most people perceive AI to be a better w",
+      "summary": "Most people perceive AI to be a better writer than it actually is https://t.co/3OotzOgCkW",
+      "url": "https://x.com/zarazhangrui/status/2096082116828406233",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 15,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Adding “sovereign” to this list based on",
+      "summary": "Adding “sovereign” to this list based on the last few weeks https://t.co/Qyu5uXanZA",
+      "url": "https://x.com/nikunj/status/2095890365723406590",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 11,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：can you tell Astra is running my @every ",
+      "summary": "can you tell Astra is running my @every office fantasy team\n\nthis is my team name: https://t.co/2t1fY52eFh",
+      "url": "https://x.com/danshipper/status/2095885899871449385",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 11,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：i am working on a massive Astra/Fable fr",
+      "summary": "i am working on a massive Astra/Fable frontier model AEO report and it looks like Claude loves @latentspacepod when asked for best ai newsletter/podcast!! was so surprised that @ricmac made me doublecheck for memory leaks lol https://t.co/fpiS98Tzu8",
+      "url": "https://x.com/swyx/status/2096095862732755342",
+      "published_at": "2026-09-06",
+      "category": "外网",
+      "likes": 7,
+      "source_name": "Follow Builders - X"
+    }
+  ]
+}
