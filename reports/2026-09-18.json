@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-18",
+  "subject": "【AI 情报周报】2026-09-18",
+  "weekly_insight": "",
+  "sections": {
+    "商业大事件/行业事件": [
+      {
+        "title": "Aaron Levie：Protecting enterprise data in a world wh",
+        "brief": "Box CEO Aaron Levie 指出，随着 AI Agent 使用量激增，企业数据安全与治理面临严峻挑战。他强调需创新安全措施，如 Box Shield 中的细粒度控制，以平衡安全与AI生产力。",
+        "weight_score": 120,
+        "url": "https://x.com/levie/status/2099550035239424465",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Aaron Levie：Some more tales from the road. Met with ",
+        "brief": "Levie 观察到企业在 AI Agent 应用上面临多重挑战，包括网络安全担忧、多模型部署、Agent 安全身份管理、工作流重塑、架构调整以及遗留系统整合等问题，显示企业正积极应对 AI 带来的变革。",
+        "weight_score": 95,
+        "url": "https://x.com/levie/status/2098218284139311615",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Boris Cherny：Claude Code showed that AI could do real",
+        "brief": "Anthropic 产品负责人 Boris Cherny 宣布 Claude 已整合聊天与工作能力，旨在提供跨场景的连贯AI体验。此举标志着 AI 从问答向实际工作辅助的演进，提升用户效率。",
+        "weight_score": 90,
+        "url": "https://x.com/bcherny/status/2100259951398789487",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Thibault Sottiaux：Excited to welcome Aidan & @\nSasha from ",
+        "brief": "OpenAI 宣布收购 Git AI 团队，将利用其开源工具增强对代码生成 Agent 贡献的可见性，帮助企业更好地理解和管理 AI 在代码开发中的作用。",
+        "weight_score": 87,
+        "url": "https://x.com/thsottiaux/status/2098569976143806918",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Thibault Sottiaux：Astra powered ships this week\n\n- Images ",
+        "brief": "Astra 平台本周发布了多项更新，包括 Images 2.5、GPT-Live-1、Agents API 等，显示出其在多模态和 Agent 技术上的快速迭代，为企业应用提供更多可能性。",
+        "weight_score": 80,
+        "url": "https://x.com/thsottiaux/status/2098639827084480864",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      }
+    ],
+    "产品情报站/主流模型": [
+      {
+        "title": "Aaron Levie：We probably need to all update our sense",
+        "brief": "Aaron Levie 预测，随着 Agent Swarm、API 升级和新形态产品涌现，Agentic Workload 将在工作和生活中扮演更重要角色，处理量级远超以往，预示着 Agent 应用的巨大增长潜力。",
+        "weight_score": 75,
+        "url": "https://x.com/levie/status/2099739019517235618",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Aaron Levie：Incredibly exciting that there are entir",
+        "brief": "Levie 指出，AI 在处理信息、成本控制和决策能力方面的进步，为企业工作流中的数据分类、路由和安全判断等任务带来巨大价值，尤其看好其在 Agentic Workflows 中的应用前景。",
+        "weight_score": 60,
+        "url": "https://x.com/levie/status/2100448648672993540",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Nikunj Kothari：PSA to the new Dreamforce visitors.. Lyf",
+        "brief": "Nikunj Kothari 借用出行类比，强调了开源模型在提供高价值的同时，显著降低了时间和成本门槛，如同共享单车般高效便捷。",
+        "weight_score": 55,
+        "url": "https://x.com/nikunj/status/2099536440006955445",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      }
+    ]
+  }
+}
