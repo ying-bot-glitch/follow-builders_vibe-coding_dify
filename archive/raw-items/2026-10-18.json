@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-18",
+  "item_count": 26,
+  "items": [
+    {
+      "title": "Sam Altman：Wow the new roadster looks quite amazing",
+      "summary": "Wow the new roadster looks quite amazing, good job @elonmusk",
+      "url": "https://x.com/sama/status/2111131677351432197",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 55749,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Sam Altman：The back of the Navier-Stokes milestone ",
+      "summary": "The back of the Navier-Stokes milestone shirt is the last line of the chain-of-thought from the solution: https://t.co/W7mK8WmCz1",
+      "url": "https://x.com/sama/status/2111139227761266699",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 9023,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Boris Cherny：I could not imagine being productive wit",
+      "summary": "I could not imagine being productive without Claude Code Review. It runs on all of my PRs, and catches almost every bug before it goes it. This is a piece of the secret sauce that lets the team and I move so quickly while raising the quality bar https://t.co/7HdyTFsM0I",
+      "url": "https://x.com/bcherny/status/2111158313463525518",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 3399,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Boris Cherny：Don't sleep on Claude Slides. This is ho",
+      "summary": "Don't sleep on Claude Slides. This is how I make slide decks now -- no more googling \"iphone frame svg\" like the old days\n\nTry it: https://t.co/cAWdwarzgp https://t.co/POdqFL9oIP",
+      "url": "https://x.com/bcherny/status/2111158659971699136",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 3025,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Sam Altman：Very happy to see this from Nick! https:",
+      "summary": "Very happy to see this from Nick! https://t.co/BBSTgPHuy8",
+      "url": "https://x.com/sama/status/2111130577789493706",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 2920,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：What is ChatGPT Space, that is the quest",
+      "summary": "What is ChatGPT Space, that is the question. Endearingly awkward at times because it's the actual team working on it. What would you like to see next? https://t.co/CYjAOAlCpR",
+      "url": "https://x.com/thsottiaux/status/2111249534072529256",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 1744,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：A cardiology fellow built a 3D tool to h",
+      "summary": "A cardiology fellow built a 3D tool to help trainees learn to read coronary angiograms.\nhttps://t.co/IG6JVPawD7",
+      "url": "https://x.com/claudeai/status/2111177843413807120",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 1506,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amanda Askell：the rocket car is cool and i want one",
+      "summary": "the rocket car is cool and i want one",
+      "url": "https://x.com/AmandaAskell/status/2111167134533611801",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 971,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：And update your app to enjoy this gem\n\nh",
+      "summary": "And update your app to enjoy this gem\n\nhttps://t.co/oMWhw3ETZ6",
+      "url": "https://x.com/thsottiaux/status/2111245052513259606",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 687,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Fascinating to see Mathematicians go thr",
+      "summary": "Fascinating to see Mathematicians go through all the stages of grief — Denial, Anger, Bargaining, Depression, and Acceptance — in such a compressed window of time. \n\nWe're at the tail end of depression and entering acceptance. https://t.co/XgPq2mh3JS",
+      "url": "https://x.com/amasad/status/2111206044416500159",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 651,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：Haiku 5.5 wrote twenty haiku, then drew ",
+      "summary": "Haiku 5.5 wrote twenty haiku, then drew every frame in JavaScript.\nhttps://t.co/LFAPUhmpEE",
+      "url": "https://x.com/claudeai/status/2111177845846495646",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 644,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Rebuilt the Roadster demo in a playable,",
+      "summary": "Rebuilt the Roadster demo in a playable, highly accurate simulation that retains a lot of the IRL details:\nhttps://t.co/6ki8kSJwdP https://t.co/cxd6T88CTc",
+      "url": "https://x.com/rauchg/status/2111313462987231519",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 602,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Also we just added slides support yester",
+      "summary": "Also we just added slides support yesterday, try it out. Currently available in Pro, Business and Enterprise while we learn from your feedback.",
+      "url": "https://x.com/thsottiaux/status/2111249810502353152",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 556,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：What are you making with Claude this wee",
+      "summary": "What are you making with Claude this weekend?",
+      "url": "https://x.com/claudeai/status/2111177848228823102",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 514,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：TypeScript is the new TypeScript 😂\nWhen ",
+      "summary": "TypeScript is the new TypeScript 😂\nWhen 𝚜𝚌𝚛𝚒𝚙𝚝𝚌-compiled, outperforms tsgo by 2-4x https://t.co/GJRMoO4PTI",
+      "url": "https://x.com/rauchg/status/2111274408706965898",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 341,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Starting a new project today, and my abs",
+      "summary": "Starting a new project today, and my absolute favorite thing is @capydotai with @AsideAI means my agents can both code the first version and help me get all the DevOps set up in one fell swoop https://t.co/9MmR0Q9LMV",
+      "url": "https://x.com/garrytan/status/2111235500568969451",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 187,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Your data belongs to you! We’ll deploy R",
+      "summary": "Your data belongs to you! We’ll deploy Replit to your cloud and data never leaves home.\n\nDesigned for high stakes environments like governments, finance, and healthcare. https://t.co/hCLeTdS0Ht",
+      "url": "https://x.com/amasad/status/2111267314012496121",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 144,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Want to try GBrain but don’t know how? h",
+      "summary": "Want to try GBrain but don’t know how? https://t.co/8Rhn51BZGP is the best easiest hosted way to get going https://t.co/d6NisKMagK",
+      "url": "https://x.com/garrytan/status/2111282839740432423",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 130,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：It’s incredible to have reached a thresh",
+      "summary": "It’s incredible to have reached a threshold where it’s practical that AI will be better at training models than humans are so quickly. One day recursive self improvement feels far off, and the next we already have signs of what it will look like.\n\nModel capability finally exceeding most human engineers, advancements in the harness and infra for long running agents, a growing array of data, and the ability to parallelize the agents to work on vastly more tasks and tests and approaches than any person could have before, creates an incredible flywheel. \n\nThis flywheel will almost certainly accelerate model progress far faster than we’ve seen before - or at a minimum enable pushing up the ceiling of the frontier at an insane rate. If you aren’t pricing in what RSI will lead to, that’s probably a mistake.",
+      "url": "https://x.com/levie/status/2111312141609586862",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 125,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：Very excited to welcome a dear friend to",
+      "summary": "Very excited to welcome a dear friend to @spc next week. \n\n@sriramk is joining us for a fireside chat and Q&amp;A.\n\nHe helped build Azure, scaled Meta’s mobile ads, and led a16z’s international expansion.\n\nThen he went to the White House and helped write the U.S. AI Action Plan. https://t.co/gQAjySUsHW",
+      "url": "https://x.com/adityaag/status/2111162109933535673",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 120,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Frontier Slides, super fast ;) https://t",
+      "summary": "Frontier Slides, super fast ;) https://t.co/sMYc1Fcdo2",
+      "url": "https://x.com/amasad/status/2111261373741383712",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 103,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Ryo Lu：feelings\n\nlight piercing through the bli",
+      "summary": "feelings\n\nlight piercing through the blinds\nbirdsongs by the window\ncoffee grounds, blooming\n\nslow walk in the cypress forest\nlong breath, cold air\nfuzzy raindrops tap on the skin\ncatching the waves\nendless ocean, salt on the lips\n\ntrain window, mountains sliding by\nholding hands, running\nthrough the yellow light\ncold bath after a hot day\nmaking you laugh like a kid again\n\neyes closed\nlistening to our favorite songs\ncuddles and kisses\nyour breath slow on my neck\nhearing my heart break\n\nday by day, letting time pass\nmidnight to sunrise\nlife is beautiful, the way it is",
+      "url": "https://x.com/ryolu_/status/2111312957439086777",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 102,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦\n⣿⡏⠀⠀⣀⠀⣀⠀⠀⢹⣿\n⣿⡇⠀⠀⣿⠀⣿⠀⠀⢸⣿\n⣿⣇⣀⣀",
+      "summary": "⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦\n⣿⡏⠀⠀⣀⠀⣀⠀⠀⢹⣿\n⣿⡇⠀⠀⣿⠀⣿⠀⠀⢸⣿\n⣿⣇⣀⣀⣀⣀⣀⣀⣀⣸⣿\n⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟ https://t.co/cqWFHEeFv9",
+      "url": "https://x.com/rauchg/status/2111315534755311931",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 99,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Shoot your shot, you never know how the ",
+      "summary": "Shoot your shot, you never know how the universe collaborates in your favor..\n\nI wrote this 7 months ago as my “prediction”, met ~50 odd startups in the space, and finally found the one that we get the privilege to lead the Series A for. \n\nPerfect way to end the week 🙏 https://t.co/umlRaVZ5El",
+      "url": "https://x.com/nikunj/status/2111292452414103892",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 91,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：founders trying to evade my “how do you ",
+      "summary": "founders trying to evade my “how do you actually calculate this revenue” question..  https://t.co/teLpLqVHns",
+      "url": "https://x.com/nikunj/status/2111103265874043314",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 89,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "The Changing Physics of Cybersecurity and Drug Development with OpenAI President Greg Brockman",
+      "summary": "Speaker 1 | 00:00 - 00:19\nTo ensure AGI benefits all of humanity, we think that humans should be firmly in the driver's seat, should have control over the future, and this technology should amplify human agency. When I look at the world we're going to be in, where software in some ways is becoming l",
+      "url": "https://www.youtube.com/@NoPriorsPodcast",
+      "published_at": "2026-10-18",
+      "category": "外网",
+      "likes": 0,
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
