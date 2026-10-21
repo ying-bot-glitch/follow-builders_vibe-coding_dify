@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-21",
+  "item_count": 20,
+  "items": [
+    {
+      "title": "Thariq：I think most people multi-tasking with a",
+      "summary": "I think most people multi-tasking with agents could benefit from slowing down\n\nmost of the stuff you're doing wont really matter- what's your P0? what would it look like if you gave it your full attention?",
+      "url": "https://x.com/trq212/status/2112219173288120531",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 5458,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Day 15/ We're cooked https://t.co/ciJpOJ",
+      "summary": "Day 15/ We're cooked https://t.co/ciJpOJlmOn",
+      "url": "https://x.com/thsottiaux/status/2112268918681485431",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 4635,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：We open sourced a *really fast* HTML art",
+      "summary": "We open sourced a *really fast* HTML artifact builder. It's powered by libfx, making the agent durable.\n\nBuilding the low-level plumbing for v0 to survive server crashes, flaky LLMs, function limits was a huge pain.\n\nNow it's easy, free, and OSS: https://t.co/aUP1vKeIsP.\n\nPS: I built this floating container in a few minutes… it's delightful, and it's just HTML!",
+      "url": "https://x.com/rauchg/status/2112247046082363821",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 1662,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Day 15/ Nevermind, we're still cooking..",
+      "summary": "Day 15/ Nevermind, we're still cooking... and reset. Enjoy. https://t.co/RZ9WhtI802",
+      "url": "https://x.com/thsottiaux/status/2112432076767289678",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 1460,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：More free AI https://t.co/9Jd42XA7rw",
+      "summary": "More free AI https://t.co/9Jd42XA7rw",
+      "url": "https://x.com/rauchg/status/2112194000639967590",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 285,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：1,000 tokens per second btw https://t.co",
+      "summary": "1,000 tokens per second btw https://t.co/BdATqYu71F",
+      "url": "https://x.com/rauchg/status/2112256718281551955",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 255,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Multiplayer agents as group chat seems q",
+      "summary": "Multiplayer agents as group chat seems quite inevitable and Wabi's built it https://t.co/ltccTzgMLo",
+      "url": "https://x.com/garrytan/status/2112278352514162834",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 243,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：The big bitter lesson question in the ap",
+      "summary": "The big bitter lesson question in the applied AI layer is that as models get better and better, what is the best way to diffuse that intelligence into an enterprise. \n\nIronically, I’d argue that as models are getting more capable, and can handle longer running tasks and better tool use, the ability to differentiate on a domain by domain basis goes up instead of down. \n\nWhen models were quite limited in what they could do, ironically all you could be literally was a “wrapper” because you were effectively delivering tokens back to the user with a custom prompt or some limited RAG. \n\nBut in a world of agents using tools, tasks that run on for hours or days, workflows that kick off agents, agent swarms that need to be coordinated against a goal, data sources that are domain specific, model routing that requires domain-specific routing, implementation that requires real change management of the workflow instead of “just type into this chat box”, it’s very very possible that specialization of these systems goes up more. \n\nObviously this doesn’t apply to everything - the closer you are to the labs core use-cases the tougher this play gets, but I’d argue we’re going to see autonomous systems for a wide range of job functions that weren’t practical to build out before. We’ll see this in security, life sciences, healthcare, finance, manufacturing, and many other fields. Either way going to be a fun and wild couple of years.",
+      "url": "https://x.com/levie/status/2112404676436222170",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 83,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：so proud of Quinten + Ajay and team! \n\nt",
+      "summary": "so proud of Quinten + Ajay and team! \n\nthey've been pushing the boundaries of creativity and storytelling with AI for years now—and one of the breakout examples of it working in consumer\n\npsyched to be a tiny investor :) https://t.co/8deaaWyuJ7",
+      "url": "https://x.com/danshipper/status/2112230653924192274",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 60,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：a story in 3 parts https://t.co/dabv01DA",
+      "summary": "a story in 3 parts https://t.co/dabv01DAY3",
+      "url": "https://x.com/danshipper/status/2112272224782856514",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 59,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：\"O Infallible one, why do the people not",
+      "summary": "\"O Infallible one, why do the people not heed the sign we tap?\"\n\n\"My dear Parth, each believes he is the first to wish for an end to chat. On X we are cursed with the eternal September of the Thoughtless Mind.\"\n\n\"But O Govinda, they yearn for what lies beyond it, and cast their votes by the thousands. Surely the people's wants must be made.\"\n\n*a wan smile* “O son of Kunti, observe what they applaud, and what they return to. They desire the end of chat as they desire the end of desire. They desire to leave X as they return in ever greater numbers. They will announce it many times. You shall learn, as they do not, that the chief desire of the people of X is not the truth, but the new.”",
+      "url": "https://x.com/swyx/status/2112182228977348963",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 58,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：Early @PalantirTech. Cofounder of @andur",
+      "summary": "Early @PalantirTech. Cofounder of @anduriltech. GP at @foundersfund.\n\nLast time @traestephens was at @spc was back in 2022.\n\nThe world looks a little different now.\n\nWednesday. RSVP below. https://t.co/6uZu9c7KKT",
+      "url": "https://x.com/adityaag/status/2112276231731466420",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 49,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：A few weeks ago, I was ranting about mul",
+      "summary": "A few weeks ago, I was ranting about multiplayer AI experiences and that's when @ekuyda shared an early preview of Wabi 2.0..\n\nTruth be told, I was one of the early users of Wabi 1.0 and while the design was gorgeous, it frankly never \"stuck\" with me.\n\nBut, in moments of downloading this edition, I was immediately hooked. \n\nIt just gets the \"paradigm\" right imo. There are two types of personal agents today: 1) Singleplayer iMessage or Muse types - while useful it's hard to compartmentalize them when many things are going on 2) Build your own multiple chat Hermes agents - while that's useful and can share context, they live forever\n\nWabi has this great paradigm of orchestrator (which is the main agent) and topic specific episodic chats that are for a single purpose. You can share these individual chats with folks (for example the school one with my wife). And these are generated proactively AND don't need to stay forever (which is important).\n\nFor example, for my recent NY trip, it was generated based on a flight it saw, provided help where needed, and then after the trip was done, it was archived. Same with my 2025 taxes. \n\nMy only critique so far it's TOO proactive, the apps can be better and they need to dial both of those in, but this is a wonderful product that everyone should try!\n\n(I know it's shocking to see this in today's day and age, but this is neither paid, nor an investor, just a fan)",
+      "url": "https://x.com/nikunj/status/2112219327881761008",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 46,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Waiting for someone to sell me a  peptid",
+      "summary": "Waiting for someone to sell me a  peptide factory built in a data center which is also a robotics neolab that is somehow collecting first party uniquely differentiated data..\n\nAnd while we’re at it use the words tape out, memory/CPU shortage too. \n\nMake it 50/500 on a memo 🤝",
+      "url": "https://x.com/nikunj/status/2112368222809034980",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 36,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：This is super cool I love how visual it ",
+      "summary": "This is super cool I love how visual it is. \n\nCan't wait to try this @ekuyda! https://t.co/UMkHxW16BB",
+      "url": "https://x.com/petergyang/status/2112292347505688990",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 23,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Very interesting insight into why alot o",
+      "summary": "Very interesting insight into why alot of Netflix original movies and TV shows are slop. \n\nI still love a few of them (especially some of the Korean ones). https://t.co/FHES8Crisi",
+      "url": "https://x.com/petergyang/status/2112280969382437076",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 23,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Zara Zhang：See this in a theater! One of the most i",
+      "summary": "See this in a theater! One of the most interesting things about this documentary was how much &amp; when people laughed while watching it https://t.co/Q9kAdgyAoW",
+      "url": "https://x.com/zarazhangrui/status/2112398939358138862",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 16,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Tenzing on Apple TV+ is a must watch..\n\n",
+      "summary": "Tenzing on Apple TV+ is a must watch..\n\nThe acting, the direction, the music. \n\nI can’t believe this was all shot in real environments and with zero green screens. \n\nLiteral goosebumps.",
+      "url": "https://x.com/nikunj/status/2112422877949751491",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 12,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：the ideographic &gt; the nomothetic http",
+      "summary": "the ideographic &gt; the nomothetic https://t.co/DT4n8LnA4C",
+      "url": "https://x.com/danshipper/status/2112308324377203182",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 6,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Why Every Traded Personal Agents for One Company Agent",
+      "summary": "Speaker 1 | 00:00 - 00:12\nThe hot thing right now is dots. They're persistent agents from OpenAI. I was there at Dev Day when they launched them. I interviewed Sam about them, and I've been using dots since before they came out. And now we're into week two of dots.\n\nSpeaker 1 | 00:12 - 00:46\nSo how'",
+      "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL",
+      "published_at": "2026-10-21",
+      "category": "外网",
+      "likes": 0,
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
