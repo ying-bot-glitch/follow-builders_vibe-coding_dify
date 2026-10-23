@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-23",
+  "item_count": 26,
+  "items": [
+    {
+      "title": "Peter Steinberger：That PHP vulnerability that’s gonna caus",
+      "summary": "That PHP vulnerability that’s gonna cause havoc this week was found with… GPT‑5.6 Sol. https://t.co/2djri1GYn4",
+      "url": "https://x.com/steipete/status/2112913060709228764",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 11229,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：We designed Claude Duet around Claude Op",
+      "summary": "We designed Claude Duet around Claude Opus 5.5, which gives it the judgment to decide what needs you, what can wait, and when to check with you first. It carries over the memory, skills, and connected apps from your Claude account, so there’s little to set up.",
+      "url": "https://x.com/claudeai/status/2112984666437546104",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 3673,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：Claude Duet is an early research preview",
+      "summary": "Claude Duet is an early research preview, available through a waitlist on Pro and Max plans in the US. It can still misjudge what’s urgent, and we’ll keep tuning it based on what early users tell us.\n\nJoin the waitlist: https://t.co/kNwzHHeYrO\nRead more: https://t.co/GT1xV1RJ7f",
+      "url": "https://x.com/claudeai/status/2112984669943968099",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 3248,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：Claude Duet draws on years of our safety",
+      "summary": "Claude Duet draws on years of our safety and security work on agents. It never directly sees your passwords, a new classifier guards against sharing sensitive information, and the important decisions stay with you.\n\nWe’ll share more on our approach to safety in Claude Duet soon.",
+      "url": "https://x.com/claudeai/status/2112984667758510197",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 2120,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Fully included in the Pro plan, doesn't ",
+      "summary": "Fully included in the Pro plan, doesn't draw on your weekly usage.",
+      "url": "https://x.com/thsottiaux/status/2113029854417600834",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 1840,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Vercel has proactively rolled out Firewa",
+      "summary": "Vercel has proactively rolled out Firewall-level mitigations for today's Node.js RCE vulnerability, in advance of the official patch release. \n\nAll traffic for all deployments is automatically protected. We're actively monitoring and rolling out managed runtime upgrades. https://t.co/fSgaLf99o7",
+      "url": "https://x.com/rauchg/status/2113050053724221732",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 1449,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：this is my quant https://t.co/9KGoY9XA17",
+      "summary": "this is my quant https://t.co/9KGoY9XA17 https://t.co/d71VZ8oPLf",
+      "url": "https://x.com/swyx/status/2113098033705664650",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 1116,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Cat Wu：We heard your feedback that you want Cla",
+      "summary": "We heard your feedback that you want Claude to proactively take more off your plate! Claude Duet is a large step in this direction - it'll notice work that needs to be done, and then do it before you ask. \n\nJoin the waitlist here: https://t.co/f3PfUuXIox https://t.co/y0DfQS4RHI",
+      "url": "https://x.com/_catwu/status/2112988751576330487",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 728,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：BREAKING:\n\n@AnthropicAI just launched Du",
+      "summary": "BREAKING:\n\n@AnthropicAI just launched Duet, its always-on personal agent. It’s the first personal agent I’d call a pro tool.\n\nWe’ve been testing it for two weeks. I’ve gone from mostly using ChatGPT to roughly 50/50 between ChatGPT and Claude—the most time I’ve spent with Anthropic in close to a year.\n\n• It lives in its own app, separate from Claude, on iOS, Android, and the web. This makes it feel clean and easy to understand.\n• It has channels for specific areas of your work and life rather than just a single chat\n• It has a todo list so you never lose what you’re working on and you can always see statuses\n• It allows you to easily write and edit documents, slides, and more all through the app.\n• It’s not a chief of staff yet. It can see the Claude sessions on my computers but can’t direct them. Its email drafts are worse than dot’s, and voice is transcription only—you can’t have a spoken conversation with it.\n\nMy verdict: the vibes are good, and I’m opening Duet every day. It’s worth trying.\n\nCheck out our agent comparison page: https://t.co/fZyTorNK4p\n\nFull Vibe Check coming soon on @every",
+      "url": "https://x.com/danshipper/status/2112997559463506059",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 670,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：DeepSeek v4.1 Flash (1017) is now includ",
+      "summary": "DeepSeek v4.1 Flash (1017) is now included in ▲ Token Pass.\n\nFast, mind-bogglingly cheap, and served with ZDR (zero-data retention).\n\nIt's a phenomenal model to run subagents that execute plans conceived by larger and more expensive models. You can port TypeScript to Rust 10 times and not run out of credits 😂",
+      "url": "https://x.com/rauchg/status/2113010010766913815",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 544,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：Cyber is going to be one of the most pro",
+      "summary": "Cyber is going to be one of the most profound aspects of AI. We now have a tireless workforce that can hunt down, discover, patch, or attack any system and software ever created.\n\nWe will use agents to identify the long standing risks in existing systems and infrastructure. Attackers will use agents to accelerate the discovery of gaps in environments. We will equally use agents to defend attacks and discover anomalous patterns to better protect our data, and much more.\n\nWe’re entering a new cyber regime, and we’ll probably use 100X more tokens on this loop than we’re imagining right now, because we can scan every log, look at every line of code, look through traffic, and process data at a scale that wasn’t comprehensible before.\n\nMore than ever, enterprises are going to care deeply about how they manage their networks, systems, software, data, identity, devices, and more. Agents will largely become the solution to these challenges, but they will keep everyone up in the process.",
+      "url": "https://x.com/levie/status/2112964214818283917",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 418,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：It was inspiring to watch the behind-the",
+      "summary": "It was inspiring to watch the behind-the-scenes¹ of the industry coming together, weeks in advance, to protect the world's infrastructure and mitigate php2shell.\n\nWe deployed Vercel WAF mitigations that have already successfully prevented attempts on PHP origins. Assume more vulnerabilities are on the way. Flex the patch → redeploy muscle.\n\n¹ A Slack channel. Thank you @SlackHQ!",
+      "url": "https://x.com/rauchg/status/2112989629536440400",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 386,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：Fucking PHP\n\nIt’s always fucking PHP",
+      "summary": "Fucking PHP\n\nIt’s always fucking PHP",
+      "url": "https://x.com/adityaag/status/2112977865432240524",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 285,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Zara Zhang：Turn a photo into a 3D popup card https:",
+      "summary": "Turn a photo into a 3D popup card https://t.co/t4YdSAPIIB",
+      "url": "https://x.com/zarazhangrui/status/2113055591954526444",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 284,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：If you wanted to know all the jobs that ",
+      "summary": "If you wanted to know all the jobs that AI will produce, look no further than cybersecurity. This is going to become one of the biggest investment areas for enterprises going forward. \n\nAnd even as the work becomes more agentic and autonomous you will need more talent to point the agents at the most critical work, review findings, patch systems, respond to incidents, and more. \n\nLots of opportunity right now for the systems that protect data and enterprises, as well as the professionals that are deploying them and protecting organizations.\n\nIt’s going to only get more wild out there.",
+      "url": "https://x.com/levie/status/2113137032633757773",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 187,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：keeping up with AI is a full-time job. t",
+      "summary": "keeping up with AI is a full-time job. that's why every company needs a frontier team:\n\nthe frontier team's job is to keep up as models change. everyone else's job is to use what they learn\n\nwe made one @Every and it's completely changed how we work:\n\n0:00 Introduction: Why every company needs a frontier team\n2:42 Why the best frontier teams have pirates and architects\n4:57 How Head of Evals @hammer_mt builds personal benchmarks\n6:46 How Opus edited an explainer video using Slack messages and meeting notes\n10:20 Working with AI means protecting other people’s attention\n12:26 Why a frontier team needs a “wrangler” like Arielle Shipper\n18:58 Why senior editor @jackcheng built a tabless browser\n24:37 How resident writer @kplikethebird teaches her AI writing plugin who the reader is\n30:51 Inside engineer @JannikJung’s personal AI orchestrator\n35:41 Compound engineer @kieranklaassen uses AI to build power tools",
+      "url": "https://x.com/danshipper/status/2113010761786175970",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 161,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Securing all my accounts with AI's help ",
+      "summary": "Securing all my accounts with AI's help tonight before something bad happens. Also finally stopped being cheap and paid for @1Password",
+      "url": "https://x.com/petergyang/status/2113122021567848450",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 103,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：prompt -&gt; corporation https://t.co/MY",
+      "summary": "prompt -&gt; corporation https://t.co/MYcINQyL4I",
+      "url": "https://x.com/amasad/status/2112975002027147545",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 99,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Who knew acquiring super intelligence co",
+      "summary": "Who knew acquiring super intelligence could lead to the entire fabric and trust of the internet being slowly broken..\n\nIt’s truly wild and batsh!t bananas out there. https://t.co/gA5AQr2s6b",
+      "url": "https://x.com/nikunj/status/2113057195948707874",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 68,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Gabriel Zucman is currently employed by ",
+      "summary": "Gabriel Zucman is currently employed by the University of California at Berkeley, a public university that will be hurt severely due to shortfall of tax revenue to the state: to the tune of $39 billion net loss in aggregate\n\nPerhaps when the tax doom spiral hits his department some people will finally say damn we shouldn’t have hired this guy",
+      "url": "https://x.com/garrytan/status/2113143993026617832",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 63,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Exhibit 347 of why you should have kids ",
+      "summary": "Exhibit 347 of why you should have kids 🥰 https://t.co/bhSmo5jHD0",
+      "url": "https://x.com/nikunj/status/2113083278223974779",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 49,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Zara Zhang：Your personal website is the new resume",
+      "summary": "Your personal website is the new resume",
+      "url": "https://x.com/zarazhangrui/status/2113148949842534482",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 48,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：Five @spc companies in there 👀👀 https://",
+      "summary": "Five @spc companies in there 👀👀 https://t.co/btSs7tKibB",
+      "url": "https://x.com/adityaag/status/2112958120528114015",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 35,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Google Labs：Story picked ✅ Calendar cleared ✅\n\nThe a",
+      "summary": "Story picked ✅ Calendar cleared ✅\n\nThe adventure continues in “Dreambeans Roulette: Part 2”!\n\nJoin the trail with Sahana, Brian, and Nala as we dive into all things Dreambeans including:\n\n☕️ How are Dreambean stories “brewed” in the first place?\n☁️ How can one make Dreambeans “dream” even better?\n📵 What if apps were designed to get you off your phone?\n\nStay tuned for Part 3, where Brian shares field notes from the trail and a bit more on the experience and vision behind Google Labs.\n\nDreambeans is live in the US, for users 18+. More regions coming soon. Learn more at https://t.co/jCdAzMHvOD",
+      "url": "https://x.com/GoogleLabs/status/2112968628861878648",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 30,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：I'm still grokking this...but it does fe",
+      "summary": "I'm still grokking this...but it does feel like it just as fun to make stuff with AI as it is to \"use\" it.\n\nMy son watched Star Wars (EP IV) for ~3 hours...but then spent ~20 hours making games about what he had seen. \n\nBut weirdly, he only played the games a little bit...he was more interested in just building the game.\n\nAs a programmer, I understand parts of this intuitively...the very act of programming is fun (most of the time). And I have always felt bad for people who couldn't experience that joy...\n\nBut maybe everyone will now get to experience that?",
+      "url": "https://x.com/adityaag/status/2112923959176106056",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 28,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "How a Frontier Team Can Help Your Company Keep Up With AI",
+      "summary": "You need a frontier team.\n\nHere's why.\n\nEvery single person in your company is caught in this dilemma.\n\nDo I get my work done or do I stay up to date with AI and figure out what all these new tools and workflows mean for what work I should do?\n\nThat's just crazy.\n\nIt's so hard to figure out.\n\nEvery ",
+      "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL",
+      "published_at": "2026-10-23",
+      "category": "外网",
+      "likes": 0,
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
