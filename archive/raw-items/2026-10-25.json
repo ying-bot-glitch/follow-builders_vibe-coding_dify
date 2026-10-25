@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-25",
+  "item_count": 25,
+  "items": [
+    {
+      "title": "Thariq：I’ve left Anthropic after more than a ye",
+      "summary": "I’ve left Anthropic after more than a year of working on Claude Code and seeing it scale larger than I ever imagined.\n\nI have really loved working at Ant and believe deeply in the mission, and most of all, the idea of a race to the top.\n\nThe idea that if we work hard and responsibly, we can raise the bar and inspire others to great outcomes. And if we all push each other to be better, things can be radically good. I will carry the spirit of this with me forever.\n\nMy colleagues at Anthropic are the most talented, thoughtful, competent, and earnest people I have ever met. I am glad they are at the wheel and trust them deeply.\n\nTo the community on X, thank you for everything. You’ve made this the most fun (and sometimes stressful) job I’ve ever had.\n\nFor me, it is time for a bit of a break before diving into something new.\n\nIf you want more excellent Claude Code content, you should follow @addyosmani , @lydiahallie, @_catwu, @ClaudeDevs  and of course @bcherny who started it all.",
+      "url": "https://x.com/trq212/status/2113844051938054167",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 10516,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：Day 19/ Small updates. Calls connect muc",
+      "summary": "Day 19/ Small updates. Calls connect much faster for dots, changing reasoning in codex &amp; work mid conversation does not invalidate cache anymore and a we've also updated the codex cli.",
+      "url": "https://x.com/thsottiaux/status/2113770573994299544",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 6132,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：The difference between having a tool and",
+      "summary": "The difference between having a tool and being a tool is subtle these days and it’s easy to accidentally build yourself into being a tool. Don’t be a tool.",
+      "url": "https://x.com/thsottiaux/status/2113838156193894447",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 4375,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：On codex cli updates. We've added reusab",
+      "summary": "On codex cli updates. We've added reusable prompt presets, inline model and permission settings, and enterprise MCP sign-in. We've also fixed failures when resuming long sessions and added Windows corporate-proxy authentication.\n\nSurprisingly the CLI has grown 2X in usage since devday.",
+      "url": "https://x.com/thsottiaux/status/2113770862860222611",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 1281,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：also can someone at gmail make it so you",
+      "summary": "also can someone at gmail make it so you can't scan for deactivated email addresses 🫩? I was hoping for a relaxing Friday night",
+      "url": "https://x.com/trq212/status/2113844560074019213",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 971,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Steinberger：I’ll wait a bit before thinking about a ",
+      "summary": "I’ll wait a bit before thinking about a new phone. https://t.co/6NBtpaSCko https://t.co/Dp5I3B1gim",
+      "url": "https://x.com/steipete/status/2113788999303385180",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 481,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：Agent swarms for cyber defense is about ",
+      "summary": "Agent swarms for cyber defense is about to be one of the biggest categories in AI. We are going to have agents reviewing our code and infra, testing every permutation of risk, processing gobs of data, and more. \n\nSecurity is one of the best use-cases for swarms because it’s an obvious area where more compute in equals more value out. There’s a wide range of testing that people can never get around to - or at least quickly enough - that agents have no problem going after. \n\nGoing to be a wild time in cyber.",
+      "url": "https://x.com/levie/status/2113738768645808277",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 358,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Thrilled to welcome Jeff and the Chroma ",
+      "summary": "Thrilled to welcome Jeff and the Chroma team to Replit!\n\nThey’re pioneers in AI. They were building RAG before it was even a thing!\n\nAt Replit, they’ll help solve one of the hardest problems in AI: giving agents the context and memory they need to do real work.\n\nMassive step toward the self-driving company.",
+      "url": "https://x.com/amasad/status/2113736007111827606",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 330,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：fake news btw i got him https://t.co/jc8",
+      "summary": "fake news btw i got him https://t.co/jc8Au9agl5 https://t.co/eunzDKSyLt",
+      "url": "https://x.com/swyx/status/2113811349281345578",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 276,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Horseshoe theory is real\n\nThe NIMBY left",
+      "summary": "Horseshoe theory is real\n\nThe NIMBY left (nonprofit extractors) and the NIMBY right (boomer landlords) just want to destroy housing affordability and the economy for their own comfort and grift \n\nMeanwhile we are just trying to build abundance https://t.co/Ki5lBwIpik",
+      "url": "https://x.com/garrytan/status/2113683853156192695",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 265,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Connie Chan is a regressive and terrible",
+      "summary": "Connie Chan is a regressive and terrible bureaucrat who wants rents to be $10,000 per month in SF\n\nAnti tech, anti housing, anti prosperity, pro grift, pro crime\n\nThat the Pelosi machine threw their weight behind her and Gary McCoy is a disgraceful joke https://t.co/qqWXGI0atz",
+      "url": "https://x.com/garrytan/status/2113742026999267330",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 249,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Agents can play \"Ouija\" in the cloud.\n\nT",
+      "summary": "Agents can play \"Ouija\" in the cloud.\n\nThis class of timing attacks on shared-host VMs has been known since at least 2015¹. With no full solution.\n\nThe world’s cyber infrastructure runs on “yes, that attack is theoretically possible, but who would have the ingenuity & gall to go that far!” Enter, agents.\n\nI'd describe this particular OpenAI find as a 'noisy neighbor' attack. If two agents are on the same machine, one can make enough noise (through the CPU caches!) that the other one can detect it by timing its own computation and cache accesses.\n\nThe only \"complete\" solution would be for each agent to run on its own dedicated hardware, which obviously has significant economic consequences.\n\nFor Vercel Sandbox, we've deployed every practical mitigation possible to this class of attack, complementing it with always-on monitoring and red-teaming (similar to where OpenAI arrived).\n\n¹ https://t.co/ZBhPMfnaj3 (and even further back)",
+      "url": "https://x.com/rauchg/status/2113759533801877920",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 169,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Zara Zhang：I'm hosting an event in the Bay Area (Sa",
+      "summary": "I'm hosting an event in the Bay Area (San Mateo) on Nov 7 (Saturday) where you can come build/rebuild your personal website!\n\nWe’ll show you the coolest personal sites out there, and you can make or remake your site, alongside other wonderful people. \n\nZERO coding/design experience needed (beginners preferred). RSVP here: https://t.co/XKE7Qgp4DN",
+      "url": "https://x.com/zarazhangrui/status/2113676956885807406",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 147,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Excited to announce Replit for Governmen",
+      "summary": "Excited to announce Replit for Government and welcome Michael Greenwald to the team!\n\nMichael brings a wealth of experience, having previously led AWS’s public sector business. Looking forward to working together to transform how governments build and operate software. https://t.co/Aj35Gg0EdQ https://t.co/STbQ82Dqw0",
+      "url": "https://x.com/amasad/status/2113676717105787192",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 146,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：Ok, more math with Mr @ScottWu46. https:",
+      "summary": "Ok, more math with Mr @ScottWu46. https://t.co/3A03bJSQ8w",
+      "url": "https://x.com/adityaag/status/2113681343502787070",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 146,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：Here’s the deeper look at how Claude Due",
+      "summary": "Here’s the deeper look at how Claude Duet handles safety, privacy, and security: https://t.co/li45PvRyyM",
+      "url": "https://x.com/claudeai/status/2113736176737845353",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 98,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：It truly feels magical - recommend addin",
+      "summary": "It truly feels magical - recommend adding to your website 😅 https://t.co/aVYV27xDuY https://t.co/U5s64SJlg3",
+      "url": "https://x.com/nikunj/status/2113844360572027321",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 93,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：reject vc founder grind\n\nif u are hot co",
+      "summary": "reject vc founder grind\n\nif u are hot corgi/wasian you should be sliding into dms for post economic bootstrapped ai founders with a bunch of angel exits and even more friends than money and complete control of their destiny https://t.co/yVnwKlEIwo",
+      "url": "https://x.com/swyx/status/2113755882022752556",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 90,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：psa to all vc’s trying to slide in our d",
+      "summary": "psa to all vc’s trying to slide in our dms https://t.co/99Q7g85sxQ https://t.co/Qzvln9wy1K",
+      "url": "https://x.com/swyx/status/2113863570018685091",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 84,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：the best configuration of teams in AI is",
+      "summary": "the best configuration of teams in AI is only two people: pirates and architects https://t.co/R4ET7IJwG9",
+      "url": "https://x.com/danshipper/status/2113693510629281895",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 48,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：Some of the biggest advances in AI have ",
+      "summary": "Some of the biggest advances in AI have come from solving many problems together, rather than training specialized systems for individual tasks.\n\n@svlevine (@physical_int) talks about the same principle for robotics. Make the problem bigger. https://t.co/1GxLuuNmu3",
+      "url": "https://x.com/adityaag/status/2113666947766169868",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 35,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：Anthropic did go 10x in revenue even wit",
+      "summary": "Anthropic did go 10x in revenue even without launching Duet, but called it 😅 https://t.co/nHK3SoMlxp https://t.co/7UZjEtRtf3",
+      "url": "https://x.com/nikunj/status/2113785018497831076",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 34,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：I think most ambitious people don't refl",
+      "summary": "I think most ambitious people don't reflect and realize that at some point, their time > their money.   \n\nBeing in the sandwich generation with young kids and aging parents has made me realize this sooner than most and I'm privileged to be in a position where I can make the choice to pursue agency over my time.  \n\nBut many tech people are also in this position and just don't stop to reflect on this.\n\n📌 See my chat with Adam for more: https://t.co/qUu5y8R1GD",
+      "url": "https://x.com/petergyang/status/2113672812909191292",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 31,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：That the machine might actually win this",
+      "summary": "That the machine might actually win this time makes me sick to my stomach\n\nThis is someone who actively works to make our communities unsafe https://t.co/kLvPG0kTUh",
+      "url": "https://x.com/garrytan/status/2113742461160046736",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 16,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Democratizing Security for the Agentic Web with Cloudflare CTO Dane Knecht",
+      "summary": "Speaker 1 | 00:00 - 00:11\nAI has become the tool that's causing this kind of security apocalypse. Is also the tool that can help us solve it faster as well. It went from how to get everyone just using AI. Now all of sudden, everyone's racing to figure out what AI security means.\n\nSpeaker 2 | 00:11 -",
+      "url": "https://www.youtube.com/@NoPriorsPodcast",
+      "published_at": "2026-10-25",
+      "category": "外网",
+      "likes": 0,
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
