@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-03",
+  "item_count": 22,
+  "items": [
+    {
+      "title": "Andrej Karpathy：Weekend hack: HackerTube. I was annoyed ",
+      "summary": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 43M comments over 20 years of HN to 6,454 videos that keep being recommended. *Significantly* better viewing experience, ~2 hours with Opus 5.5:\nhttps://t.co/JIhXN7OSh1\n\n- Excellent recs without any logins (state is kept in local browser session)\n- Thumbnail is a representative frame from middle of the video instead of the super duper A/B test hyper-optimized user uploads\n- Underlying data from the comment analysis as one zip file, point your Claude at it and ask for your own version\n- HackerTube Longs ✊\n\nA bit more on the process:\nI use Claude Code (desktop app for Mac), Opus 5.5 on Medium effort as my default. I only talk to Claude and have it do everything, the only \"manual work\" I helped with in tandem was in the browser (reminiscent of MenuGen): 1) I had to create some kind of API key from Google Cloud UI to query YouTube for video metadata, 2) I booted up a VPS box for serving and 3) I bought the domain name. Once the box was up I gave Claude the IP and told it update, secure, harden, deploy and optimize the code, and it did the whole thing.\n\nMany awesome projects that would have normally taken weeks/months even can now be few-shotted for breakfast. What else are we not thinking of.",
+      "url": "https://x.com/karpathy/status/2116957135661945283",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 36797,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：If you’re enjoying a subsidized AI subsc",
+      "summary": "If you’re enjoying a subsidized AI subscription get ready to get rug pulled. https://t.co/XCjMc61pir",
+      "url": "https://x.com/amasad/status/2117010858845089805",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 2266,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Own your intelligence.\n\nAnyone that oppo",
+      "summary": "Own your intelligence.\n\nAnyone that opposes this has something to sell you (perhaps your own intelligence back to you.)\n\nLocal models need to continue proliferating. The “absolute unit” massive models may be out of reach for now locally, so your best option is to, indeed, keep your options open. Own your harness, data, connections, runtime: your agents. Embrace open source.",
+      "url": "https://x.com/rauchg/status/2117000819623243925",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 2251,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：adding a new character: a taekwondo mast",
+      "summary": "adding a new character: a taekwondo master that fights with fire\n\nI also updated the art style from 3d models to use generated sprites https://t.co/4F60NS4TQy https://t.co/hLIVplRPrW",
+      "url": "https://x.com/trq212/status/2116976789046350040",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 990,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：F1 is basically the perfect competition ",
+      "summary": "F1 is basically the perfect competition for our times. The celebration of extraordinary technology and extraordinary human ability. That’s what Vercel stands for! (also: winning) https://t.co/XkxVDnmWjE",
+      "url": "https://x.com/rauchg/status/2117039740096847920",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 555,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：My dog just patched that bug we couldn’t",
+      "summary": "My dog just patched that bug we couldn’t find for two weeks. Clever dog",
+      "url": "https://x.com/thsottiaux/status/2116936205623611781",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 509,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：YC is the YC for hard tech https://t.co/",
+      "summary": "YC is the YC for hard tech https://t.co/M9UWjjHuJo",
+      "url": "https://x.com/garrytan/status/2116909591607099793",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 498,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：My dog sent you the meeting notes from y",
+      "summary": "My dog sent you the meeting notes from yesterday, did you see them?",
+      "url": "https://x.com/thsottiaux/status/2116936031866077423",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 403,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：Working with Gemini on https://t.co/3Z4N",
+      "summary": "Working with Gemini on https://t.co/3Z4NESzNKd is hilarious 😂😂\n\nOther than being SUPER EXCITED!, I've been testing it on two high complexity projects and it's doing great. https://t.co/Vb16Fbyats",
+      "url": "https://x.com/rauchg/status/2116988333096370443",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 381,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Practical robotics is nigh https://t.co/",
+      "summary": "Practical robotics is nigh https://t.co/uFs7HoCLvs",
+      "url": "https://x.com/garrytan/status/2116941191526895975",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 296,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：You can enable this on Replit with one t",
+      "summary": "You can enable this on Replit with one toggle. If you enable the “feedback widget” on your site, users’ feedback become prompts for the agents to build. https://t.co/QLBwKenews",
+      "url": "https://x.com/amasad/status/2116998155925360965",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 245,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：I wish I could just use one AI tool but ",
+      "summary": "I wish I could just use one AI tool but right now there are clear winners in each category below:\n\nBrowser/computer use = ChatGPT + Codex\nDesign/video editing/\"taste\" = Claude\n24/7 agents and scheduled jobs = Grok Bot\n\nAlso, Gemini is underrated for writing but need to test it more.",
+      "url": "https://x.com/petergyang/status/2116946320674152810",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 190,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：argon cooks https://t.co/RmZ0FeQLpM",
+      "summary": "argon cooks https://t.co/RmZ0FeQLpM",
+      "url": "https://x.com/danshipper/status/2117014507083948453",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 116,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：this is anti competitive and not cool ht",
+      "summary": "this is anti competitive and not cool https://t.co/3hu26UpLkX",
+      "url": "https://x.com/danshipper/status/2116978123044688304",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 108,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Zara Zhang：What if your Linktree were an actual tre",
+      "summary": "What if your Linktree were an actual tree https://t.co/3ozuquLIIC https://t.co/WEzBKd6aaF",
+      "url": "https://x.com/zarazhangrui/status/2117086544586780867",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 83,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：Increasingly this will be the new job de",
+      "summary": "Increasingly this will be the new job description for a lot of roles, not just coding. We’re clearly moving from a world where agents help us do our work incrementally better or faster, to us helping agents do their work.\n\nThis turns everyone in one of these positions to that of a manager of a team of agents, instead of an individual contributor with just some added leverage from AI. The biggest areas of impact will be information-heavy jobs, like coding, cybersecurity, legal work, biotech, engineering, and many other fields. \n\nAnd as a result, in these jobs your leverage will begin to be decoupled from the normal ratio of hours spent working to output generated. For essentially the history of knowledge work the main variable you had to play with was hours of work done (assuming fixed level talent/coordination/strategy). \n\nNow we’ve separated these variables because agents can parallelize work for us, to in theory execute as much as we need to pull off whatever goal we’re trying to accomplish. The people and organizations that discover this sooner, and orient their operations around it, will see compounding gains in their workflows.",
+      "url": "https://x.com/levie/status/2117134917847093491",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 67,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：also had a little highlight intro video\n",
+      "summary": "also had a little highlight intro video\n\nI like how its all coming together! hoping to have a vertical slice sometime next week https://t.co/YAurDfYM5S",
+      "url": "https://x.com/trq212/status/2116977363728867664",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 43,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Upcoming episodes of Behind the Craft:\n\n",
+      "summary": "Upcoming episodes of Behind the Craft:\n\n1. Ashley Alexander\n\nAshley is VP of Product at @OpenAI. We had a heart-to-heart conversation about what it's like to care for parents through cancer and where ChatGPT and AI can help.\n\n2. Nate Parrott\n\n@nateparrott is the @AnthropicAI designer behind Claude Design, Dashboard, Motion, and more. He was refreshingly honest about how to get Claude to avoid designing AI slop with a live walkthrough of a real example.\n\n3. Matt Pocock\n\nMatt's AI skills for working with coding agents have 300K+ (!) GitHub stars. He teaches an excellent course on engineering fundamentals, and I can't wait to learn from him how to build software factories the right way.\n\n4. Jacob Sansbury\n\n@jsnnsa, according to my friend and a16z partner @illscience, has built the most AI-pilled gaming company in the world with just 10 people and $32M/year in Claude spend. Excited to dig into all this with him.\n\nWith all my interviews, I try to find people who are builders and practitioners who can talk about topics that I genuinely care about.\n\n📌 Subscribe to get all the episodes soon:\nhttps://t.co/NSTj7ijxE0\n\nThanks for your support!",
+      "url": "https://x.com/petergyang/status/2117059131349868790",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 40,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Garry Tan：Particle-1 is as good as much larger mod",
+      "summary": "Particle-1 is as good as much larger models for agentic retrieval but 1/23 the price\n\nhttps://t.co/1CmqlXOx8D https://t.co/7s33EuSO0L",
+      "url": "https://x.com/garrytan/status/2117137390016073977",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 30,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：@karpathy https://t.co/ff9Go6a7Zd url",
+      "summary": "@karpathy https://t.co/ff9Go6a7Zd url",
+      "url": "https://x.com/swyx/status/2116782055665402157",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 21,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：\"It really makes you question, why do yo",
+      "summary": "\"It really makes you question, why do you want a person in your product? Is your product something that needs a UI?\"\n\nFrom @jacalulu (product director at @GoogleLabs):\n\n\"Anything that involves me creating something. Anything where I want to learn something, there might be a reason for me to interact.\n\nAnytime I want to be entertained or consume something, I'm still the one using the product.\n\nBut there are definitely products that I use today that I would be more than happy to not use, or at least not be the main person interacting with the interface.\"\n\n📌 Watch our full episode here: https://t.co/8hLt6x6atQ",
+      "url": "https://x.com/petergyang/status/2116987415319740756",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 17,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Ep 95: Modal CEO on the Future of Inference, the Chaos of the GPU Market &amp; Origins of the Sandbox Bet",
+      "summary": "Speaker 1 | 00:00 - 00:04\nHow much of, like, an an organized marketplaces compute these days versus, like, the Wild West?\n\nSpeaker 2 | 00:04 - 00:17\nI went to GTC last year. It was like an open air drug market, but, like, GPUs. Walking around, like, talking to people, trying to get GPUs, and meeting",
+      "url": "https://www.youtube.com/@RedpointAI",
+      "published_at": "2026-11-03",
+      "category": "外网",
+      "likes": 0,
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
