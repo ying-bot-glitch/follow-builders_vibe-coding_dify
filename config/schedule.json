@@ -1,1 +1,5 @@
-{`n  "send_frequency": "weekly",`n  "send_day": 0,`n  "send_time": "09:00"`n}
+{
+  "send_frequency": "weekly",
+  "send_day": 0,
+  "send_time": "09:00"
+}
