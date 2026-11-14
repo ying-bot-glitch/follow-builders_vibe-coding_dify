@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-14",
+  "item_count": 26,
+  "items": [
+    {
+      "title": "Thibault Sottiaux：We shipped some good updates to dots tod",
+      "summary": "We shipped some good updates to dots today and the banked reset has been activated and should land in everyones accounts sometime soon! https://t.co/Y7Mnp6Cuu1",
+      "url": "https://x.com/thsottiaux/status/2120999993079451919",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 5699,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：How can codex be improved? Try not to sa",
+      "summary": "How can codex be improved? Try not to say model.",
+      "url": "https://x.com/thsottiaux/status/2121062974161092792",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 5486,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thibault Sottiaux：We announced new tools we're developing ",
+      "summary": "We announced new tools we're developing for cybersecurity today across automated patching and automated red teaming. Watch the recording here https://t.co/fW371aFjB5",
+      "url": "https://x.com/thsottiaux/status/2121036562058400200",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 2350,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：Makes total sense that congressman leadi",
+      "summary": "Makes total sense that congressman leading the inquiry into Jensen’s alleged foreign ties is the same guy who showed up at the Capitol wearing a foreign army uniform. He’s an expert at foreign ties! https://t.co/9DfLI6DEwq",
+      "url": "https://x.com/amasad/status/2121081862659739870",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 1705,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：Claude joins as a visible participant. A",
+      "summary": "Claude joins as a visible participant. Ask it a question out loud or in chat, or have it start a doc. Your team can see what it’s building and correct it as it takes shape. https://t.co/IFoJgWURCj",
+      "url": "https://x.com/claudeai/status/2120973996304830859",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 1678,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：Claude takes the notes, too. After the c",
+      "summary": "Claude takes the notes, too. After the call, the notes, action items, transcript, and anything Claude built are on the meeting’s page in Claude.",
+      "url": "https://x.com/claudeai/status/2120973999295643679",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 1277,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Claude：Claude Meetings is starting with Google ",
+      "summary": "Claude Meetings is starting with Google Meet, with support for other video conferencing platforms coming soon.\n\nLearn more: https://t.co/RcQpSG8Ub3",
+      "url": "https://x.com/claudeai/status/2120974000746582357",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 1275,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Steinberger：There’s some new agent launching later t",
+      "summary": "There’s some new agent launching later this week and marketers offer a lot of money to say nice things about it on X. Keep a lookout on honest reviews 🫠",
+      "url": "https://x.com/steipete/status/2121009372470067544",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 1159,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Guillermo Rauch：What happens to frameworks in the agents",
+      "summary": "What happens to frameworks in the agents era? to component libraries? to @shadcn? \n\nThe answer is: we need to drill deeper. Delete the part, optimize, accelerate, automate.\n\nUI SDK is like the x86 instruction set for agents to build new UI components spontaneously. \n\nAgents are the new design engineers, and they're ready to build *anything* you ask, tailored to your usecase. High-level, rigid, single-framework abstractions are like kryptonite for what is essentially an infinite, untiring creation machine.\n\nI think we've found someone that allows us to have the cake and eat it too. A decades-long dream. UI SDK is packaged behaviors that give us accessibility, performance, cohesion, saving us tokens, errors and effort, but with absolutely zero limitations and tradeoffs for what UIs we can generate.\n\nEnjoy!",
+      "url": "https://x.com/rauchg/status/2120966768483262648",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 990,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Josh Woodward：Gemini, now from your point of view http",
+      "summary": "Gemini, now from your point of view https://t.co/D15CnXvMvP",
+      "url": "https://x.com/joshwoodward/status/2120990820631450061",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 976,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Josh Woodward：Introducing Gemini 4 Hydrogen, cutting-e",
+      "summary": "Introducing Gemini 4 Hydrogen, cutting-edge intelligence for everyone! Now in @GeminiApp. It's fast. It's smart. It's a big jump. Enjoy! https://t.co/5AAIN6ryyh",
+      "url": "https://x.com/joshwoodward/status/2120942262054232392",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 847,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aaron Levie：Ok this is a big deal. We’ve been testin",
+      "summary": "Ok this is a big deal. We’ve been testing Gemini 4 Hydrogen in early access with the Box AI Complex Work Eval, and it’s a serious jump for fast models. \n\nHydrogen is 5 percentage points better in accuracy than Gemini 3.8 Flash. That alone would be a great boost in capability, but possibly more importantly it did the tasks in less than half the time with about 12% fewer tokens on a typical task.\n\nFor this eval, we give the Box Agent Hydrogen as a model for a series of complex tasks that represent real world work with enterprise documents across finance, consulting, life sciences, and other industries. Hydrogen will be a great model for a lot of efficient but complex tasks across these fields.\n\nGemini team is definitely cooking. Hydrogen will be rolling out in the Box AI Studio shortly so any customer can build a custom agent with it.",
+      "url": "https://x.com/levie/status/2120947988143198302",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 619,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Steinberger：My team wrote about how we run persisten",
+      "summary": "My team wrote about how we run persistent agents inside OpenAI. https://t.co/vP5cH7Pohg",
+      "url": "https://x.com/steipete/status/2121058770767982997",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 589,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Alex Albert：A lot of getting good work out of Claude",
+      "summary": "A lot of getting good work out of Claude now is just finding the context it’s missing and figuring out how to close that gap\n\nClaude Meetings is one way to bring in the remaining slices and has proved very useful internally https://t.co/j4yRaG5gUg",
+      "url": "https://x.com/alexalbert__/status/2120983722182988206",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 386,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Aditya Agarwal：We would not be where we are today witho",
+      "summary": "We would not be where we are today without Jensen.\n\nIt is viscerally painful to see what is happening.",
+      "url": "https://x.com/adityaag/status/2120924059709956201",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 334,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：Can't tell if this is real but if NVIDIA",
+      "summary": "Can't tell if this is real but if NVIDIA employees feels strongly doing something like this isn't a bad idea. https://t.co/oQ8085yvMY",
+      "url": "https://x.com/petergyang/status/2121100531502620784",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 242,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：China hawkishness was right-coded rhetor",
+      "summary": "China hawkishness was right-coded rhetoric. The Cathedral will turn it into actual power.",
+      "url": "https://x.com/amasad/status/2120793075836768333",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 231,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Yang：This man clearly was an inspiration to m",
+      "summary": "This man clearly was an inspiration to many people and well respected by NVIDIA employees which makes his downfall all the sadder 😢 https://t.co/jmxBPZnKAM",
+      "url": "https://x.com/petergyang/status/2121035933541941297",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 185,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Amjad Masad：You can now ask Replit Agent to buy stuf",
+      "summary": "You can now ask Replit Agent to buy stuff for your business, including buying ads to acquire new customers! https://t.co/HelMtQT8EA https://t.co/vJsdESZaPl",
+      "url": "https://x.com/amasad/status/2121018020520931712",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 145,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Thariq：it’s time to retvrn https://t.co/2vx6G3o",
+      "summary": "it’s time to retvrn https://t.co/2vx6G3oPne",
+      "url": "https://x.com/trq212/status/2121067561915916575",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 143,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Dan Shipper：Claude the first time it sits in on one ",
+      "summary": "Claude the first time it sits in on one of my meetings: https://t.co/UkEeSuWP7r https://t.co/p22tdnV7pe",
+      "url": "https://x.com/danshipper/status/2121029280432075157",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 138,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Matt Turck：My first time at Slush next week, and th",
+      "summary": "My first time at Slush next week, and the schedule is like:\n\n* boozy brunch\n* post-lunch cocktails\n* sauna &amp; wine!\n* afternoon tea and whiskey\n* join us for pre-dinner drinks!\n* dinner showcasing premium spirits\n* post-dinner cocktails\n* come drink with us at the after party!!",
+      "url": "https://x.com/mattturck/status/2120933338928108016",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 123,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Swyx：the production team got us a cake!! #aie",
+      "summary": "the production team got us a cake!! #aie1m https://t.co/TYkzM7lfDP https://t.co/xTb0EjSdC7",
+      "url": "https://x.com/swyx/status/2121060183988486493",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 122,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Peter Steinberger：Would you enable yolo mode for dots, eve",
+      "summary": "Would you enable yolo mode for dots, even if your dot might do sth unwanted?",
+      "url": "https://x.com/steipete/status/2121042215619510584",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 106,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Nikunj Kothari：I know everyone is plugged into the Jens",
+      "summary": "I know everyone is plugged into the Jensen news, but 9 hours of this without resolution is wiiiiild..\n\nI guess it’s going to get way WAY worse before it gets any better. \n\nAnd it’s going to happen to every single organization - big and small ☠️ https://t.co/4768lam91A",
+      "url": "https://x.com/nikunj/status/2121096888023932949",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 92,
+      "source_name": "Follow Builders - X"
+    },
+    {
+      "title": "Powering AI-Driven Drug Discovery with President of Isomorphic Labs Max Jaderberg",
+      "summary": "Speaker 1 | 00:00 - 00:24\nThe large part of the industry makes medicines is this very empirically driven process. Where things really fail is in the clinic because we never could see the problems until we get to the point where we put these drugs in patients and we say, Oh no, like, there's toxicity",
+      "url": "https://www.youtube.com/@NoPriorsPodcast",
+      "published_at": "2026-11-14",
+      "category": "外网",
+      "likes": 0,
+      "source_name": "Follow Builders - Podcasts"
+    }
+  ]
+}
