@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-20",
+  "subject": "【AI 情报周报】2026-11-20",
+  "weekly_insight": "本周行业动态显示，AI Agent已从概念验证阶段快速迈入面向全场景知识工作落地的爆发前夜，头部厂商纷纷推出相关实验性产品，同时行业共识明确编码与工具调用能力是Agent释放生产力的核心支点，后续Token消耗、算力需求将随Agent规模化普及持续快速攀升，团队需提前在场景选型、资源储备、工作流适配层面做好布局。",
+  "sections": {
+    "产品情报站/主流模型": [
+      {
+        "title": "Aaron Levie：The chart of token spend per employee st",
+        "brief": "Box CEO Aaron Levie指出当前人均Token消耗仍无明确天花板，AI应用与Token使用尚处于增长早期阶段。随着模型能力迭代、可自主编码调用工具的Agent逐步普及，后续Agent集群、后台常驻Agent将覆盖金融、生命科学、网络安全等大量此前无法规模化自动化的知识工作场景，Token消耗量将持续快速攀升，该趋势对我们后续的算力资源规划、成本管控策略制定具备重要参考价值。",
+        "weight_score": 92,
+        "url": "https://x.com/levie/status/2122508098351038532",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Aaron Levie：Regardless of what it’s called, we’re cl",
+        "brief": "Aaron Levie提出AI Agent正进入全新发展阶段，已从早期仅能输出简单回答的形态，演进为可并行执行多任务、处理长上下文、完成长周期工作的自主系统。这类Agent可接收目标指令后自主设计解决方案、迭代优化并落地部署，将率先在工程领域落地，后续逐步渗透到客户流程优化、风险管控、安全防护等各类知识工作场景，有望大幅提升整体生产效率，值得我们在Agent落地场景选型中重点关注。",
+        "weight_score": 70,
+        "url": "https://x.com/levie/status/2123278949749059756",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Peter Steinberger：There’s some new agent launching later t",
+        "brief": "开发者Peter Steinberger透露本周晚些时候将有一款新Agent产品发布，目前已有大量营销方付费在X平台发布相关好评内容。后续我们跟进该新品信息时，需注意甄别内容真实性，优先参考中立的实测评价，避免被营销宣传误导。",
+        "weight_score": 55,
+        "url": "https://x.com/steipete/status/2121009372470067544",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Dan Shipper：if you want all of the raw alpha from @e",
+        "brief": "Every创始人Dan Shipper公开其团队的前沿AI实验资源库，包含完整实验代码与短报告，可通过Agent读取该前沿信息流快速获取行业一手实践经验。该资源可作为我们团队内部AI创新探索的参考素材，辅助激发研发思路。",
+        "weight_score": 55,
+        "url": "https://x.com/danshipper/status/2121620539655819305",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Guillermo Rauch：A new era of software is upon us. Person",
+        "brief": "Vercel CEO Guillermo Rauch提出软件行业正进入全新阶段，未来软件将走向个性化、用户完全自主可控的开源形态，且整体质量将优于现有闭源产品。该趋势对我们后续的产品开源路线规划、用户个性化需求响应策略具备参考意义。",
+        "weight_score": 55,
+        "url": "https://x.com/rauchg/status/2122396034186014919",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      }
+    ],
+    "商业大事件/行业事件": [
+      {
+        "title": "Peter Yang：Two very useful prompts to try with Fabl",
+        "brief": "行业从业者Peter Yang分享了两款适配Fable 5.2的实用提示词，可分别用于全量审计Claude Code的配置体系、深度审计单个技能模块并输出优化方案。该工具可帮助我们在Anthropic发布新模型后快速完成现有Claude相关工作流的适配校验，提升迭代效率。",
+        "weight_score": 85,
+        "url": "https://x.com/petergyang/status/2121649295950762363",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Google Labs：🚨NEW EXPERIMENT 🚨\n\nPlease join us in wel",
+        "brief": "Google Labs推出名为Stitch Loop的常驻产品Agent实验产品，可全天候为小型团队提供产品建设辅助，目前已开放等待名单申请。该产品代表头部厂商在面向团队协作的常驻Agent方向的最新探索，我们可跟进其后续公开的能力细节，参考相关设计思路。",
+        "weight_score": 80,
+        "url": "https://x.com/GoogleLabs/status/2123102389775573314",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Google Labs：Create a world from one sentence, then c",
+        "brief": "Google Labs宣布旗下Project Genie产品已升级至DeepMind Genie 4底座，新增实时场景编辑、Agent辅助对话式生成、用户作品社区画廊等功能，目前仅对符合条件的Google AI Ultra订阅用户开放。该产品展示了生成式AI在3D交互场景领域的落地进展，其Agent辅助生成的交互模式具备较高参考价值。",
+        "weight_score": 80,
+        "url": "https://x.com/GoogleLabs/status/2123118145552749015",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Peter Yang：\"When you ask Claude to create something",
+        "brief": "Anthropic团队成员公开了Claude生成设计内容时存在的固有偏好问题，即默认倾向于使用特定衬线字体、米白背景、橙色元素等同质化设计风格，官方给出的优化方案是在提示词中明确指定规避这类默认偏好。该经验可直接复用在我们团队使用Claude生成设计内容的相关工作流中，提升输出结果的多样性。",
+        "weight_score": 75,
+        "url": "https://x.com/petergyang/status/2122132596352327816",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      },
+      {
+        "title": "Josh Woodward：Explore a new Project Genie experience f",
+        "brief": "Google团队成员Josh Woodward补充介绍了面向Google AI Ultra订阅用户开放的新版Project Genie体验，核心基于Genie 4模型与配套Agent能力搭建，附带用户作品共享社区。该产品的订阅制落地模式可作为我们探索AI增值服务商业化路径的参考案例。",
+        "weight_score": 70,
+        "url": "https://x.com/joshwoodward/status/2123123552052494529",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      }
+    ],
+    "AI应用与开发资源": [
+      {
+        "title": "Aaron Levie：AI models are inevitably going to keep g",
+        "brief": "Aaron Levie提出AI模型在编码、工具调用、数学等相关能力上的持续迭代，将推动可自主生成代码、调用现有软件的Agent优先实现能力突破。未来大量知识工作将逐步适配Agent的能力特性，无需模型掌握全量领域知识，只要结合高效的软件生成/调用能力与领域专业判断，即可解锁大量此前无法自动化的场景，该判断可作为我们团队后续Agent落地场景规划的核心参考框架。",
+        "weight_score": 42,
+        "url": "https://x.com/levie/status/2121686564078297461",
+        "source_name": "Follow Builders - X",
+        "category": "外网"
+      }
+    ]
+  }
+}
